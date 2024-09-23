@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrfk6gjagxmg"]
+[gd_scene load_steps=2 format=3 uid="uid://cow01l1v4qgdk"]
 
-[ext_resource type="Script" path="res://player_battle.gd" id="1_t5hag"]
+[ext_resource type="Script" path="res://player_battle.gd" id="1_uak5q"]
 
 [node name="combat" type="Node2D"]
 
@@ -9,6 +9,6 @@
 [node name="enemyBattleSprite" type="Sprite2D" parent="enemyBattle"]
 
 [node name="playerBattle" type="Node2D" parent="."]
-script = ExtResource("1_t5hag")
+script = ExtResource("1_uak5q")
 
 [node name="playerBattleSprite" type="Sprite2D" parent="playerBattle"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://bds1uux6rumop"]
+
+[ext_resource type="Script" path="res://exit_button.gd" id="1_cgc4p"]
+[ext_resource type="Script" path="res://exit_game.gd" id="1_lmwfq"]
+
+[node name="main" type="Node2D"]
+
+[node name="menuOverlay" type="AspectRatioContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="menuContainer" type="VBoxContainer" parent="menuOverlay"]
+layout_mode = 2
+
+[node name="startButton" type="TextureButton" parent="menuOverlay/menuContainer"]
+layout_mode = 2
+
+[node name="resumeButton" type="TextureButton" parent="menuOverlay/menuContainer"]
+layout_mode = 2
+
+[node name="optionButton" type="TextureButton" parent="menuOverlay/menuContainer"]
+layout_mode = 2
+
+[node name="exitButton" type="TextureButton" parent="menuOverlay/menuContainer"]
+layout_mode = 2
+script = ExtResource("1_cgc4p")
+
+[node name="exitConfirm" type="ConfirmationDialog" parent="menuOverlay/menuContainer/exitButton"]
+gui_embed_subwindows = true
+title = "Closing Game"
+popup_window = true
+ok_button_text = "Yes"
+dialog_text = "You are about to close the game. This game does not save. Are you sure?"
+dialog_autowrap = true
+script = ExtResource("1_lmwfq")
+
+[node name="optionContainer" type="VBoxContainer" parent="menuOverlay"]
+layout_mode = 2
+
+[connection signal="pressed" from="menuOverlay/menuContainer/exitButton" to="menuOverlay/menuContainer/exitButton/exitConfirm" method="_on_exit_button_pressed"]
+[connection signal="confirmed" from="menuOverlay/menuContainer/exitButton/exitConfirm" to="menuOverlay/menuContainer/exitButton/exitConfirm" method="_on_confirmed"]
