@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ckcjcxq06q5ij"]
+
+[ext_resource type="Script" path="res://Resources/BaseMove.gd" id="1_g41ml"]
+
+[resource]
+script = ExtResource("1_g41ml")
+name = "Blend"
+damage_scalar = 6
+accuracy = 0.6
+status = "None"

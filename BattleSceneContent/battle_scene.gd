@@ -7,11 +7,20 @@ signal textbox_closed
 var current_enemy_health = 0
 var current_player_health = 0
 
+var moves = []
+
 func _ready() -> void:
 	$Textbox.hide()
 	$Actions.hide()
 	
 	$EnemyTexture.texture = enemy.texture
+	
+	for item in PlayerState.moves:
+		moves.append(load(item))
+	
+	$Actions/MovesMenu/Move1.text = moves[0].name
+	$Actions/MovesMenu/Move2.text = moves[1].name
+	$Actions/MovesMenu/Move3.text = moves[2].name
 	
 	set_health(PlayerState.current_health, PlayerState.max_health, $PlayerHealth)
 	set_health(enemy.health, enemy.health, $EnemyHealth)
@@ -42,15 +51,17 @@ func set_health(health, max_health, health_label):
 	health_label.text = "HP: %d/%d" % [health, max_health]
 
 func enemy_turn():
-	## todo -- implement different moves that deal different amounts of damage/have differing accuracy
 	## todo -- incorporate enemy attack and defense stats into calculation
-	display_text("Enemy turn")
+	var move_num = randi() % enemy.moves.size()
+	display_text("%s uses %s!" % [enemy.name, enemy.moves[move_num].name])
 	await textbox_closed
 	
-	current_player_health = max(0, current_player_health - enemy.attack)
+	var damage = enemy.moves[move_num].damage_scalar
+	
+	current_player_health = max(0, current_player_health - damage)
 	set_health(current_player_health, PlayerState.max_health, $PlayerHealth)
 	
-	display_text("%s dealt %d damage" % [enemy.name, enemy.attack])
+	display_text("%s dealt %d damage" % [enemy.name, damage])
 	await textbox_closed
 	
 	if (current_player_health == 0):
@@ -64,25 +75,29 @@ func enemy_turn():
 	$Actions/ActionMenu.show()
 	$Actions/MovesMenu.hide()
 	
-func player_attack():
-	## todo -- implement different moves that deal different amounts of damage/have differing accuracy
-	## todo -- incorporate player attack and defense stats into calculation
-	display_text("Attack successful")
+func player_attack(move_num):
+	display_text("You used %s!" % moves[move_num].name)
 	await textbox_closed
 	
-	current_enemy_health = max(0, current_enemy_health - PlayerState.attack)
-	set_health(current_enemy_health, enemy.health, $EnemyHealth)
-	
-	display_text("You dealt %d damage" % PlayerState.attack)
-	await textbox_closed
-	
-	if (current_enemy_health == 0):
-		display_text("%s was defeated!" % enemy.name)
+	if (randf() <= moves[move_num].accuracy):
+		## todo -- incorporate player attack and defense stats into calculation
+		var damage = moves[move_num].damage_scalar
+		
+		current_enemy_health = max(0, current_enemy_health - damage)
+		set_health(current_enemy_health, enemy.health, $EnemyHealth)
+		
+		display_text("You dealt %d damage" % damage)
 		await textbox_closed
 		
-		await get_tree().create_timer(.5).timeout
-		get_tree().quit()
-		
+		if (current_enemy_health == 0):
+			display_text("%s was defeated!" % enemy.name)
+			await textbox_closed
+			
+			await get_tree().create_timer(.5).timeout
+			get_tree().quit()
+	else:
+		display_text("You missed!")
+		await textbox_closed
 	
 	enemy_turn()
 
@@ -102,4 +117,10 @@ func _on_move_back_pressed() -> void:
 	$Actions/ActionMenu.show()
 
 func _on_move_1_pressed() -> void:
-	player_attack()
+	player_attack(0)
+
+func _on_move_2_pressed() -> void:
+	player_attack(1)
+
+func _on_move_3_pressed() -> void:
+	player_attack(2)

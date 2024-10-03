@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://njpri1oj6eqf"]
+
+[ext_resource type="Script" path="res://Resources/BaseMove.gd" id="1_osies"]
+
+[resource]
+script = ExtResource("1_osies")
+name = "Chop"
+damage_scalar = 3
+accuracy = 0.9
+status = "None"

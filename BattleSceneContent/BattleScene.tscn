@@ -51,10 +51,6 @@ text = "Move 2"
 layout_mode = 2
 text = "Move 3"
 
-[node name="Move4" type="Button" parent="Actions/MovesMenu"]
-layout_mode = 2
-text = "Move 4"
-
 [node name="MoveBack" type="Button" parent="Actions/MovesMenu"]
 layout_mode = 2
 text = "Back"
@@ -99,4 +95,6 @@ text = "5/5"
 [connection signal="pressed" from="Actions/ActionMenu/Moves" to="." method="_on_moves_pressed"]
 [connection signal="pressed" from="Actions/ActionMenu/Run" to="." method="_on_run_pressed"]
 [connection signal="pressed" from="Actions/MovesMenu/Move1" to="." method="_on_move_1_pressed"]
+[connection signal="pressed" from="Actions/MovesMenu/Move2" to="." method="_on_move_2_pressed"]
+[connection signal="pressed" from="Actions/MovesMenu/Move3" to="." method="_on_move_3_pressed"]
 [connection signal="pressed" from="Actions/MovesMenu/MoveBack" to="." method="_on_move_back_pressed"]
