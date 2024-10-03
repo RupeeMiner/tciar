@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bgjy3hmohyjc3"]
+
+[ext_resource type="Script" path="res://Resources/BaseMove.gd" id="1_a4wpc"]
+
+[resource]
+script = ExtResource("1_a4wpc")
+name = "Burn"
+damage_scalar = 9
+accuracy = 0.3
+status = "Burn"

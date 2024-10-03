@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://6qjljw47p3v4"]
+
+[ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_0g8jt"]
+[ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_umnho"]
+[ext_resource type="Texture2D" uid="uid://dcesdvknl2v1p" path="res://Textures/Beefy.png" id="2_52y1h"]
+[ext_resource type="Resource" uid="uid://ckcjcxq06q5ij" path="res://Resources/BlendAttack.tres" id="2_mqmdf"]
+
+[resource]
+script = ExtResource("1_umnho")
+name = "Beefy"
+texture = ExtResource("2_52y1h")
+health = 10
+attack = 5
+defense = 5
+speed = 3
+moves = Array[Resource]([ExtResource("1_0g8jt"), ExtResource("2_mqmdf")])
