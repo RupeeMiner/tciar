@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6qjljw47p3v4"]
+
+[ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_umnho"]
+[ext_resource type="Texture2D" uid="uid://dcesdvknl2v1p" path="res://Textures/Beefy.png" id="2_52y1h"]
+
+[resource]
+script = ExtResource("1_umnho")
+name = "Beefy"
+texture = ExtResource("2_52y1h")
+health = 10
+attack = 5
+defense = 5
+speed = 3

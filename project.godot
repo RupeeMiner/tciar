@@ -15,6 +15,14 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerState="*res://BattleSceneContent/PlayerState.gd"
+
+[dotnet]
+
+project/assembly_name="tciar"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

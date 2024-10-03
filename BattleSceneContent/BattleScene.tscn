@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://bucd04qwib6t"]
+
+[ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_aflyk"]
+[ext_resource type="Resource" uid="uid://6qjljw47p3v4" path="res://Resources/Beefy.tres" id="2_34r8m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5lpl"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="BattleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aflyk")
+enemy = ExtResource("2_34r8m")
+
+[node name="Actions" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ActionMenu" type="HBoxContainer" parent="Actions"]
+layout_mode = 2
+
+[node name="Moves" type="Button" parent="Actions/ActionMenu"]
+layout_mode = 2
+text = "Moves"
+
+[node name="Run" type="Button" parent="Actions/ActionMenu"]
+layout_mode = 2
+text = "Run"
+
+[node name="MovesMenu" type="HBoxContainer" parent="Actions"]
+layout_mode = 2
+
+[node name="Move1" type="Button" parent="Actions/MovesMenu"]
+layout_mode = 2
+text = "Move 1"
+
+[node name="Move2" type="Button" parent="Actions/MovesMenu"]
+layout_mode = 2
+text = "Move 2"
+
+[node name="Move3" type="Button" parent="Actions/MovesMenu"]
+layout_mode = 2
+text = "Move 3"
+
+[node name="Move4" type="Button" parent="Actions/MovesMenu"]
+layout_mode = 2
+text = "Move 4"
+
+[node name="MoveBack" type="Button" parent="Actions/MovesMenu"]
+layout_mode = 2
+text = "Back"
+
+[node name="PlayerHealth" type="Label" parent="Actions"]
+layout_mode = 2
+text = "25/25"
+
+[node name="EnemyHealth" type="Label" parent="Actions"]
+layout_mode = 2
+text = "5/5"
+
+[node name="Textbox" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 73.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k5lpl")
+
+[node name="Label" type="Label" parent="Textbox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Text goes here"
+
+[node name="EnemyTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 158.0
+offset_right = 41.0
+offset_bottom = 198.0
+
+[connection signal="pressed" from="Actions/ActionMenu/Moves" to="." method="_on_moves_pressed"]
+[connection signal="pressed" from="Actions/ActionMenu/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="Actions/MovesMenu/MoveBack" to="." method="_on_move_back_pressed"]
