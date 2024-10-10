@@ -1,6 +1,7 @@
 extends Resource
 
 @export var name: String = "Enemy"
+@export var ingredient: String = "Item"
 @export var texture: Texture = null
 @export var health: int = 30
 @export var attack: int = 10

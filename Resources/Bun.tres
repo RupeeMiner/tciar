@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("3_cry7g")
 name = "Bun"
+ingredient = "Hamburger Bun"
 texture = ExtResource("4_jqsjx")
 health = 10
 attack = 5

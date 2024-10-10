@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bucd04qwib6t"]
+[gd_scene load_steps=4 format=3 uid="uid://dpyyw3fn617fo"]
 
 [ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_aflyk"]
 [ext_resource type="Resource" uid="uid://6qjljw47p3v4" path="res://Resources/Beefy.tres" id="2_34r8m"]

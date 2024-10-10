@@ -78,12 +78,13 @@ func enemy_turn():
 		await textbox_closed
 		
 		get_tree().paused = false
+		get_tree().reload_current_scene()
 		visible = false
 	
 	$Actions.show()
 	$Actions/ActionMenu.show()
 	$Actions/MovesMenu.hide()
-	
+
 func player_attack(move_num):
 	display_text("You used %s!" % moves[move_num].name)
 	await textbox_closed
@@ -102,6 +103,7 @@ func player_attack(move_num):
 			display_text("%s was defeated!" % enemy.name)
 			await textbox_closed
 			
+			PlayerState.items.append(enemy.ingredient)
 			get_tree().paused = false
 			visible = false
 	else:
@@ -109,6 +111,9 @@ func player_attack(move_num):
 		await textbox_closed
 	
 	enemy_turn()
+
+func end_battle():
+	pass
 
 func _on_run_pressed() -> void:
 	## todo -- calculate run possibility using player's speed value

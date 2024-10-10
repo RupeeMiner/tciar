@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_umnho")
 name = "Beefy"
+ingredient = "Beef Patty"
 texture = ExtResource("2_52y1h")
 health = 10
 attack = 5
