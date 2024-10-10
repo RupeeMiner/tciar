@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbcagl8qv3ydj"
-path="res://.godot/imported/Top wall straight double.png-c595c5d297072cdc2fbbbfc9577942e3.ctex"
+uid="uid://bna2t4mnj25c3"
+path="res://.godot/imported/Door.png-d1062452e9a4d8396fe52b177e121bc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Top wall straight double.png"
-dest_files=["res://.godot/imported/Top wall straight double.png-c595c5d297072cdc2fbbbfc9577942e3.ctex"]
+source_file="res://Textures/ShipTiles/Door.png"
+dest_files=["res://.godot/imported/Door.png-d1062452e9a4d8396fe52b177e121bc6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nrkgsnuov67d"
-path="res://.godot/imported/Top wall corner outer.png-a60143c3b70e7954b626e442bdf1405d.ctex"
+uid="uid://sna25nbccvg8"
+path="res://.godot/imported/Top wall corner inner double.png-9a6feb7ec159fa43f930780741071548.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Top wall corner outer.png"
-dest_files=["res://.godot/imported/Top wall corner outer.png-a60143c3b70e7954b626e442bdf1405d.ctex"]
+source_file="res://Textures/ShipTiles/Top wall corner inner double.png"
+dest_files=["res://.godot/imported/Top wall corner inner double.png-9a6feb7ec159fa43f930780741071548.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dccfojy7hmbbj"
-path="res://.godot/imported/Space.png-fbd26e7c4f4c2e03585466f801f30aa2.ctex"
+uid="uid://quubfhfh5a2x"
+path="res://.godot/imported/Wall Screen.png-cd93a0906da7f7f50fe0448487e89695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Space.png"
-dest_files=["res://.godot/imported/Space.png-fbd26e7c4f4c2e03585466f801f30aa2.ctex"]
+source_file="res://Textures/ShipTiles/Wall Screen.png"
+dest_files=["res://.godot/imported/Wall Screen.png-cd93a0906da7f7f50fe0448487e89695.ctex"]
 
 [params]
 

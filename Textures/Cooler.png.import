@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnbeqxumyh57c"
-path="res://.godot/imported/Wall Pipe.png-32179b67517f45c778532d46215d2904.ctex"
+uid="uid://bvt0ltf1ro708"
+path="res://.godot/imported/Cooler.png-b27f2a4f1474e82a4fee91341bd38bc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Wall Pipe.png"
-dest_files=["res://.godot/imported/Wall Pipe.png-32179b67517f45c778532d46215d2904.ctex"]
+source_file="res://Textures/Cooler.png"
+dest_files=["res://.godot/imported/Cooler.png-b27f2a4f1474e82a4fee91341bd38bc8.ctex"]
 
 [params]
 

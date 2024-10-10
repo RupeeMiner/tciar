@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddbuyyy08idwb"
-path="res://.godot/imported/Wall Corner.png-e3a4e1207a40403a18af59bc488fafb4.ctex"
+path="res://.godot/imported/Wall Corner.png-c24f4d94025874f27c785e74383537f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Wall Corner.png"
-dest_files=["res://.godot/imported/Wall Corner.png-e3a4e1207a40403a18af59bc488fafb4.ctex"]
+source_file="res://Textures/ShipTiles/Wall Corner.png"
+dest_files=["res://.godot/imported/Wall Corner.png-c24f4d94025874f27c785e74383537f6.ctex"]
 
 [params]
 

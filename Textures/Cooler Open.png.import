@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bikdwonpbo42c"
-path="res://.godot/imported/Top wall corner inner.png-3930789dc9ec9a7ab2dcb9a95017ea6e.ctex"
+uid="uid://mfeo6a3lemso"
+path="res://.godot/imported/Cooler Open.png-a4244043ef0f77d070dda35fe1289234.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Top wall corner inner.png"
-dest_files=["res://.godot/imported/Top wall corner inner.png-3930789dc9ec9a7ab2dcb9a95017ea6e.ctex"]
+source_file="res://Textures/Cooler Open.png"
+dest_files=["res://.godot/imported/Cooler Open.png-a4244043ef0f77d070dda35fe1289234.ctex"]
 
 [params]
 

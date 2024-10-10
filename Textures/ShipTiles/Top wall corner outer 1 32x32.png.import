@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bna2t4mnj25c3"
-path="res://.godot/imported/Door.png-24fb96a2b6456d5e84b3f4a281a3f9dc.ctex"
+uid="uid://c6ll3typq86ib"
+path="res://.godot/imported/Top wall corner outer 1 32x32.png-79affe19699263947c7e846f27f6be70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Door.png"
-dest_files=["res://.godot/imported/Door.png-24fb96a2b6456d5e84b3f4a281a3f9dc.ctex"]
+source_file="res://Textures/ShipTiles/Top wall corner outer 1 32x32.png"
+dest_files=["res://.godot/imported/Top wall corner outer 1 32x32.png-79affe19699263947c7e846f27f6be70.ctex"]
 
 [params]
 

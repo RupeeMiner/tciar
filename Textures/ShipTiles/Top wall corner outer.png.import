@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn2xp5jbodwx7"
-path="res://.godot/imported/Wall With Star.png-de03dafd1be900c9ae40551705e055cb.ctex"
+uid="uid://nrkgsnuov67d"
+path="res://.godot/imported/Top wall corner outer.png-2d7b79a0ee0861f9c55f6de5c34d9870.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/Wall With Star.png"
-dest_files=["res://.godot/imported/Wall With Star.png-de03dafd1be900c9ae40551705e055cb.ctex"]
+source_file="res://Textures/ShipTiles/Top wall corner outer.png"
+dest_files=["res://.godot/imported/Top wall corner outer.png-2d7b79a0ee0861f9c55f6de5c34d9870.ctex"]
 
 [params]
 

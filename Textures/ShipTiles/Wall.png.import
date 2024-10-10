@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv01tvwong67h"
-path="res://.godot/imported/floor tile large.png-59c76a60aea16f20076a9cadb3ab5548.ctex"
+uid="uid://cifmhe0t2tyiq"
+path="res://.godot/imported/Wall.png-0adec42ede6606a58ae7f153975e6936.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShipTiles/floor tile large.png"
-dest_files=["res://.godot/imported/floor tile large.png-59c76a60aea16f20076a9cadb3ab5548.ctex"]
+source_file="res://Textures/ShipTiles/Wall.png"
+dest_files=["res://.godot/imported/Wall.png-0adec42ede6606a58ae7f153975e6936.ctex"]
 
 [params]
 
