@@ -10,6 +10,15 @@ var current_player_health = 0
 var moves = []
 
 func _ready() -> void:
+	visible = false
+	WorldState.battle_started.connect(Callable(self, "init"))
+
+func init(current_enemy):
+	get_tree().paused = true
+	enemy = load(current_enemy)
+	
+	visible = true
+	
 	$Textbox.hide()
 	$Actions.hide()
 	
@@ -68,8 +77,8 @@ func enemy_turn():
 		display_text("You were defeated! :(")
 		await textbox_closed
 		
-		await get_tree().create_timer(.5).timeout
-		get_tree().quit()
+		get_tree().paused = false
+		visible = false
 	
 	$Actions.show()
 	$Actions/ActionMenu.show()
@@ -93,8 +102,8 @@ func player_attack(move_num):
 			display_text("%s was defeated!" % enemy.name)
 			await textbox_closed
 			
-			await get_tree().create_timer(.5).timeout
-			get_tree().quit()
+			get_tree().paused = false
+			visible = false
 	else:
 		display_text("You missed!")
 		await textbox_closed
@@ -105,8 +114,8 @@ func _on_run_pressed() -> void:
 	## todo -- calculate run possibility using player's speed value
 	display_text("You ran away.")
 	await textbox_closed
-	await get_tree().create_timer(.5).timeout
-	get_tree().quit()
+	get_tree().paused = false
+	visible = false
 
 func _on_moves_pressed() -> void:
 	$Actions/ActionMenu.hide()

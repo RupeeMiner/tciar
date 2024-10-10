@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("closed")
 		if playerInArea:
 			if Input.is_action_just_pressed("interact"):
-				# todo init battle
+				WorldState.start_battle()
 				isClosed = false
 	else:
 		$AnimatedSprite2D.play("open")
