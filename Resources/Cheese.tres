@@ -3,13 +3,13 @@
 [ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_4emyi"]
 [ext_resource type="Resource" uid="uid://ckcjcxq06q5ij" path="res://Resources/BlendAttack.tres" id="2_syexa"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_n3w2j"]
-[ext_resource type="Texture2D" uid="uid://dcesdvknl2v1p" path="res://Textures/Beefy.png" id="4_vcrdn"]
+[ext_resource type="Texture2D" uid="uid://dqj13yi0nyl4d" path="res://Textures/paper_assets/CheesePaperPNG_V2.png" id="4_frrny"]
 
 [resource]
 script = ExtResource("3_n3w2j")
 name = "Cheese"
 ingredient = "Cheese"
-texture = ExtResource("4_vcrdn")
+texture = ExtResource("4_frrny")
 health = 10
 attack = 5
 defense = 5

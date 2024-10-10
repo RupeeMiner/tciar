@@ -2,14 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_0g8jt"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_umnho"]
-[ext_resource type="Texture2D" uid="uid://dcesdvknl2v1p" path="res://Textures/Beefy.png" id="2_52y1h"]
 [ext_resource type="Resource" uid="uid://ckcjcxq06q5ij" path="res://Resources/BlendAttack.tres" id="2_mqmdf"]
+[ext_resource type="Texture2D" uid="uid://bniqkhafmmx4t" path="res://Textures/paper_assets/PattyPaperPNG.png" id="4_ob2tl"]
 
 [resource]
 script = ExtResource("1_umnho")
 name = "Beefy"
 ingredient = "Beef Patty"
-texture = ExtResource("2_52y1h")
+texture = ExtResource("4_ob2tl")
 health = 10
 attack = 5
 defense = 5

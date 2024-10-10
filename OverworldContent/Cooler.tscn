@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3u0j66gmm7y7"]
 
 [ext_resource type="Script" path="res://OverworldContent/cooler.gd" id="1_6nvhl"]
-[ext_resource type="Texture2D" uid="uid://bvt0ltf1ro708" path="res://Textures/Cooler.png" id="1_u0bbq"]
-[ext_resource type="Texture2D" uid="uid://mfeo6a3lemso" path="res://Textures/Cooler Open.png" id="2_5b5k7"]
+[ext_resource type="Texture2D" uid="uid://bvt0ltf1ro708" path="res://Textures/pixel_assets/Cooler.png" id="1_u0bbq"]
+[ext_resource type="Texture2D" uid="uid://mfeo6a3lemso" path="res://Textures/pixel_assets/Cooler Open.png" id="2_5b5k7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1s6dr"]
 animations = [{
