@@ -3,12 +3,12 @@
 [ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_v0kyo"]
 [ext_resource type="Resource" uid="uid://ckcjcxq06q5ij" path="res://Resources/BlendAttack.tres" id="2_a8r2y"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_cry7g"]
-[ext_resource type="Texture2D" uid="uid://bvt0ltf1ro708" path="res://Textures/Cooler.png" id="4_jqsjx"]
+[ext_resource type="Texture2D" uid="uid://dcqqx6gier0as" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="4_d48qt"]
 
 [resource]
 script = ExtResource("3_cry7g")
 name = "Bun"
-texture = ExtResource("4_jqsjx")
+texture = ExtResource("4_d48qt")
 health = 10
 attack = 5
 defense = 5

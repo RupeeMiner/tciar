@@ -1,22 +1,22 @@
 [gd_scene load_steps=41 format=4 uid="uid://dj1nayxt6d1w2"]
 
-[ext_resource type="Texture2D" uid="uid://bna2t4mnj25c3" path="res://Textures/ShipTiles/Door.png" id="1_nnl1m"]
-[ext_resource type="Texture2D" uid="uid://e3y56e6p8v4t" path="res://Textures/ShipTiles/floor tile 2x2.png" id="2_18hyf"]
-[ext_resource type="Texture2D" uid="uid://cbcagl8qv3ydj" path="res://Textures/ShipTiles/Top wall straight double.png" id="3_noqt1"]
-[ext_resource type="Texture2D" uid="uid://bwq6rtqulh8hc" path="res://Textures/ShipTiles/Wall Corner Inner 32.png" id="4_ed4k6"]
-[ext_resource type="Texture2D" uid="uid://ddbuyyy08idwb" path="res://Textures/ShipTiles/Wall Corner.png" id="5_4f1ug"]
-[ext_resource type="Texture2D" uid="uid://cnbeqxumyh57c" path="res://Textures/ShipTiles/Wall Pipe.png" id="6_ix32w"]
-[ext_resource type="Texture2D" uid="uid://quubfhfh5a2x" path="res://Textures/ShipTiles/Wall Screen.png" id="7_ucjvu"]
-[ext_resource type="Texture2D" uid="uid://dn2xp5jbodwx7" path="res://Textures/ShipTiles/Wall With Star.png" id="8_a3j38"]
-[ext_resource type="Texture2D" uid="uid://cifmhe0t2tyiq" path="res://Textures/ShipTiles/Wall.png" id="9_4iy40"]
-[ext_resource type="Texture2D" uid="uid://bn1nxi4gqm8y2" path="res://Textures/ShipTiles/floor tile large stained.png" id="10_beegv"]
-[ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/ShipTiles/Space.png" id="10_qmc07"]
-[ext_resource type="Texture2D" uid="uid://dv01tvwong67h" path="res://Textures/ShipTiles/floor tile large.png" id="11_jxkxa"]
-[ext_resource type="Texture2D" uid="uid://sna25nbccvg8" path="res://Textures/ShipTiles/Top wall corner inner double.png" id="12_p12v1"]
-[ext_resource type="Texture2D" uid="uid://bikdwonpbo42c" path="res://Textures/ShipTiles/Top wall corner inner.png" id="13_380j1"]
-[ext_resource type="Texture2D" uid="uid://c6ll3typq86ib" path="res://Textures/ShipTiles/Top wall corner outer 1 32x32.png" id="14_pvm13"]
-[ext_resource type="Texture2D" uid="uid://nrkgsnuov67d" path="res://Textures/ShipTiles/Top wall corner outer.png" id="15_y5oic"]
-[ext_resource type="Texture2D" uid="uid://1umrvjh6ueo0" path="res://Textures/ShipTiles/Top wall flat.png" id="16_rbg5a"]
+[ext_resource type="Texture2D" uid="uid://bna2t4mnj25c3" path="res://Textures/pixel_assets/ShipTiles/Door.png" id="1_nnl1m"]
+[ext_resource type="Texture2D" uid="uid://e3y56e6p8v4t" path="res://Textures/pixel_assets/ShipTiles/floor tile 2x2.png" id="2_18hyf"]
+[ext_resource type="Texture2D" uid="uid://cbcagl8qv3ydj" path="res://Textures/pixel_assets/ShipTiles/Top wall straight double.png" id="3_noqt1"]
+[ext_resource type="Texture2D" uid="uid://bwq6rtqulh8hc" path="res://Textures/pixel_assets/ShipTiles/Wall Corner Inner 32.png" id="4_ed4k6"]
+[ext_resource type="Texture2D" uid="uid://ddbuyyy08idwb" path="res://Textures/pixel_assets/ShipTiles/Wall Corner.png" id="5_4f1ug"]
+[ext_resource type="Texture2D" uid="uid://cnbeqxumyh57c" path="res://Textures/pixel_assets/ShipTiles/Wall Pipe.png" id="6_ix32w"]
+[ext_resource type="Texture2D" uid="uid://quubfhfh5a2x" path="res://Textures/pixel_assets/ShipTiles/Wall Screen.png" id="7_ucjvu"]
+[ext_resource type="Texture2D" uid="uid://dn2xp5jbodwx7" path="res://Textures/pixel_assets/ShipTiles/Wall With Star.png" id="8_a3j38"]
+[ext_resource type="Texture2D" uid="uid://cifmhe0t2tyiq" path="res://Textures/pixel_assets/ShipTiles/Wall.png" id="9_4iy40"]
+[ext_resource type="Texture2D" uid="uid://bn1nxi4gqm8y2" path="res://Textures/pixel_assets/ShipTiles/floor tile large stained.png" id="10_beegv"]
+[ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="10_qmc07"]
+[ext_resource type="Texture2D" uid="uid://dv01tvwong67h" path="res://Textures/pixel_assets/ShipTiles/floor tile large.png" id="11_jxkxa"]
+[ext_resource type="Texture2D" uid="uid://sna25nbccvg8" path="res://Textures/pixel_assets/ShipTiles/Top wall corner inner double.png" id="12_p12v1"]
+[ext_resource type="Texture2D" uid="uid://bikdwonpbo42c" path="res://Textures/pixel_assets/ShipTiles/Top wall corner inner.png" id="13_380j1"]
+[ext_resource type="Texture2D" uid="uid://c6ll3typq86ib" path="res://Textures/pixel_assets/ShipTiles/Top wall corner outer 1 32x32.png" id="14_pvm13"]
+[ext_resource type="Texture2D" uid="uid://nrkgsnuov67d" path="res://Textures/pixel_assets/ShipTiles/Top wall corner outer.png" id="15_y5oic"]
+[ext_resource type="Texture2D" uid="uid://1umrvjh6ueo0" path="res://Textures/pixel_assets/ShipTiles/Top wall flat.png" id="16_rbg5a"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="17_138gl"]
 [ext_resource type="PackedScene" uid="uid://bucd04qwib6t" path="res://BattleSceneContent/BattleScene.tscn" id="19_yfmiu"]
 [ext_resource type="PackedScene" uid="uid://b3u0j66gmm7y7" path="res://OverworldContent/Cooler.tscn" id="20_n82gj"]
@@ -173,7 +173,7 @@ tile_map_data = PackedByteArray("AAAHAAQAAAAAAAAAAQALAAgAAAAAAAAAAQANAAgAAAAAAAA
 tile_set = SubResource("TileSet_o6m6a")
 
 [node name="Player" parent="." instance=ExtResource("17_138gl")]
-position = Vector2(147, 145)
+position = Vector2(80, 64)
 
 [node name="BattleScene" parent="." instance=ExtResource("19_yfmiu")]
 process_mode = 3
