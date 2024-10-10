@@ -20,6 +20,12 @@ grow_vertical = 2
 script = ExtResource("1_aflyk")
 enemy = ExtResource("2_34r8m")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 282.0
+offset_bottom = 194.0
+color = Color(0.25, 0.5375, 1, 1)
+
 [node name="Actions" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
