@@ -20,6 +20,12 @@ config/icon="res://icon.svg"
 PlayerState="*res://BattleSceneContent/PlayerState.gd"
 WorldState="*res://OverworldContent/WorldState.gd"
 
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=224
+window/size/resizable=false
+
 [dotnet]
 
 project/assembly_name="tciar"
