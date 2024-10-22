@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfbkkhowh5awc"
-path="res://.godot/imported/ShipTiles.png-8fc73ee9a9882edc90af091662f0754c.ctex"
+uid="uid://bqhjtgixa8vlg"
+path="res://.godot/imported/Table Overlapping Wall.png-425fbef5639988885ec8df24b7b10964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/ShipTiles.png"
-dest_files=["res://.godot/imported/ShipTiles.png-8fc73ee9a9882edc90af091662f0754c.ctex"]
+source_file="res://Textures/pixel_assets/DinerTiles/Table Overlapping Wall.png"
+dest_files=["res://.godot/imported/Table Overlapping Wall.png-425fbef5639988885ec8df24b7b10964.ctex"]
 
 [params]
 

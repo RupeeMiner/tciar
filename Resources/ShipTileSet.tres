@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://brb51mdqtblph"]
 
-[ext_resource type="Texture2D" uid="uid://dfbkkhowh5awc" path="res://Textures/pixel_assets/ShipTiles.png" id="2_sw7lw"]
+[ext_resource type="Texture2D" uid="uid://dfbkkhowh5awc" path="res://Textures/pixel_assets/DinerTiles/ShipTiles.png" id="2_sw7lw"]
 [ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="10_iy7ty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mr038"]
