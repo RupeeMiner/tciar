@@ -11,11 +11,15 @@ var moves = []
 
 func _ready() -> void:
 	visible = false
-	WorldState.battle_started.connect(Callable(self, "init"))
+	WorldState.battle_started.connect(cooler_opened)
 
-func init(current_enemy):
-	get_tree().paused = true
+func cooler_opened(current_enemy):
 	enemy = load(current_enemy)
+	Dialogic.timeline_ended.connect(init)
+
+func init():
+	Dialogic.timeline_ended.disconnect(init)
+	get_tree().paused = true
 	
 	visible = true
 	
@@ -111,9 +115,6 @@ func player_attack(move_num):
 		await textbox_closed
 	
 	enemy_turn()
-
-func end_battle():
-	pass
 
 func _on_run_pressed() -> void:
 	## todo -- calculate run possibility using player's speed value

@@ -5,6 +5,7 @@ var current_dir = "none"
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
+	WorldState.battle_started.connect(play_quip)
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -65,6 +66,21 @@ func play_anim(isMoving):
 			anim.play("back_walk")
 		else:
 			anim.play("back_idle")
+
+func play_quip(enemy):
+	print("I am here")
+	var enemy_name = load(enemy).name
+	play_dialogue(enemy_name + "Quip")
+
+func ended_dialogue():
+	Dialogic.timeline_ended.disconnect(ended_dialogue)
+	set_physics_process(true)
+
+func play_dialogue(timeline_name):
+	Dialogic.timeline_ended.connect(ended_dialogue)
+	set_physics_process(false)
+	var layout = Dialogic.start(timeline_name)
+	layout.register_character(load("res://DialogicContent/TonyCharacter.dch"), $".")
 
 func player():
 	pass

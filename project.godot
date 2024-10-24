@@ -23,8 +23,17 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"TonyCharacter": "res://DialogicContent/TonyCharacter.dch"
+}
+directories/dtl_directory={
+"BeefyQuip": "res://DialogicContent/BeefyQuip.dtl",
+"BunQuip": "res://DialogicContent/BunQuip.dtl",
+"CheeseQuip": "res://DialogicContent/CheeseQuip.dtl"
+}
+layout/style_list=["res://DialogicContent/QuipStyle.tres"]
+layout/default_style="res://DialogicContent/QuipStyle.tres"
+glossary/default_case_sensitive=true
 
 [dotnet]
 

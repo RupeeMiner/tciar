@@ -31,5 +31,3 @@ position = Vector2(80, 72)
 process_mode = 3
 visible = false
 scale = Vector2(3.3, 3.3)
-
-[node name="Area2D" type="Area2D" parent="."]
