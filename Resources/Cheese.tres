@@ -1,7 +1,6 @@
-[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dnjtja57pydjb"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dnjtja57pydjb"]
 
 [ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_4emyi"]
-[ext_resource type="Resource" uid="uid://ckcjcxq06q5ij" path="res://Resources/BlendAttack.tres" id="2_syexa"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_n3w2j"]
 [ext_resource type="Texture2D" uid="uid://dqj13yi0nyl4d" path="res://Textures/paper_assets/CheesePaperPNG_V2.png" id="4_frrny"]
 
@@ -14,4 +13,4 @@ health = 10
 attack = 5
 defense = 5
 speed = 3
-moves = Array[Resource]([ExtResource("1_4emyi"), ExtResource("2_syexa")])
+moves = Array[Resource]([ExtResource("1_4emyi")])
