@@ -156,3 +156,12 @@ shape = SubResource("RectangleShape2D_tris7")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ffdh0")
 animation = &"front_idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+limit_left = -64
+limit_top = -64
+limit_right = 512
+limit_bottom = 512
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

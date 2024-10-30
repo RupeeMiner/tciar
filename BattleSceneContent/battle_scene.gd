@@ -11,11 +11,15 @@ var moves = []
 
 func _ready() -> void:
 	visible = false
-	WorldState.battle_started.connect(Callable(self, "init"))
+	WorldState.battle_started.connect(cooler_opened)
 
-func init(current_enemy):
-	get_tree().paused = true
+func cooler_opened(current_enemy):
 	enemy = load(current_enemy)
+	Dialogic.timeline_ended.connect(init)
+
+func init():
+	Dialogic.timeline_ended.disconnect(init)
+	get_tree().paused = true
 	
 	visible = true
 	
@@ -80,36 +84,34 @@ func enemy_turn():
 		await textbox_closed
 		
 		get_tree().paused = false
+		get_tree().reload_current_scene()
 		visible = false
 	
 	$Actions.show()
 	$Actions/ActionMenu.show()
 	$Actions/MovesMenu.hide()
-	
+
 func player_attack(move_num):
 	display_text("You used %s!" % moves[move_num].name)
 	await textbox_closed
 	
-	if (randf() <= moves[move_num].accuracy):
-		## todo -- incorporate player attack and defense stats into calculation
-		var damage = moves[move_num].damage_scalar
-		
-		current_enemy_health = max(0, current_enemy_health - damage)
-		set_health(current_enemy_health, enemy.health, $EnemyHealth)
-		
-		display_text("You dealt %d damage" % damage)
+	## todo -- incorporate player attack and defense stats into calculation
+	var damage = moves[move_num].damage_scalar
+	
+	current_enemy_health = max(0, current_enemy_health - damage)
+	set_health(current_enemy_health, enemy.health, $EnemyHealth)
+	
+	display_text("You dealt %d damage" % damage)
+	await textbox_closed
+	
+	if (current_enemy_health == 0):
+		display_text("%s was defeated!" % enemy.name)
 		await textbox_closed
-		
-		if (current_enemy_health == 0):
-			display_text("%s was defeated!" % enemy.name)
-			await textbox_closed
-			
-			PlayerState.current_health = current_player_health
-			get_tree().paused = false
-			visible = false
-	else:
-		display_text("You missed!")
-		await textbox_closed
+		PlayerState.current_health = current_player_health
+		PlayerState.items.append(enemy.ingredient)
+		get_tree().paused = false
+		visible = false
+		WorldState.check_recipe_ready()
 	
 	enemy_turn()
 
@@ -117,8 +119,7 @@ func _on_run_pressed() -> void:
 	## todo -- calculate run possibility using player's speed value
 	display_text("You ran away.")
 	await textbox_closed
-	
-	PlayerState.current_health = current_player_health	
+	PlayerState.current_health = current_player_health
 	get_tree().paused = false
 	visible = false
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bucd04qwib6t"]
+[gd_scene load_steps=5 format=3 uid="uid://dpyyw3fn617fo"]
 
 [ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_aflyk"]
 [ext_resource type="Resource" uid="uid://6qjljw47p3v4" path="res://Resources/Beefy.tres" id="2_34r8m"]
-[ext_resource type="Texture2D" uid="uid://dcqqx6gier0as" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="3_fecdi"]
+[ext_resource type="Texture2D" uid="uid://c26b14a0xjri2" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="3_85ph0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5lpl"]
 bg_color = Color(0, 0, 0, 1)
@@ -80,11 +80,12 @@ text = "Text goes here"
 
 [node name="EnemyTexture" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 71.0
-offset_right = 178.0
-offset_bottom = 181.0
-texture = ExtResource("3_fecdi")
+offset_left = 97.0
+offset_top = 67.0
+offset_right = 189.0
+offset_bottom = 201.0
+texture = ExtResource("3_85ph0")
+
 expand_mode = 1
 
 [node name="PlayerHealth" type="Label" parent="."]
