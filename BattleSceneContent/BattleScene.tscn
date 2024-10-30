@@ -85,6 +85,7 @@ offset_top = 67.0
 offset_right = 189.0
 offset_bottom = 201.0
 texture = ExtResource("3_85ph0")
+
 expand_mode = 1
 
 [node name="PlayerHealth" type="Label" parent="."]
