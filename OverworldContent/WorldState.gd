@@ -4,6 +4,15 @@ signal battle_started(current_enemy)
 signal battle_ended()
 signal recipe_ready(current_recipe)
 
+var first_loaded = true
+
+var diner_door_pos = Vector2(40, 209)
+
+var level = 0
+var recipes = ["Burger", "Spag", "Slam"]
+var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
+var enemies = []
+
 var current_recipe = "Burger"
 var current_ingredients = ["Beef Patty", "Hamburger Bun", "Cheese Slice"]
 var current_enemies = ["res://Resources/Beefy.tres", "res://Resources/Bun.tres", "res://Resources/Cheese.tres"]
@@ -34,9 +43,7 @@ func list_missing_ingredients():
 	return list_str
 
 func check_recipe_ready():
-	print("Checking readiness")
 	if !ingredients_missing():
-		print("It's ready")
 		emit_signal("recipe_ready", current_recipe)
 
 func load_scene(scene_name):

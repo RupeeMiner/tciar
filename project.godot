@@ -11,8 +11,7 @@ config_version=5
 [application]
 
 config/name="tciar"
-
-run/main_scene="res://OverworldContent/BurgerDungeon.tscn"
+run/main_scene="res://OverworldContent/Diner.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,26 +24,40 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"ChefCharacter": "res://DialogicContent/ChefCharacter.dch",
+"DaBossCharacter": "res://DialogicContent/DaBossCharacter.dch",
+"HorkentCharacter": "res://DialogicContent/HorkentCharacter.dch",
+"KahhaehunCharacter": "res://DialogicContent/KahhaehunCharacter.dch",
 "PopupCharacter": "res://DialogicContent/PopupCharacter.dch",
-"TonyCharacter": "res://DialogicContent/TonyCharacter.dch"
+"PrimokCharacter": "res://DialogicContent/PrimokCharacter.dch",
+"TonyCharacter": "res://DialogicContent/TonyCharacter.dch",
+"VokunalCharacter": "res://DialogicContent/VokunalCharacter.dch"
 }
 directories/dtl_directory={
 "BaconQuip": "res://DialogicContent/BaconQuip.dtl",
 "BeefyQuip": "res://DialogicContent/BeefyQuip.dtl",
 "BunQuip": "res://DialogicContent/BunQuip.dtl",
+"BurgerOrder": "res://DialogicContent/BurgerOrder.dtl",
 "BurgerReady": "res://DialogicContent/BurgerReady.dtl",
+"BurgerStart": "res://DialogicContent/BurgerStart.dtl",
 "CheeseQuip": "res://DialogicContent/CheeseQuip.dtl",
 "EggsQuip": "res://DialogicContent/EggsQuip.dtl",
+"EndScene": "res://DialogicContent/EndScene.dtl",
 "IngredientsMissing": "res://DialogicContent/IngredientsMissing.dtl",
+"IntroScene": "res://DialogicContent/IntroScene.dtl",
 "LeaveDungeon": "res://DialogicContent/LeaveDungeon.dtl",
 "MeatballQuip": "res://DialogicContent/MeatballQuip.dtl",
 "NoodlesQuip": "res://DialogicContent/NoodlesQuip.dtl",
 "PotatoQuip": "res://DialogicContent/PotatoQuip.dtl",
+"SlamOrder": "res://DialogicContent/SlamOrder.dtl",
 "SlamReady": "res://DialogicContent/SlamReady.dtl",
+"SlamStart": "res://DialogicContent/SlamStart.dtl",
+"SpagOrder": "res://DialogicContent/SpagOrder.dtl",
 "SpagReady": "res://DialogicContent/SpagReady.dtl",
+"SpagStart": "res://DialogicContent/SpagStart.dtl",
 "TomatoQuip": "res://DialogicContent/TomatoQuip.dtl"
 }
-layout/style_list=["res://DialogicContent/QuipStyle.tres", "res://DialogicContent/PopupStyle.tres"]
+layout/style_list=["res://DialogicContent/QuipStyle.tres", "res://DialogicContent/PopupStyle.tres", "res://DialogicContent/ConversationStyle.tres"]
 layout/default_style="res://DialogicContent/QuipStyle.tres"
 glossary/default_case_sensitive=true
 variables={}

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://edvcuag1uj0v"]
+[gd_scene load_steps=4 format=4 uid="uid://edvcuag1uj0v"]
 
+[ext_resource type="Script" path="res://OverworldContent/diner.gd" id="1_n57w0"]
 [ext_resource type="TileSet" uid="uid://djmo2eadxldvx" path="res://Resources/DinerTileSet.tres" id="1_ssg1g"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="2_2vc71"]
 
 [node name="Diner" type="Node2D"]
+script = ExtResource("1_n57w0")
 
 [node name="DinerTiles" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -11,4 +13,4 @@ tile_map_data = PackedByteArray("AAAAAAIAGAAAAAEAAAABAAIAGAAAAAEAAAACAAIAGAAAAAE
 tile_set = ExtResource("1_ssg1g")
 
 [node name="Player" parent="." instance=ExtResource("2_2vc71")]
-position = Vector2(40, 208)
+position = Vector2(40, 209)

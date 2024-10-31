@@ -1,0 +1,16 @@
+[style name="ConversationStyle"]
+join ChefCharacter left
+join HorkentCharacter right
+ChefCharacter: Order up! Hot and freshly beaten!
+HorkentCharacter: Took you long enough, bet you were slacking off back there! Gimme that.
+HorkentCharacter: Looks good enough... here is a tip, get a better job!
+leave HorkentCharacter
+ChefCharacter: Jeez, he musta woke up on the wrong side of the space bed...
+join VokunalCharacter right
+ChefCharacter: H-how can I help you... sir? Ma'am?
+VokunalCharacter: Sup.
+ChefCharacter: Nothing much, I guess...
+VokunalCharacter: Cool. Do you guys do breakfast?
+ChefCharacter: Uh, yeah, we have our grandest slammy, with eggs, bacon, and fried potatoes.
+VokunalCharacter: Nice, sounds good. I'll take one of those. Thanks man.
+ChefCharacter: No problem... I'll get right on it.
