@@ -4,22 +4,34 @@ signal battle_started(current_enemy)
 signal battle_ended()
 signal recipe_ready(current_recipe)
 
-var first_loaded = true
+var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "SlamDungeon": true}
 
-var diner_door_pos = Vector2(40, 209)
+var diner_intro_pos = Vector2(80, 140)
+var diner_door_pos = Vector2(49, 208)
 
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
-var enemies = []
+var story_enemies = [["res://Resources/Beefy.tres", "res://Resources/Bun.tres", "res://Resources/Cheese.tres"], ["res://Resources/Meatballs.tres", "res://Resources/Noodles.tres", "res://Resources/Tomato.tres"], ["res://Resources/Bacon.tres", "res://Resources/Egg.tres", "res://Resources/Potato.tres"]]
+var extra_enemies = ["res://Resources/Lettuce.tres","res://Resources/Cuce.tres"]
 
-var current_recipe = "Burger"
-var current_ingredients = ["Beef Patty", "Hamburger Bun", "Cheese Slice"]
-var current_enemies = ["res://Resources/Beefy.tres", "res://Resources/Bun.tres", "res://Resources/Cheese.tres"]
+var current_recipe = ""
+var current_ingredients = []
+var current_enemies = []
+
+var current_scene = "Diner"
+
+func load_level_data():
+	current_recipe = recipes[level]
+	current_enemies = story_enemies[level]
+	current_ingredients = ingredients[level]
+	level += 1
 
 func start_battle():
 	var index = randi() % current_enemies.size()
-	emit_signal("battle_started", current_enemies.pop_at(index))
+	var enemy = current_enemies.pop_at(index)
+	print(enemy)
+	emit_signal("battle_started", enemy)
 
 func ingredients_missing():
 	var ingredients_collected = false
@@ -47,4 +59,11 @@ func check_recipe_ready():
 		emit_signal("recipe_ready", current_recipe)
 
 func load_scene(scene_name):
+	current_scene = scene_name
 	get_tree().change_scene_to_file("res://OverworldContent/" + scene_name + ".tscn")
+
+func load_next_level():
+	PlayerState.current_health = PlayerState.max_health
+	load_scene(current_recipe + "Dungeon")
+	await get_tree().create_timer(1).timeout
+	first_loaded[current_recipe + "Dungeon"] = false

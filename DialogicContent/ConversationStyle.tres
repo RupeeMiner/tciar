@@ -66,4 +66,4 @@ script = ExtResource("10_kemcl")
 name = "ConversationStyle"
 base_overrides = {}
 layers = Array[ExtResource("1_1evji")]([SubResource("Resource_x2xu5"), SubResource("Resource_o8wmv"), SubResource("Resource_esx6m"), SubResource("Resource_tqcpx"), SubResource("Resource_l26pr"), SubResource("Resource_73spv"), SubResource("Resource_4v8b7"), SubResource("Resource_wrqbd")])
-metadata/_latest_layer = 0
+metadata/_latest_layer = 3

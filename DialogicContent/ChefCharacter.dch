@@ -17,10 +17,10 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Textures/paper_assets/BaconPaperPNGScaled.png\""
+"image": "\"res://Textures/paper_assets/PotatoPaperPNGScaled.png\""
 },
 "mirror": true,
-"offset": Vector2(0, 0),
+"offset": Vector2(0, -50),
 "scale": 0.8,
 "scene": ""
 }

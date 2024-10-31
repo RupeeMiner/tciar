@@ -41,12 +41,13 @@ directories/dtl_directory={
 "BurgerReady": "res://DialogicContent/BurgerReady.dtl",
 "BurgerStart": "res://DialogicContent/BurgerStart.dtl",
 "CheeseQuip": "res://DialogicContent/CheeseQuip.dtl",
-"EggsQuip": "res://DialogicContent/EggsQuip.dtl",
+"EggyQuip": "res://DialogicContent/EggyQuip.dtl",
 "EndScene": "res://DialogicContent/EndScene.dtl",
+"EnterDungeon": "res://DialogicContent/EnterDungeon.dtl",
 "IngredientsMissing": "res://DialogicContent/IngredientsMissing.dtl",
 "IntroScene": "res://DialogicContent/IntroScene.dtl",
 "LeaveDungeon": "res://DialogicContent/LeaveDungeon.dtl",
-"MeatballQuip": "res://DialogicContent/MeatballQuip.dtl",
+"MeatballerQuip": "res://DialogicContent/MeatballerQuip.dtl",
 "NoodlesQuip": "res://DialogicContent/NoodlesQuip.dtl",
 "PotatoQuip": "res://DialogicContent/PotatoQuip.dtl",
 "SlamOrder": "res://DialogicContent/SlamOrder.dtl",
@@ -55,6 +56,7 @@ directories/dtl_directory={
 "SpagOrder": "res://DialogicContent/SpagOrder.dtl",
 "SpagReady": "res://DialogicContent/SpagReady.dtl",
 "SpagStart": "res://DialogicContent/SpagStart.dtl",
+"TempTutorial": "res://DialogicContent/TempTutorial.dtl",
 "TomatoQuip": "res://DialogicContent/TomatoQuip.dtl"
 }
 layout/style_list=["res://DialogicContent/QuipStyle.tres", "res://DialogicContent/PopupStyle.tres", "res://DialogicContent/ConversationStyle.tres"]

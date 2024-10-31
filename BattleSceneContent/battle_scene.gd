@@ -14,7 +14,9 @@ func _ready() -> void:
 	WorldState.battle_started.connect(cooler_opened)
 
 func cooler_opened(current_enemy):
+	print(current_enemy)
 	enemy = load(current_enemy)
+	print(enemy.name)
 	Dialogic.timeline_ended.connect(init)
 
 func init():
@@ -65,9 +67,7 @@ func set_health(health, max_health, health_label):
 
 func enemy_turn():
 	## todo -- incorporate enemy attack and defense stats into calculation
-	print(enemy.moves.size())
 	var move_num = randi() % enemy.moves.size()
-	print(move_num)
 	display_text("%s uses %s!" % [enemy.name, enemy.moves[move_num].name])
 	await textbox_closed
 	

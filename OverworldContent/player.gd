@@ -7,6 +7,7 @@ func _ready():
 	$AnimatedSprite2D.play("front_idle")
 	WorldState.battle_started.connect(play_quip)
 	WorldState.recipe_ready.connect(play_ready_quip)
+	update_self()
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -68,6 +69,17 @@ func play_anim(isMoving):
 		else:
 			anim.play("back_idle")
 
+func update_self():
+	if (WorldState.current_scene == "Diner"):
+		if(WorldState.first_loaded["Diner"]):
+			self.position = WorldState.diner_intro_pos
+		else:
+			self.position = WorldState.diner_door_pos
+	else:
+		if(WorldState.first_loaded[WorldState.current_scene]):
+			await self.is_node_ready()
+			play_dialogue(WorldState.current_recipe + "Start")
+
 func play_quip(enemy):
 	var enemy_name = load(enemy).name
 	play_dialogue(enemy_name + "Quip")
@@ -79,8 +91,9 @@ func ended_dialogue():
 func play_dialogue(timeline_name):
 	Dialogic.timeline_ended.connect(ended_dialogue)
 	set_physics_process(false)
-	var layout = Dialogic.start(timeline_name)
+	var layout = Dialogic.Styles.load_style("QuipStyle")
 	layout.register_character(load("res://DialogicContent/TonyCharacter.dch"), $".")
+	Dialogic.start(timeline_name)
 
 func play_ready_quip(current_recipe):
 	play_dialogue(current_recipe + "Ready")
