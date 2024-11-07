@@ -9,6 +9,9 @@ var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "
 var diner_intro_pos = Vector2(80, 140)
 var diner_door_pos = Vector2(49, 208)
 
+var dungeon_entrance_pos = {"BurgerDungeon": Vector2(80,74), "SpagDungeon": Vector2(80,74), "SlamDungeon": Vector2(80,74)}
+var dungeon_rest_pos = {"BurgerDungeon": Vector2(168,76), "SpagDungeon": Vector2(168,76), "SlamDungeon": Vector2(168,76)}
+
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
@@ -23,14 +26,13 @@ var current_scene = "Diner"
 
 func load_level_data():
 	current_recipe = recipes[level]
-	current_enemies = story_enemies[level]
+	current_enemies = story_enemies[level].duplicate(true)
 	current_ingredients = ingredients[level]
 	level += 1
 
 func start_battle():
 	var index = randi() % current_enemies.size()
 	var enemy = current_enemies.pop_at(index)
-	print(enemy)
 	emit_signal("battle_started", enemy)
 
 func ingredients_missing():
@@ -67,3 +69,17 @@ func load_next_level():
 	load_scene(current_recipe + "Dungeon")
 	await get_tree().create_timer(1).timeout
 	first_loaded[current_recipe + "Dungeon"] = false
+
+func reset_level():
+	current_enemies = []
+	for enemy in story_enemies[level - 1]:
+		var ingredient = load(enemy).ingredient
+		var ingredient_needed = true
+		for item in PlayerState.items:
+			if (item == ingredient):
+				ingredient_needed = false
+		if (ingredient_needed):
+			current_enemies.append(enemy)
+	while current_enemies.size() < story_enemies[level - 1].size():
+		current_enemies.append(extra_enemies[randi() % extra_enemies.size()])
+	load_next_level()

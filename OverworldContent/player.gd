@@ -77,8 +77,11 @@ func update_self():
 			self.position = WorldState.diner_door_pos
 	else:
 		if(WorldState.first_loaded[WorldState.current_scene]):
+			self.position = WorldState.dungeon_entrance_pos[WorldState.current_scene]
 			await self.is_node_ready()
 			play_dialogue(WorldState.current_recipe + "Start")
+		else:
+			self.position = WorldState.dungeon_rest_pos[WorldState.current_scene]
 
 func play_quip(enemy):
 	var enemy_name = load(enemy).name

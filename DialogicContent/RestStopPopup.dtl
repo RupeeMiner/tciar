@@ -1,0 +1,4 @@
+PopupCharacter: Take a bathroom break? (This will reset the level and respawn enemies.)
+- Sure.
+	do WorldState.reset_level()
+- Nope.

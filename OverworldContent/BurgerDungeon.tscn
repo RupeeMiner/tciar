@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://dj1nayxt6d1w2"]
+[gd_scene load_steps=10 format=4 uid="uid://dj1nayxt6d1w2"]
 
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="1_0gqmp"]
 [ext_resource type="Script" path="res://OverworldContent/burger_dungeon.gd" id="1_vve7x"]
 [ext_resource type="PackedScene" uid="uid://b3u0j66gmm7y7" path="res://OverworldContent/Cooler.tscn" id="2_0rkvj"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="3_qu8py"]
+[ext_resource type="PackedScene" uid="uid://dvxcwg525iddr" path="res://OverworldContent/RestStop.tscn" id="4_acws7"]
 [ext_resource type="PackedScene" uid="uid://dpyyw3fn617fo" path="res://BattleSceneContent/BattleScene.tscn" id="4_iw76f"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4pm8d"]
 scenes/1/scene = ExtResource("2_0rkvj")
+scenes/2/scene = ExtResource("4_acws7")
 
 [sub_resource type="TileSet" id="TileSet_o6m6a"]
 sources/0 = SubResource("TileSetScenesCollectionSource_4pm8d")
@@ -24,11 +26,11 @@ tile_map_data = PackedByteArray("AAAAAAAAEwACAAIAAGAAAAEAEwAAAAQAAGAAAAIAEwAAAAQ
 tile_set = ExtResource("1_0gqmp")
 
 [node name="Interactables" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAQAAAAAAAAAAQANAAgAAAAAAAAAAQAOABAAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAHAAQAAAAAAAAAAQANAAgAAAAAAAAAAQAOABAAAAAAAAAAAQAKAAQAAAAAAAAAAgA=")
 tile_set = SubResource("TileSet_o6m6a")
 
 [node name="Player" parent="." instance=ExtResource("3_qu8py")]
-position = Vector2(80, 74)
+position = Vector2(168, 76)
 
 [node name="ExitArea" type="Area2D" parent="."]
 
