@@ -9,8 +9,8 @@ var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "
 var diner_intro_pos = Vector2(80, 140)
 var diner_door_pos = Vector2(49, 208)
 
-var dungeon_entrance_pos = {"BurgerDungeon": Vector2(80,74), "SpagDungeon": Vector2(80,74), "SlamDungeon": Vector2(80,74)}
-var dungeon_rest_pos = {"BurgerDungeon": Vector2(168,76), "SpagDungeon": Vector2(168,76), "SlamDungeon": Vector2(168,76)}
+var dungeon_entrance_pos = {"BurgerDungeon": Vector2(880, 784), "SpagDungeon": Vector2(1232,1229), "SlamDungeon": Vector2(80,74)}
+var dungeon_rest_pos = {"BurgerDungeon": Vector2(1541,229), "SpagDungeon": Vector2(160,266), "SlamDungeon": Vector2(168,76)}
 
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
