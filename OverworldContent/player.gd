@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const speed = 100
 var current_dir = "none"
+var quipped = false
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
@@ -99,7 +100,9 @@ func play_dialogue(timeline_name):
 	Dialogic.start(timeline_name)
 
 func play_ready_quip(current_recipe):
-	play_dialogue(current_recipe + "Ready")
+	if (!quipped):
+		play_dialogue(current_recipe + "Ready")
+		quipped = true
 
 func player():
 	pass

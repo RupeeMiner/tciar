@@ -7,4 +7,5 @@ extends Resource
 @export var attack: int = 10
 @export var defense: int = 10
 @export var speed: int = 10
-@export var moves: Array[Resource]
+@export var moves: Array[String]
+@export var weakness: String = "Attack"

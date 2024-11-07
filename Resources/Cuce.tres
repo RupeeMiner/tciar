@@ -1,6 +1,5 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://btgowg0v3y84x"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://btgowg0v3y84x"]
 
-[ext_resource type="Resource" uid="uid://bgjy3hmohyjc3" path="res://Resources/BurnAttack.tres" id="1_40r1j"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_72jor"]
 [ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="2_0b83g"]
 
@@ -9,8 +8,9 @@ script = ExtResource("1_72jor")
 name = "Cuce"
 ingredient = "Cucumber"
 texture = ExtResource("2_0b83g")
-health = 30
-attack = 10
-defense = 10
-speed = 10
-moves = Array[Resource]([ExtResource("1_40r1j")])
+health = 8
+attack = 4
+defense = 0
+speed = 2
+moves = Array[String](["atk"])
+weakness = "Attack"

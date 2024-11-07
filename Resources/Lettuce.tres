@@ -1,7 +1,6 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ddg0ehxij35lu"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ddg0ehxij35lu"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_hutm8"]
-[ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_jrigj"]
 [ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="2_rm2th"]
 
 [resource]
@@ -9,8 +8,9 @@ script = ExtResource("1_hutm8")
 name = "Lettuce"
 ingredient = "Lettuce"
 texture = ExtResource("2_rm2th")
-health = 30
-attack = 10
-defense = 10
-speed = 10
-moves = Array[Resource]([ExtResource("1_jrigj")])
+health = 10
+attack = 3
+defense = 0
+speed = 0
+moves = Array[String](["atk"])
+weakness = "Attack"

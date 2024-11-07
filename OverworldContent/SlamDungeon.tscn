@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://b35xyrdlp7gah"]
 
-[ext_resource type="Script" path="res://OverworldContent/burger_dungeon.gd" id="1_xncrd"]
+[ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_xncrd"]
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="2_kgpm5"]
 [ext_resource type="PackedScene" uid="uid://b3u0j66gmm7y7" path="res://OverworldContent/Cooler.tscn" id="3_l1ard"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="4_qqagl"]
@@ -15,7 +15,7 @@ sources/0 = SubResource("TileSetScenesCollectionSource_4pm8d")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuf8f"]
 size = Vector2(24, 22)
 
-[node name="BurgerDungeon" type="Node2D"]
+[node name="SlamDungeon" type="Node2D"]
 script = ExtResource("1_xncrd")
 
 [node name="World" type="TileMapLayer" parent="."]

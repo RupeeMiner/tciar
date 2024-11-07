@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://dj1nayxt6d1w2"]
 
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="1_0gqmp"]
-[ext_resource type="Script" path="res://OverworldContent/burger_dungeon.gd" id="1_vve7x"]
+[ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_vve7x"]
 [ext_resource type="PackedScene" uid="uid://b3u0j66gmm7y7" path="res://OverworldContent/Cooler.tscn" id="2_0rkvj"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="3_qu8py"]
 [ext_resource type="PackedScene" uid="uid://dvxcwg525iddr" path="res://OverworldContent/RestStop.tscn" id="4_acws7"]
