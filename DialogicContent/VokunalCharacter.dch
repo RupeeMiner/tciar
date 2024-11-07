@@ -17,7 +17,7 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Textures/paper_assets/AlienSquidPaperBG.png\""
+"image": "\"res://Textures/paper_assets/AlienSquidFinalPNG.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -50),

@@ -35,7 +35,7 @@ position = Vector2(80, 51)
 shape = SubResource("RectangleShape2D_ga12b")
 
 [node name="Interactables" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAALAAQAAAAAAAAAAgAMAAgAAAAAAAAAAQAIAAcAAAAAAAAAAQAEAAkAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAALAAQAAAAAAAAAAgAIAAcAAAAAAAAAAQAEAAkAAAAAAAAAAQANAAgAAAAAAAAAAQA=")
 tile_set = SubResource("TileSet_o6m6a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
