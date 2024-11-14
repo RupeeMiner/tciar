@@ -10,7 +10,7 @@ var diner_intro_pos = Vector2(80, 140)
 var diner_door_pos = Vector2(49, 208)
 
 var dungeon_entrance_pos = {"BurgerDungeon": Vector2(880, 784), "SpagDungeon": Vector2(1232,1229), "SlamDungeon": Vector2(76,79)}
-var dungeon_rest_pos = {"BurgerDungeon": Vector2(1553, 203), "SpagDungeon": Vector2(110, 240), "SlamDungeon": Vector2(1936,179)}
+var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vector2(110, 240), "SlamDungeon": Vector2(1936,179)}
 
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
@@ -73,6 +73,7 @@ func load_next_level():
 	first_loaded[current_recipe + "Dungeon"] = false
 
 func reset_level():
+	print("Hi")
 	current_enemies = []
 	for enemy in story_enemies[level - 1]:
 		var ingredient = load(enemy).ingredient

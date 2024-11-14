@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b35xyrdlp7gah"]
+[gd_scene load_steps=11 format=4 uid="uid://b35xyrdlp7gah"]
 
 [ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_xncrd"]
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="2_kgpm5"]
@@ -17,6 +17,9 @@ sources/0 = SubResource("TileSetScenesCollectionSource_krmxk")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ga12b"]
 size = Vector2(27, 27)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi4pt"]
+size = Vector2(25, 28)
+
 [node name="SlamDungeon" type="Node2D"]
 position = Vector2(-23, 619)
 script = ExtResource("1_xncrd")
@@ -27,7 +30,7 @@ tile_map_data = PackedByteArray("AAABAAAAEwAGAAQAAGABAAQAEwAGAAQAADABAAIAEwAAAAA
 tile_set = ExtResource("2_kgpm5")
 
 [node name="Interactables" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAB4AAsAAAAAAAAAAgAXAAMAAAAAAAAAAQBdAOT/AAAAAAAAAQBTAAoAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAXAAMAAAAAAAAAAQBdAOT/AAAAAAAAAQBTAAoAAAAAAAAAAQA=")
 tile_set = SubResource("TileSet_o6m6a")
 
 [node name="Player" parent="." instance=ExtResource("4_qqagl")]
@@ -45,3 +48,10 @@ shape = SubResource("RectangleShape2D_ga12b")
 process_mode = 3
 visible = false
 scale = Vector2(3.3, 3.3)
+
+[node name="RestArea" type="Area2D" parent="."]
+position = Vector2(1600, 1530)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestArea"]
+position = Vector2(335.5, -1328)
+shape = SubResource("RectangleShape2D_fi4pt")

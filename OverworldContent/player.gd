@@ -77,7 +77,7 @@ func update_self():
 			self.position = WorldState.diner_intro_pos
 		else:
 			self.position = WorldState.diner_door_pos
-	else:
+	elif (WorldState.current_scene != "Restroom"):
 		if(WorldState.first_loaded[WorldState.current_scene]):
 			self.position = WorldState.dungeon_entrance_pos[WorldState.current_scene]
 			await self.is_node_ready()

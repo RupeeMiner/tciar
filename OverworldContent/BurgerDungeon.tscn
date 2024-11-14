@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dj1nayxt6d1w2"]
+[gd_scene load_steps=11 format=4 uid="uid://dj1nayxt6d1w2"]
 
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="1_0gqmp"]
 [ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_vve7x"]
@@ -17,6 +17,9 @@ sources/0 = SubResource("TileSetScenesCollectionSource_4pm8d")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuf8f"]
 size = Vector2(24, 29)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yuok"]
+size = Vector2(24, 28)
+
 [node name="BurgerDungeon" type="Node2D"]
 script = ExtResource("1_vve7x")
 
@@ -27,7 +30,7 @@ tile_set = ExtResource("1_0gqmp")
 
 [node name="Interactables" type="TileMapLayer" parent="."]
 position = Vector2(592, 1200)
-tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAQA7AOz/AAAAAAAAAQDo/8r/AAAAAAAAAQA8AMH/AAAAAAAAAgA=")
+tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAQA7AOz/AAAAAAAAAQDo/8r/AAAAAAAAAQA=")
 tile_set = SubResource("TileSet_o6m6a")
 
 [node name="Player" parent="." instance=ExtResource("3_qu8py")]
@@ -40,6 +43,13 @@ position = Vector2(800, 765)
 position = Vector2(80, 44)
 shape = SubResource("RectangleShape2D_nuf8f")
 
+[node name="RestArea" type="Area2D" parent="."]
+position = Vector2(1600, 1530)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestArea"]
+position = Vector2(-48, -1345)
+shape = SubResource("RectangleShape2D_7yuok")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="BattleScene" parent="CanvasLayer" instance=ExtResource("4_iw76f")]
@@ -48,3 +58,4 @@ visible = false
 scale = Vector2(3.3, 3.3)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_entered" from="RestArea" to="." method="_on_rest_area_body_entered"]
