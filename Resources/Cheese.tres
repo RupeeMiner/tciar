@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://dnjtja57pydjb"]
 
+[ext_resource type="Texture2D" uid="uid://c80yufkyvky0s" path="res://Textures/paper_assets/Final Ingredients/CheesePaper.png" id="2_rgken"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_n3w2j"]
-[ext_resource type="Texture2D" uid="uid://dqj13yi0nyl4d" path="res://Textures/paper_assets/CheesePaperPNG_V2.png" id="4_frrny"]
 
 [resource]
 script = ExtResource("3_n3w2j")
 name = "Cheese"
 ingredient = "Cheese Slice"
-texture = ExtResource("4_frrny")
+texture = ExtResource("2_rgken")
 health = 15
 attack = 3
 defense = 0

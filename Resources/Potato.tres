@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://dad6deuudnmnp"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="2_7cgdb"]
-[ext_resource type="Texture2D" uid="uid://c8lbhmssrj3me" path="res://Textures/paper_assets/PotatoPaperPNGScaled.png" id="3_td0pp"]
+[ext_resource type="Texture2D" uid="uid://c0w0ham0c5w7s" path="res://Textures/paper_assets/Final Ingredients/PotatoPaper.png" id="2_kp2ha"]
 
 [resource]
 script = ExtResource("2_7cgdb")
 name = "Potato"
 ingredient = "Potato"
-texture = ExtResource("3_td0pp")
+texture = ExtResource("2_kp2ha")
 health = 15
 attack = 5
 defense = 0

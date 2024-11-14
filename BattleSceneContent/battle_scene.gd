@@ -60,7 +60,7 @@ func set_health(health, max_health, health_label):
 
 func enemy_turn():
 	var move_num = randi() % enemy.moves.size()
-	display_text("%s uses %s!" % [enemy.name, enemy.moves[move_num]])
+	display_text("%s attacks!" % enemy.name)
 	await textbox_closed
 	
 	var damage = enemy.attack - PlayerState.defense

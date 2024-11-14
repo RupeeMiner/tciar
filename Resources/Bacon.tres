@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://cvfqovp6jdx5x"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="2_3f41k"]
-[ext_resource type="Texture2D" uid="uid://bslp01u417mxi" path="res://Textures/paper_assets/BaconPaperPNGScaled.png" id="3_d0208"]
+[ext_resource type="Texture2D" uid="uid://ch0m50pl3y0nd" path="res://Textures/paper_assets/Final Ingredients/BaconPaper.png" id="2_bj2ts"]
 
 [resource]
 script = ExtResource("2_3f41k")
 name = "Bacon"
 ingredient = "Bacon"
-texture = ExtResource("3_d0208")
+texture = ExtResource("2_bj2ts")
 health = 8
 attack = 4
 defense = 2

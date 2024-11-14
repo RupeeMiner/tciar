@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://c2f872uvavhnc"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="2_8dyai"]
-[ext_resource type="Texture2D" uid="uid://bcxa2i6m14280" path="res://Textures/paper_assets/TomatoPaperPNGScaled.png" id="3_o0lds"]
+[ext_resource type="Texture2D" uid="uid://cjdfthse1nugc" path="res://Textures/paper_assets/Final Ingredients/TomatoPaper.png" id="2_vmpne"]
 
 [resource]
 script = ExtResource("2_8dyai")
 name = "Tomato"
 ingredient = "Tomato"
-texture = ExtResource("3_o0lds")
+texture = ExtResource("2_vmpne")
 health = 10
 attack = 3
 defense = 1

@@ -72,18 +72,18 @@ func play_anim(isMoving):
 
 func update_self():
 	pass
-	#if (WorldState.current_scene == "Diner"):
-		#if(WorldState.first_loaded["Diner"]):
-			#self.position = WorldState.diner_intro_pos
-		#else:
-			#self.position = WorldState.diner_door_pos
-	#else:
-		#if(WorldState.first_loaded[WorldState.current_scene]):
-			#self.position = WorldState.dungeon_entrance_pos[WorldState.current_scene]
-			#await self.is_node_ready()
-			#play_dialogue(WorldState.current_recipe + "Start")
-		#else:
-			#self.position = WorldState.dungeon_rest_pos[WorldState.current_scene]
+	if (WorldState.current_scene == "Diner"):
+		if(WorldState.first_loaded["Diner"]):
+			self.position = WorldState.diner_intro_pos
+		else:
+			self.position = WorldState.diner_door_pos
+	else:
+		if(WorldState.first_loaded[WorldState.current_scene]):
+			self.position = WorldState.dungeon_entrance_pos[WorldState.current_scene]
+			await self.is_node_ready()
+			play_dialogue(WorldState.current_recipe + "Start")
+		else:
+			self.position = WorldState.dungeon_rest_pos[WorldState.current_scene]
 
 func play_quip(enemy):
 	var enemy_name = load(enemy).name

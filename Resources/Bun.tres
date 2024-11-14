@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://drw3vkgbrkafg"]
 
+[ext_resource type="Texture2D" uid="uid://d1o3lt4l34ngp" path="res://Textures/paper_assets/Final Ingredients/BurgerPunPaper.png" id="2_wx2b1"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_cry7g"]
-[ext_resource type="Texture2D" uid="uid://c26b14a0xjri2" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="4_0474s"]
 
 [resource]
 script = ExtResource("3_cry7g")
 name = "Bun"
 ingredient = "Hamburger Bun"
-texture = ExtResource("4_0474s")
+texture = ExtResource("2_wx2b1")
 health = 12
 attack = 3
 defense = 0

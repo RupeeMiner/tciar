@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://btgowg0v3y84x"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_72jor"]
-[ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="2_0b83g"]
+[ext_resource type="Texture2D" uid="uid://ox4nc8djvnh4" path="res://Textures/paper_assets/Final Ingredients/CucumberPaper.png" id="2_s14gc"]
 
 [resource]
 script = ExtResource("1_72jor")
 name = "Cuce"
 ingredient = "Cucumber"
-texture = ExtResource("2_0b83g")
+texture = ExtResource("2_s14gc")
 health = 8
 attack = 4
 defense = 0

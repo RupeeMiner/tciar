@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://ddg0ehxij35lu"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_hutm8"]
-[ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="2_rm2th"]
+[ext_resource type="Texture2D" uid="uid://br7oa834ahyi" path="res://Textures/paper_assets/Final Ingredients/LettucePaper.png" id="2_qluco"]
 
 [resource]
 script = ExtResource("1_hutm8")
 name = "Lettuce"
 ingredient = "Lettuce"
-texture = ExtResource("2_rm2th")
+texture = ExtResource("2_qluco")
 health = 10
 attack = 3
 defense = 0
