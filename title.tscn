@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://daxr1niw8bcsb"]
+
+[ext_resource type="Texture2D" uid="uid://ya7gg4na71i7" path="res://Textures/pixel_assets/titleScreen/mainTitleBack.png" id="1_qiuum"]
+[ext_resource type="Texture2D" uid="uid://c6o0a1cw3n1ju" path="res://Textures/pixel_assets/titleScreen/option.png" id="2_ihphh"]
+
+[node name="TitleButtons" type="Node2D"]
+
+[node name="titleTexture" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qiuum")
+stretch_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 198.0
+offset_top = 121.0
+offset_right = 269.0
+offset_bottom = 196.0
+texture_normal = ExtResource("2_ihphh")
