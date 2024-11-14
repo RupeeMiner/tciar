@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg46vhbjiuvbd"
-path="res://.godot/imported/optionButton.png-9b13eb43aecbb684d3acd0a1e82d7217.ctex"
+uid="uid://drbtq45k06do6"
+path="res://.godot/imported/mainTitleBack.png-761dc1220012cb049b09caab4cf5b057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/titleScreen/optionButton.png"
-dest_files=["res://.godot/imported/optionButton.png-9b13eb43aecbb684d3acd0a1e82d7217.ctex"]
+source_file="res://Resources/mainTitleBack.png"
+dest_files=["res://.godot/imported/mainTitleBack.png-761dc1220012cb049b09caab4cf5b057.ctex"]
 
 [params]
 
