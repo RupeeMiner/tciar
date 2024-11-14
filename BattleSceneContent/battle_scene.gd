@@ -7,8 +7,6 @@ signal textbox_closed
 var current_enemy_health = 0
 var current_player_health = 0
 
-var moves = []
-
 func _ready() -> void:
 	visible = false
 	WorldState.battle_started.connect(cooler_opened)
@@ -28,12 +26,9 @@ func init():
 	
 	$EnemyTexture.texture = enemy.texture
 	
-	for item in PlayerState.moves:
-		moves.append(load(item))
-	
-	$Actions/MovesMenu/Move1.text = moves[0].name
-	$Actions/MovesMenu/Move2.text = moves[1].name
-	$Actions/MovesMenu/Move3.text = moves[2].name
+	$Actions/MovesMenu/Move1.text = PlayerState.moves[0]
+	$Actions/MovesMenu/Move2.text = PlayerState.moves[1]
+	$Actions/MovesMenu/Move3.text = PlayerState.moves[2]
 	
 	set_health(PlayerState.current_health, PlayerState.max_health, $PlayerHealth)
 	set_health(enemy.health, enemy.health, $EnemyHealth)
@@ -64,14 +59,11 @@ func set_health(health, max_health, health_label):
 	health_label.text = "HP: %d/%d" % [health, max_health]
 
 func enemy_turn():
-	## todo -- incorporate enemy attack and defense stats into calculation
-	print(enemy.moves.size())
 	var move_num = randi() % enemy.moves.size()
-	print(move_num)
-	display_text("%s uses %s!" % [enemy.name, enemy.moves[move_num].name])
+	display_text("%s uses %s!" % [enemy.name, enemy.moves[move_num]])
 	await textbox_closed
 	
-	var damage = enemy.moves[move_num].damage_scalar
+	var damage = enemy.attack - PlayerState.defense
 	
 	current_player_health = max(0, current_player_health - damage)
 	set_health(current_player_health, PlayerState.max_health, $PlayerHealth)
@@ -83,6 +75,7 @@ func enemy_turn():
 		display_text("You were defeated! :(")
 		await textbox_closed
 		
+		#todo: game over
 		get_tree().paused = false
 		get_tree().reload_current_scene()
 		visible = false
@@ -92,11 +85,14 @@ func enemy_turn():
 	$Actions/MovesMenu.hide()
 
 func player_attack(move_num):
-	display_text("You used %s!" % moves[move_num].name)
+	display_text("You used %s!" % PlayerState.moves[move_num])
 	await textbox_closed
 	
-	## todo -- incorporate player attack and defense stats into calculation
-	var damage = moves[move_num].damage_scalar
+	var damage = PlayerState.attack - enemy.defense
+	if (PlayerState.moves[move_num] == enemy.weakness):
+		display_text("It was super effective!")
+		await textbox_closed
+		damage = damage + 2
 	
 	current_enemy_health = max(0, current_enemy_health - damage)
 	set_health(current_enemy_health, enemy.health, $EnemyHealth)

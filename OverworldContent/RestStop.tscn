@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvxcwg525iddr"]
+
+[ext_resource type="Script" path="res://OverworldContent/rest_stop.gd" id="1_84j1q"]
+[ext_resource type="Texture2D" uid="uid://dccfojy7hmbbj" path="res://Textures/pixel_assets/ShipTiles/Space.png" id="2_hrefy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh24g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l5ha6"]
+radius = 14.0
+
+[node name="RestStop" type="Node2D"]
+script = ExtResource("1_84j1q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_hrefy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wh24g")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_l5ha6")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="interactable_area" to="." method="_on_interactable_area_body_exited"]

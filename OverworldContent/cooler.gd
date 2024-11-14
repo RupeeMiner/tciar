@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("open")
 
 func _on_interactable_area_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.has_method("player"):
 		playerInArea = true
 
 func _on_interactable_area_body_exited(body: Node2D) -> void:

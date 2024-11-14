@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=4 uid="uid://edvcuag1uj0v"]
+[gd_scene load_steps=5 format=4 uid="uid://edvcuag1uj0v"]
 
+[ext_resource type="Script" path="res://OverworldContent/diner.gd" id="1_n57w0"]
 [ext_resource type="TileSet" uid="uid://djmo2eadxldvx" path="res://Resources/DinerTileSet.tres" id="1_ssg1g"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="2_2vc71"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1xb0"]
+size = Vector2(10, 24)
+
 [node name="Diner" type="Node2D"]
+script = ExtResource("1_n57w0")
 
 [node name="DinerTiles" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -11,4 +16,13 @@ tile_map_data = PackedByteArray("AAAAAAIAGAAAAAEAAAABAAIAGAAAAAEAAAACAAIAGAAAAAE
 tile_set = ExtResource("1_ssg1g")
 
 [node name="Player" parent="." instance=ExtResource("2_2vc71")]
-position = Vector2(40, 208)
+position = Vector2(49, 208)
+
+[node name="ExitArea" type="Area2D" parent="."]
+position = Vector2(80, 140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+position = Vector2(-45, 68)
+shape = SubResource("RectangleShape2D_m1xb0")
+
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

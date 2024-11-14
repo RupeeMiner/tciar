@@ -1,6 +1,5 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://drw3vkgbrkafg"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://drw3vkgbrkafg"]
 
-[ext_resource type="Resource" uid="uid://njpri1oj6eqf" path="res://Resources/ChopAttack.tres" id="1_v0kyo"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="3_cry7g"]
 [ext_resource type="Texture2D" uid="uid://c26b14a0xjri2" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="4_0474s"]
 
@@ -9,8 +8,9 @@ script = ExtResource("3_cry7g")
 name = "Bun"
 ingredient = "Hamburger Bun"
 texture = ExtResource("4_0474s")
-health = 10
-attack = 5
-defense = 5
-speed = 3
-moves = Array[Resource]([ExtResource("1_v0kyo")])
+health = 12
+attack = 3
+defense = 0
+speed = 0
+moves = Array[String](["atk"])
+weakness = "Toast"
