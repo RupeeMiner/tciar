@@ -1,0 +1,4 @@
+PopupCharacter: Ready to get outta here?
+- Yep.
+	do WorldState.reset_level()
+- Not yet.
