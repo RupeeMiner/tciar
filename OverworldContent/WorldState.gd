@@ -73,7 +73,6 @@ func load_next_level():
 	first_loaded[current_recipe + "Dungeon"] = false
 
 func reset_level():
-	print("Hi")
 	current_enemies = []
 	for enemy in story_enemies[level - 1]:
 		var ingredient = load(enemy).ingredient

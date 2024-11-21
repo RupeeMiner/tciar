@@ -96,6 +96,10 @@ project/assembly_name="tciar"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+Player=""
+
 [gui]
 
 theme/custom_font="res://Resources/text/vertopal.com_scrawl-10.ttf"
