@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dj1nayxt6d1w2"]
+[gd_scene load_steps=12 format=4 uid="uid://dj1nayxt6d1w2"]
 
 [ext_resource type="TileSet" uid="uid://brb51mdqtblph" path="res://Resources/ShipTileSet.tres" id="1_0gqmp"]
 [ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_vve7x"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="3_qu8py"]
 [ext_resource type="PackedScene" uid="uid://dvxcwg525iddr" path="res://OverworldContent/RestStop.tscn" id="4_acws7"]
 [ext_resource type="PackedScene" uid="uid://dpyyw3fn617fo" path="res://BattleSceneContent/BattleScene.tscn" id="4_iw76f"]
+[ext_resource type="PackedScene" uid="uid://dxhku6mb4mds3" path="res://OverworldContent/Enemy/OverworldEnemy.tscn" id="7_rc7wb"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4pm8d"]
 scenes/1/scene = ExtResource("2_0rkvj")
@@ -56,6 +57,9 @@ shape = SubResource("RectangleShape2D_7yuok")
 process_mode = 3
 visible = false
 scale = Vector2(3.3, 3.3)
+
+[node name="OverworldEnemy" parent="." instance=ExtResource("7_rc7wb")]
+position = Vector2(869, 732)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="RestArea" to="." method="_on_rest_area_body_entered"]

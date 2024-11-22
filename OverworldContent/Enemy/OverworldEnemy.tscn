@@ -20,19 +20,37 @@ size = Vector2(18, 18)
 [node name="OverworldEnemy" type="CharacterBody2D"]
 script = ExtResource("1_eksa4")
 
-[node name="ContextMap" type="Node" parent="."]
+[node name="ContextMap" type="Node2D" parent="."]
 
-[node name="Up" type="RayCast2D" parent="ContextMap"]
-target_position = Vector2(0, -30)
+[node name="Orthogonal" type="Node2D" parent="ContextMap"]
 
-[node name="Down" type="RayCast2D" parent="ContextMap"]
-target_position = Vector2(0, 30)
+[node name="Up" type="RayCast2D" parent="ContextMap/Orthogonal"]
+target_position = Vector2(0, -20)
+collide_with_areas = true
 
-[node name="Left" type="RayCast2D" parent="ContextMap"]
-target_position = Vector2(-30, 0)
+[node name="Down" type="RayCast2D" parent="ContextMap/Orthogonal"]
+target_position = Vector2(0, 20)
 
-[node name="Right" type="RayCast2D" parent="ContextMap"]
-target_position = Vector2(30, 0)
+[node name="Left" type="RayCast2D" parent="ContextMap/Orthogonal"]
+target_position = Vector2(-20, 0)
+
+[node name="Right" type="RayCast2D" parent="ContextMap/Orthogonal"]
+target_position = Vector2(20, 0)
+
+[node name="Diagonal" type="Node2D" parent="ContextMap"]
+
+[node name="UpR" type="RayCast2D" parent="ContextMap/Diagonal"]
+target_position = Vector2(20, -20)
+collide_with_areas = true
+
+[node name="DownR" type="RayCast2D" parent="ContextMap/Diagonal"]
+target_position = Vector2(20, 20)
+
+[node name="UpL" type="RayCast2D" parent="ContextMap/Diagonal"]
+target_position = Vector2(-20, -20)
+
+[node name="DownL" type="RayCast2D" parent="ContextMap/Diagonal"]
+target_position = Vector2(-20, 20)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_60ptq")
