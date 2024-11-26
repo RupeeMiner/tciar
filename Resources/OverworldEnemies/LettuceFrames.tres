@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c3yfbbfnyvufj"]
+
+[ext_resource type="Texture2D" uid="uid://bkxnnocfrafag" path="res://Textures/pixel_assets/Enemies/Lettuce.png" id="1_8t7jd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihpuu"]
+atlas = ExtResource("1_8t7jd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82hj1"]
+atlas = ExtResource("1_8t7jd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxqxk"]
+atlas = ExtResource("1_8t7jd")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o4og"]
+atlas = ExtResource("1_8t7jd")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihpuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxqxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4og")
+}],
+"loop": true,
+"name": &"horizontal_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihpuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxqxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4og")
+}],
+"loop": true,
+"name": &"vertical_move",
+"speed": 5.0
+}]

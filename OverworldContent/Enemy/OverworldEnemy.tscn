@@ -1,7 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxhku6mb4mds3"]
+[gd_scene load_steps=9 format=3 uid="uid://dxhku6mb4mds3"]
 
 [ext_resource type="Script" path="res://OverworldContent/Enemy/overworld_enemy.gd" id="1_eksa4"]
-[ext_resource type="SpriteFrames" uid="uid://x62vsryvbtp3" path="res://Resources/OverworldEnemies/CuceFrames.tres" id="2_0yaiv"]
+[ext_resource type="Texture2D" uid="uid://cmyhuer2si7ue" path="res://Textures/pixel_assets/Enemies/Tomato.png" id="2_28xph"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p810"]
+atlas = ExtResource("2_28xph")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd6rm"]
+atlas = ExtResource("2_28xph")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gowou"]
+atlas = ExtResource("2_28xph")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2aus"]
+atlas = ExtResource("2_28xph")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqv7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p810")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd6rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gowou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2aus")
+}],
+"loop": true,
+"name": &"horizontal_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p810")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd6rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gowou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2aus")
+}],
+"loop": true,
+"name": &"vertical_move",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_by8km"]
 size = Vector2(18, 18)
@@ -28,8 +81,8 @@ target_position = Vector2(30, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = ExtResource("2_0yaiv")
-animation = &"horizontal_move"
+sprite_frames = SubResource("SpriteFrames_cqv7f")
+animation = &"vertical_move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_by8km")

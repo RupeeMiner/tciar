@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://8ma74sl3dn68"]
+
+[ext_resource type="Texture2D" uid="uid://dyjr5s7t5p450" path="res://Textures/pixel_assets/Enemies/meatball.png" id="1_mut3c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuw8y"]
+atlas = ExtResource("1_mut3c")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6ehs"]
+atlas = ExtResource("1_mut3c")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxv7x"]
+atlas = ExtResource("1_mut3c")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dbf5"]
+atlas = ExtResource("1_mut3c")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wncfy"]
+atlas = ExtResource("1_mut3c")
+region = Rect2(0, 32, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuw8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6ehs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxv7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dbf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wncfy")
+}],
+"loop": true,
+"name": &"horziontal_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuw8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6ehs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxv7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dbf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wncfy")
+}],
+"loop": true,
+"name": &"vertical_move",
+"speed": 5.0
+}]

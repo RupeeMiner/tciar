@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dmbdybagb32is"]
+
+[ext_resource type="Texture2D" uid="uid://co5lhrwevxgam" path="res://Textures/pixel_assets/Enemies/tater.png" id="1_5h7hc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l4kk"]
+atlas = ExtResource("1_5h7hc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn24k"]
+atlas = ExtResource("1_5h7hc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrfsy"]
+atlas = ExtResource("1_5h7hc")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4god"]
+atlas = ExtResource("1_5h7hc")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l4kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn24k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrfsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4god")
+}],
+"loop": true,
+"name": &"horziontal_move",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l4kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn24k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrfsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4god")
+}],
+"loop": true,
+"name": &"vertical_move",
+"speed": 8.0
+}]
