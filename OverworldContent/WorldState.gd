@@ -15,8 +15,8 @@ var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vect
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
-var story_enemies = [["res://Resources/Beefy.tres", "res://Resources/Bun.tres", "res://Resources/Cheese.tres"], ["res://Resources/Meatballs.tres", "res://Resources/Noodles.tres", "res://Resources/Tomato.tres"], ["res://Resources/Bacon.tres", "res://Resources/Egg.tres", "res://Resources/Potato.tres"]]
-var extra_enemies = ["res://Resources/Lettuce.tres","res://Resources/Cuce.tres"]
+var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballs", "Noodles", "Tomato"], ["Bacon", "Egg", "Potato"]]
+var extra_enemies = ["Lettuce","Cuce"]
 var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend","Boil","Sear"], "SlamDungeon": ["Beat","Fry","Shred"]}
 
 var current_recipe = ""

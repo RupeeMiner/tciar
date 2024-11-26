@@ -155,7 +155,7 @@ shape = SubResource("RectangleShape2D_tris7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ffdh0")
-animation = &"front_idle"
+animation = &"side_walk"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

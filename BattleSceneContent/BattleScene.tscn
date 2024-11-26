@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpyyw3fn617fo"]
 
 [ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_aflyk"]
-[ext_resource type="Resource" uid="uid://6qjljw47p3v4" path="res://Resources/Beefy.tres" id="2_34r8m"]
+[ext_resource type="Resource" uid="uid://6qjljw47p3v4" path="res://Resources/BattleEnemies/Beefy.tres" id="2_34r8m"]
 [ext_resource type="Texture2D" uid="uid://c26b14a0xjri2" path="res://Textures/paper_assets/BunPaperPNG_V2.png" id="3_85ph0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5lpl"]

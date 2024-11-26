@@ -12,7 +12,7 @@ func _ready() -> void:
 	WorldState.battle_started.connect(cooler_opened)
 
 func cooler_opened(current_enemy):
-	enemy = load(current_enemy)
+	enemy = load("res://Resources/BattleEnemies/" + current_enemy + ".tres")
 	Dialogic.timeline_ended.connect(init)
 
 func init():

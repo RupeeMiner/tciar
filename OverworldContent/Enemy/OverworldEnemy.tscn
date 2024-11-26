@@ -1,18 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxhku6mb4mds3"]
+[gd_scene load_steps=4 format=3 uid="uid://dxhku6mb4mds3"]
 
 [ext_resource type="Script" path="res://OverworldContent/Enemy/overworld_enemy.gd" id="1_eksa4"]
-[ext_resource type="Texture2D" uid="uid://mfeo6a3lemso" path="res://Textures/pixel_assets/Cooler Open.png" id="1_ksmnf"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_60ptq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_ksmnf")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://x62vsryvbtp3" path="res://Resources/OverworldEnemies/CuceFrames.tres" id="2_0yaiv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_by8km"]
 size = Vector2(18, 18)
@@ -25,36 +14,22 @@ script = ExtResource("1_eksa4")
 [node name="Orthogonal" type="Node2D" parent="ContextMap"]
 
 [node name="Up" type="RayCast2D" parent="ContextMap/Orthogonal"]
-target_position = Vector2(0, -20)
+target_position = Vector2(0, -30)
 collide_with_areas = true
 
 [node name="Down" type="RayCast2D" parent="ContextMap/Orthogonal"]
-target_position = Vector2(0, 20)
+target_position = Vector2(0, 30)
 
 [node name="Left" type="RayCast2D" parent="ContextMap/Orthogonal"]
-target_position = Vector2(-20, 0)
+target_position = Vector2(-30, 0)
 
 [node name="Right" type="RayCast2D" parent="ContextMap/Orthogonal"]
-target_position = Vector2(20, 0)
-
-[node name="Diagonal" type="Node2D" parent="ContextMap"]
-
-[node name="UpR" type="RayCast2D" parent="ContextMap/Diagonal"]
-target_position = Vector2(20, -20)
-collide_with_areas = true
-
-[node name="DownR" type="RayCast2D" parent="ContextMap/Diagonal"]
-target_position = Vector2(20, 20)
-
-[node name="UpL" type="RayCast2D" parent="ContextMap/Diagonal"]
-target_position = Vector2(-20, -20)
-
-[node name="DownL" type="RayCast2D" parent="ContextMap/Diagonal"]
-target_position = Vector2(-20, 20)
+target_position = Vector2(30, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_60ptq")
-animation = &"new_animation"
+texture_filter = 1
+sprite_frames = ExtResource("2_0yaiv")
+animation = &"horizontal_move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_by8km")

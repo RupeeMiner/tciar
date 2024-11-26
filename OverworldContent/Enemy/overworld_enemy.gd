@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
 var sight_range = 100
-var speed = 80
+var walk_speed = 30
+var run_speed = 35
+
+var direction
 var directions = [Vector2(0,-1), Vector2(0, 1), Vector2(-1, 0), Vector2(1,0)]
+var interest_direction = 0
+var old_safe = [0,1,2,3]
 var player
 
 func _ready():
@@ -10,27 +15,45 @@ func _ready():
 
 func _physics_process(delta):
 	var contexts = [0,0,0,0]
+	var speed = walk_speed
 	
 	var player_dir = global_position - player.global_position
-	if (player_dir.length() < 60):
+	if (player_dir.length() < 80):
+		speed = run_speed
 		for i in range(directions.size()):
-			contexts[i] += directions[i].dot(player_dir.normalized())
+			contexts[i] += 2 * directions[i].dot(player_dir.normalized())
 	
 	var i = 0
+	var safe = []
 	for raycast in $ContextMap/Orthogonal.get_children():
 		if (raycast.is_colliding()):
 			contexts[i] -= 5
+		else:
+			safe.append(i)
 		i +=1
 	
-	var index
-	if (contexts.count(contexts.max() == contexts.size() - 1)):
-		if (contexts.find(contexts.min()) in [0, 3]):
-			index = contexts.find(contexts.min()) + 1
-		else:
-			index = contexts.find(contexts.min()) - 1
-	elif (contexts.count(contexts.max() == contexts.size())):
-		index = contexts.find(contexts.max())
-	velocity.x = directions[index][0] * speed - (velocity.x * .9)
-	velocity.y = directions[index][1] * speed - (velocity.y * .9)
+	if safe != old_safe:
+		interest_direction = safe.pick_random()
+	
+	old_safe = safe
+	
+	contexts[interest_direction] += 2
+	
+	direction = contexts.find(contexts.max())
+	velocity = directions[direction] * speed
 	
 	move_and_slide()
+	play_anim()
+
+func play_anim():
+	var anim = $AnimatedSprite2D
+	
+	if (direction == 2): #left
+		anim.flip_h = false
+		anim.play("horizontal_move")
+	elif (direction == 3): #right
+		anim.flip_h = true
+		anim.play("horizontal_move")
+	else: #up and down
+		anim.flip_h = false
+		anim.play("vertical_move")
