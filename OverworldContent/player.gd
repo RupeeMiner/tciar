@@ -6,7 +6,7 @@ var quipped = false
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
-	WorldState.battle_started.connect(play_quip)
+	WorldState.enemy_spawned.connect(play_quip)
 	WorldState.recipe_ready.connect(play_ready_quip)
 	update_self()
 

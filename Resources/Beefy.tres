@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6qjljw47p3v4"]
+
+[ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_umnho"]
+[ext_resource type="Texture2D" uid="uid://nr851g4kwykg" path="res://Textures/paper_assets/Final Ingredients/BurgerPattyPaper.png" id="2_v6mnv"]
+
+[resource]
+script = ExtResource("1_umnho")
+name = "Beefy"
+ingredient = "Beef Patty"
+texture = ExtResource("2_v6mnv")
+health = 10
+attack = 4
+defense = 1
+speed = 2
+moves = Array[String](["atk"])
+weakness = "Smash"

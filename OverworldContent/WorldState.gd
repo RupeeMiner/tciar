@@ -3,6 +3,7 @@ extends Node
 signal battle_started(current_enemy)
 signal battle_ended()
 signal recipe_ready(current_recipe)
+signal enemy_spawned(enemy)
 
 var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "SlamDungeon": true}
 
@@ -32,9 +33,13 @@ func load_level_data():
 	PlayerState.moves = moves[current_recipe + "Dungeon"]
 	level += 1
 
-func start_battle():
+func spawn_enemy():
 	var index = randi() % current_enemies.size()
 	var enemy = current_enemies.pop_at(index)
+	emit_signal("enemy_spawned", enemy)
+	return enemy
+
+func start_battle(enemy):
 	emit_signal("battle_started", enemy)
 
 func ingredients_missing():

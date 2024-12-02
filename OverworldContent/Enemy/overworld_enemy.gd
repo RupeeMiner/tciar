@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+var enemy = "Cuce"
+
+var battle_ready = false
+
 var sight_range = 100
 var walk_speed = 30
 var run_speed = 35
@@ -12,6 +16,11 @@ var player
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
+	set_physics_process(false)
+	await get_tree().create_timer(2).timeout
+	set_physics_process(true)
+	await get_tree().create_timer(3)
+	battle_ready = true
 
 func _physics_process(delta):
 	var contexts = [0,0,0,0]
@@ -21,7 +30,7 @@ func _physics_process(delta):
 	if (player_dir.length() < 80):
 		speed = run_speed
 		for i in range(directions.size()):
-			contexts[i] += 2 * directions[i].dot(player_dir.normalized())
+			contexts[i] += directions[i].dot(player_dir.normalized())
 	
 	var i = 0
 	var safe = []
@@ -30,7 +39,7 @@ func _physics_process(delta):
 			contexts[i] -= 5
 		else:
 			safe.append(i)
-		i +=1
+		i += 1
 	
 	if safe != old_safe:
 		interest_direction = safe.pick_random()
@@ -48,12 +57,24 @@ func _physics_process(delta):
 func play_anim():
 	var anim = $AnimatedSprite2D
 	
+	if (direction == 0): # up
+		anim.flip_h = false
+		anim.play("up_move")
+	if (direction == 1): #down
+		anim.flip_h = false
+		anim.play("down_move")
 	if (direction == 2): #left
 		anim.flip_h = false
-		anim.play("horizontal_move")
+		anim.play("side_move")
 	elif (direction == 3): #right
 		anim.flip_h = true
-		anim.play("horizontal_move")
-	else: #up and down
-		anim.flip_h = false
-		anim.play("vertical_move")
+		anim.play("side_move")
+
+func _on_battle_area_body_entered(body: Node2D) -> void:
+	if (body.has_method("player")):
+		if (battle_ready):
+			WorldState.start_battle(enemy)
+
+func load_data(name):
+	enemy = name
+	$AnimatedSprite2D.sprite_frames = load("res://Resources/OverworldEnemies/" + name + "Frames.tres")

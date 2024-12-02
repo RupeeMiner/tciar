@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://7j6nbjk3rt8y"]
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://7j6nbjk3rt8y"]
 
 [ext_resource type="Texture2D" uid="uid://66nis14nw0mq" path="res://Textures/pixel_assets/Enemies/Egg.png" id="1_g4x5t"]
 
@@ -22,6 +22,22 @@ region = Rect2(0, 16, 16, 16)
 atlas = ExtResource("1_g4x5t")
 region = Rect2(16, 16, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddbhk"]
+atlas = ExtResource("1_g4x5t")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4gwo"]
+atlas = ExtResource("1_g4x5t")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oqtl"]
+atlas = ExtResource("1_g4x5t")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd3a3"]
+atlas = ExtResource("1_g4x5t")
+region = Rect2(32, 32, 16, 16)
+
 [resource]
 animations = [{
 "frames": [{
@@ -41,7 +57,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_gck0y")
 }],
 "loop": true,
-"name": &"horizontal_move",
+"name": &"down_move",
 "speed": 5.0
 }, {
 "frames": [{
@@ -61,6 +77,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_gck0y")
 }],
 "loop": true,
-"name": &"vertical_move",
+"name": &"side_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddbhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4gwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oqtl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd3a3")
+}],
+"loop": true,
+"name": &"up_move",
 "speed": 5.0
 }]

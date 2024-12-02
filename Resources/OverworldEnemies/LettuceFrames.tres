@@ -34,7 +34,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_0o4og")
 }],
 "loop": true,
-"name": &"horizontal_move",
+"name": &"down_move",
 "speed": 5.0
 }, {
 "frames": [{
@@ -51,6 +51,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_0o4og")
 }],
 "loop": true,
-"name": &"vertical_move",
+"name": &"side_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihpuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxqxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4og")
+}],
+"loop": true,
+"name": &"up_move",
 "speed": 5.0
 }]

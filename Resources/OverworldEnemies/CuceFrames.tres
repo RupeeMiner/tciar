@@ -97,7 +97,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yoxf1")
 }],
 "loop": true,
-"name": &"horizontal_move",
+"name": &"down_move",
 "speed": 8.0
 }, {
 "frames": [{
@@ -141,6 +141,50 @@ animations = [{
 "texture": SubResource("AtlasTexture_yoxf1")
 }],
 "loop": true,
-"name": &"vertical_move",
+"name": &"side_move",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7rfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avhfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd4vw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_448kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ys3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p60h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j03op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6idl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3mci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mieik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fln8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqoya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoxf1")
+}],
+"loop": true,
+"name": &"up_move",
 "speed": 8.0
 }]

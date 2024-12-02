@@ -2,6 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://ucou5mu60ry1" path="res://Textures/pixel_assets/Enemies/the Beef.png" id="1_6rdgq"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx0uf"]
+atlas = ExtResource("1_6rdgq")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajt5u"]
+atlas = ExtResource("1_6rdgq")
+region = Rect2(0, 32, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_efr7w"]
 atlas = ExtResource("1_6rdgq")
 region = Rect2(0, 0, 16, 16)
@@ -22,16 +30,19 @@ region = Rect2(0, 16, 16, 16)
 atlas = ExtResource("1_6rdgq")
 region = Rect2(16, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tx0uf"]
-atlas = ExtResource("1_6rdgq")
-region = Rect2(32, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ajt5u"]
-atlas = ExtResource("1_6rdgq")
-region = Rect2(0, 32, 16, 16)
-
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx0uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajt5u")
+}],
+"loop": true,
+"name": &"down_move",
+"speed": 2.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_efr7w")
@@ -49,7 +60,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_sksrt")
 }],
 "loop": true,
-"name": &"horizontal_move",
+"name": &"side_move",
 "speed": 5.0
 }, {
 "frames": [{
@@ -60,6 +71,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_ajt5u")
 }],
 "loop": true,
-"name": &"vertical_move",
+"name": &"up_move",
 "speed": 2.0
 }]

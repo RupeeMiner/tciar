@@ -9,14 +9,10 @@ var current_player_health = 0
 
 func _ready() -> void:
 	visible = false
-	WorldState.battle_started.connect(cooler_opened)
+	WorldState.battle_started.connect(init)
 
-func cooler_opened(current_enemy):
+func init(current_enemy):
 	enemy = load("res://Resources/BattleEnemies/" + current_enemy + ".tres")
-	Dialogic.timeline_ended.connect(init)
-
-func init():
-	Dialogic.timeline_ended.disconnect(init)
 	get_tree().paused = true
 	
 	visible = true
