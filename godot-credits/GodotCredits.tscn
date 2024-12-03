@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duv36vku4rplo"]
+
+[node name="GodotCredits" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="CreditsContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Line" type="Label" parent="CreditsContainer"]
+layout_mode = 0
+anchor_right = 1.0
+size_flags_horizontal = 3
+text = "Credits line"
+horizontal_alignment = 1
