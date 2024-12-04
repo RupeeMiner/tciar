@@ -4,14 +4,14 @@ extends Node2D
 
 var colliding_areas = [false, false, false, false]
 
-var isClosed = true
-var playerInArea = false
+var isClosed: bool = true
+var playerInArea: bool = false
 
 func _ready():
 	var i = 0
 	for node in $SpawnPoints.get_children():
-		node.get_child(0).body_entered.connect(player_entered_spawn, i)
-		node.get_child(0).body_exited.connect(player_exited_spawn, i)
+		node.get_child(0).body_entered.connect(player_entered_spawn.bind(i))
+		node.get_child(0).body_exited.connect(player_exited_spawn.bind(i))
 		i += 1
 
 func _process(delta: float) -> void:
@@ -53,6 +53,6 @@ func player_entered_spawn(body: Node2D, index):
 	if body.has_method("player"):
 		colliding_areas[index] = true
 
-func player_exited_spawn(body: Node2D, index):
+func player_exited_spawn(body: Node2D, index: int):
 	if body.has_method("player"):
 		colliding_areas[index] = false

@@ -59,7 +59,7 @@ visible = false
 scale = Vector2(3.3, 3.3)
 
 [node name="OverworldEnemy" parent="." instance=ExtResource("7_rc7wb")]
-position = Vector2(869, 732)
+position = Vector2(884, 747)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="RestArea" to="." method="_on_rest_area_body_entered"]

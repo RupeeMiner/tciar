@@ -51,7 +51,6 @@ directories/dtl_directory={
 "LettuceQuip": "res://DialogicContent/LettuceQuip.dtl",
 "MeatballerQuip": "res://DialogicContent/MeatballerQuip.dtl",
 "NoodlesQuip": "res://DialogicContent/NoodlesQuip.dtl",
-"PotatoQuip": "res://DialogicContent/PotatoQuip.dtl",
 "RestStopPopup": "res://DialogicContent/RestStopPopup.dtl",
 "RestroomExit": "res://DialogicContent/RestroomExit.dtl",
 "SlamOrder": "res://DialogicContent/SlamOrder.dtl",
@@ -60,6 +59,7 @@ directories/dtl_directory={
 "SpagOrder": "res://DialogicContent/SpagOrder.dtl",
 "SpagReady": "res://DialogicContent/SpagReady.dtl",
 "SpagStart": "res://DialogicContent/SpagStart.dtl",
+"TaterQuip": "res://DialogicContent/TaterQuip.dtl",
 "TempTutorial": "res://DialogicContent/TempTutorial.dtl",
 "TomatoQuip": "res://DialogicContent/TomatoQuip.dtl"
 }

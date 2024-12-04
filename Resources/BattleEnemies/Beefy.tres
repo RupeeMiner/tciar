@@ -14,3 +14,6 @@ defense = 1
 speed = 2
 moves = Array[String](["atk"])
 weakness = "Smash"
+sight_range = 100
+walk_speed = 50
+run_speed = 60

@@ -1,7 +1,7 @@
 extends Node
 
-signal battle_started(current_enemy)
-signal battle_ended()
+signal battle_started(enemy, enemy_health)
+signal battle_ended(enemy_health)
 signal recipe_ready(current_recipe)
 signal enemy_spawned(enemy)
 
@@ -16,7 +16,7 @@ var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vect
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
-var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballs", "Noodles", "Tomato"], ["Bacon", "Egg", "Potato"]]
+var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballs", "Noodles", "Tomato"], ["Bacon", "Egg", "Tater"]]
 var extra_enemies = ["Lettuce","Cuce"]
 var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend","Boil","Sear"], "SlamDungeon": ["Beat","Fry","Shred"]}
 
@@ -39,8 +39,11 @@ func spawn_enemy():
 	emit_signal("enemy_spawned", enemy)
 	return enemy
 
-func start_battle(enemy):
-	emit_signal("battle_started", enemy)
+func start_battle(enemy, enemy_health):
+	emit_signal("battle_started", enemy, enemy_health)
+
+func end_battle(enemy_health):
+	emit_signal("battle_ended", enemy_health)
 
 func ingredients_missing():
 	var ingredients_collected = false
@@ -80,7 +83,7 @@ func load_next_level():
 func reset_level():
 	current_enemies = []
 	for enemy in story_enemies[level - 1]:
-		var ingredient = load(enemy).ingredient
+		var ingredient = load("res://Resources/BattleEnemies/" + enemy + ".tres").ingredient
 		var ingredient_needed = true
 		for item in PlayerState.items:
 			if (item == ingredient):
