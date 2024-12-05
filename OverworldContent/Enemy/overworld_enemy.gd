@@ -31,7 +31,7 @@ func _physics_process(delta):
 		var speed = walk_speed
 		
 		var player_dir = global_position - player.global_position
-		if (player_dir.length() < 80):
+		if (player_dir.length() < sight_range):
 			speed = run_speed
 			for i in range(directions.size()):
 				contexts[i] += directions[i].dot(player_dir.normalized())

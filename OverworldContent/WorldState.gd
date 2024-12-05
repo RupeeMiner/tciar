@@ -83,7 +83,7 @@ func load_next_level():
 	coolers_closed = [true, true, true]
 	active_enemies = []
 	load_scene(current_recipe + "Dungeon")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(6).timeout
 	first_loaded[current_recipe + "Dungeon"] = false
 
 func reset_level():
