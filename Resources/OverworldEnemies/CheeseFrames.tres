@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c51rafbil81rf"]
+
+[ext_resource type="Texture2D" uid="uid://bsmuox2fktdpr" path="res://Textures/pixel_assets/Enemies/Cheese.png" id="1_besli"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r1dl"]
+atlas = ExtResource("1_besli")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiqk6"]
+atlas = ExtResource("1_besli")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hii3x"]
+atlas = ExtResource("1_besli")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8aa3"]
+atlas = ExtResource("1_besli")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r1dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiqk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hii3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8aa3")
+}],
+"loop": true,
+"name": &"down_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r1dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiqk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hii3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8aa3")
+}],
+"loop": true,
+"name": &"side_move",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r1dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiqk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hii3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8aa3")
+}],
+"loop": true,
+"name": &"up_move",
+"speed": 5.0
+}]
