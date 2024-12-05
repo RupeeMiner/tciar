@@ -1,9 +1,152 @@
-[gd_scene format=3 uid="uid://cjnujus1tx5bm"]
+[gd_scene load_steps=15 format=3 uid="uid://cjnujus1tx5bm"]
+
+[ext_resource type="Texture2D" uid="uid://dy8waqbs5naj7" path="res://Resources/battleUI/battleTextBox.png" id="1_ewts8"]
+[ext_resource type="Texture2D" uid="uid://bgs6a1pmy2luk" path="res://Resources/battleUI/battleBox.png" id="2_mt6id"]
+[ext_resource type="Texture2D" uid="uid://dui6s3t4rqt40" path="res://Resources/battleUI/flavorText.png" id="3_qu0h3"]
+[ext_resource type="Texture2D" uid="uid://bud022wegcbj4" path="res://Resources/battleUI/HPBox.png" id="4_by704"]
+[ext_resource type="Texture2D" uid="uid://bk1gatqh62nl7" path="res://Resources/battleUI/buttons/TOAST.png" id="5_mpcfu"]
+[ext_resource type="Texture2D" uid="uid://l4jxdijcfv1" path="res://Resources/battleUI/buttons/SMASH.png" id="6_icari"]
+[ext_resource type="Texture2D" uid="uid://blftc81vnw136" path="res://Resources/battleUI/buttons/MELT.png" id="7_os68v"]
+[ext_resource type="Texture2D" uid="uid://uxjuou6ay0dp" path="res://Resources/battleUI/buttons/BLEND.png" id="8_nfv73"]
+[ext_resource type="Texture2D" uid="uid://j70qe0580xjx" path="res://Resources/battleUI/buttons/BOIL.png" id="9_ixlek"]
+[ext_resource type="Texture2D" uid="uid://bjja22fm31t5v" path="res://Resources/battleUI/buttons/SEAR.png" id="10_ydd7b"]
+[ext_resource type="Texture2D" uid="uid://benbjpf2fs88b" path="res://Resources/battleUI/buttons/BEAT.png" id="11_hvy10"]
+[ext_resource type="Texture2D" uid="uid://cn7yu1b7t2yl6" path="res://Resources/battleUI/buttons/FRY.png" id="12_36hga"]
+[ext_resource type="Texture2D" uid="uid://d0lgowtj7vpn3" path="res://Resources/battleUI/buttons/SHRED.png" id="13_3tbgv"]
+[ext_resource type="Texture2D" uid="uid://edo84fi316a5" path="res://Resources/battleUI/buttons/RUN.png" id="14_cyrdu"]
 
 [node name="BattleSceneTextured" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -896.0
+offset_bottom = -424.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 224.0
+ratio = 1.1429
+stretch_mode = 0
+
+[node name="BattleTextBox" type="Sprite2D" parent="AspectRatioContainer"]
+texture_filter = 1
+position = Vector2(128, 192)
+texture = ExtResource("1_ewts8")
+
+[node name="BattleBox" type="Sprite2D" parent="AspectRatioContainer"]
+visible = false
+texture_filter = 1
+position = Vector2(128, 192)
+texture = ExtResource("2_mt6id")
+
+[node name="FlavorText" type="Sprite2D" parent="AspectRatioContainer"]
+visible = false
+texture_filter = 1
+position = Vector2(128, 148)
+texture = ExtResource("3_qu0h3")
+
+[node name="HpBox" type="Sprite2D" parent="AspectRatioContainer"]
+texture_filter = 1
+position = Vector2(224, 144)
+texture = ExtResource("4_by704")
+
+[node name="Burger" type="Node" parent="."]
+
+[node name="Toast" type="TextureButton" parent="Burger"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 172.0
+offset_right = 126.0
+offset_bottom = 190.0
+texture_normal = ExtResource("5_mpcfu")
+
+[node name="Smash" type="TextureButton" parent="Burger"]
+visible = false
+texture_filter = 1
+offset_left = 130.0
+offset_top = 172.0
+offset_right = 179.0
+offset_bottom = 190.0
+texture_normal = ExtResource("6_icari")
+
+[node name="Melt" type="TextureButton" parent="Burger"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 194.0
+offset_right = 126.0
+offset_bottom = 212.0
+texture_normal = ExtResource("7_os68v")
+
+[node name="Spaghetti" type="Node" parent="."]
+
+[node name="Blend" type="TextureButton" parent="Spaghetti"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 172.0
+offset_right = 126.0
+offset_bottom = 190.0
+texture_normal = ExtResource("8_nfv73")
+
+[node name="Boil" type="TextureButton" parent="Spaghetti"]
+visible = false
+texture_filter = 1
+offset_left = 130.0
+offset_top = 172.0
+offset_right = 179.0
+offset_bottom = 190.0
+texture_normal = ExtResource("9_ixlek")
+
+[node name="Sear" type="TextureButton" parent="Spaghetti"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 194.0
+offset_right = 126.0
+offset_bottom = 212.0
+texture_normal = ExtResource("10_ydd7b")
+
+[node name="Slam" type="Node" parent="."]
+
+[node name="Beat" type="TextureButton" parent="Slam"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 172.0
+offset_right = 126.0
+offset_bottom = 190.0
+texture_normal = ExtResource("11_hvy10")
+
+[node name="Fry" type="TextureButton" parent="Slam"]
+visible = false
+texture_filter = 1
+offset_left = 130.0
+offset_top = 172.0
+offset_right = 179.0
+offset_bottom = 190.0
+texture_normal = ExtResource("12_36hga")
+
+[node name="Shred" type="TextureButton" parent="Slam"]
+visible = false
+texture_filter = 1
+offset_left = 77.0
+offset_top = 194.0
+offset_right = 126.0
+offset_bottom = 212.0
+texture_normal = ExtResource("13_3tbgv")
+
+[node name="Run" type="TextureButton" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 2
+offset_left = 130.0
+offset_top = 194.0
+offset_right = 179.0
+offset_bottom = 212.0
+texture_normal = ExtResource("14_cyrdu")
