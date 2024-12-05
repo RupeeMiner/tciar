@@ -38,26 +38,23 @@ position = Vector2(128, 192)
 texture = ExtResource("1_ewts8")
 
 [node name="BattleBox" type="Sprite2D" parent="AspectRatioContainer"]
-visible = false
 texture_filter = 1
 position = Vector2(128, 192)
 texture = ExtResource("2_mt6id")
 
 [node name="FlavorText" type="Sprite2D" parent="AspectRatioContainer"]
-visible = false
 texture_filter = 1
 position = Vector2(128, 148)
 texture = ExtResource("3_qu0h3")
 
 [node name="HpBox" type="Sprite2D" parent="AspectRatioContainer"]
 texture_filter = 1
-position = Vector2(224, 144)
+position = Vector2(224, 142)
 texture = ExtResource("4_by704")
 
 [node name="Burger" type="Node" parent="."]
 
 [node name="Toast" type="TextureButton" parent="Burger"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 172.0
@@ -66,7 +63,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("5_mpcfu")
 
 [node name="Smash" type="TextureButton" parent="Burger"]
-visible = false
 texture_filter = 1
 offset_left = 130.0
 offset_top = 172.0
@@ -75,7 +71,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("6_icari")
 
 [node name="Melt" type="TextureButton" parent="Burger"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 194.0
@@ -86,7 +81,6 @@ texture_normal = ExtResource("7_os68v")
 [node name="Spaghetti" type="Node" parent="."]
 
 [node name="Blend" type="TextureButton" parent="Spaghetti"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 172.0
@@ -95,7 +89,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("8_nfv73")
 
 [node name="Boil" type="TextureButton" parent="Spaghetti"]
-visible = false
 texture_filter = 1
 offset_left = 130.0
 offset_top = 172.0
@@ -104,7 +97,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("9_ixlek")
 
 [node name="Sear" type="TextureButton" parent="Spaghetti"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 194.0
@@ -115,7 +107,6 @@ texture_normal = ExtResource("10_ydd7b")
 [node name="Slam" type="Node" parent="."]
 
 [node name="Beat" type="TextureButton" parent="Slam"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 172.0
@@ -124,7 +115,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("11_hvy10")
 
 [node name="Fry" type="TextureButton" parent="Slam"]
-visible = false
 texture_filter = 1
 offset_left = 130.0
 offset_top = 172.0
@@ -133,7 +123,6 @@ offset_bottom = 190.0
 texture_normal = ExtResource("12_36hga")
 
 [node name="Shred" type="TextureButton" parent="Slam"]
-visible = false
 texture_filter = 1
 offset_left = 77.0
 offset_top = 194.0
@@ -142,7 +131,6 @@ offset_bottom = 212.0
 texture_normal = ExtResource("13_3tbgv")
 
 [node name="Run" type="TextureButton" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 2
 offset_left = 130.0
