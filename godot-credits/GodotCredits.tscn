@@ -14,8 +14,10 @@ color = Color(0, 0, 0, 1)
 [node name="CreditsContainer" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 256.0
-offset_bottom = 224.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1153.0
+offset_bottom = 689.0
 
 [node name="Line" type="Label" parent="CreditsContainer"]
 layout_mode = 1
