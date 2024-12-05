@@ -1,13 +1,10 @@
-<<<<<<< Updated upstream
-[gd_scene format=3 uid="uid://duv36vku4rplo"]
-=======
 [gd_scene load_steps=3 format=3 uid="uid://duv36vku4rplo"]
 
 [ext_resource type="Script" path="res://godot-credits/GodotCredits.gd" id="1_gr4ws"]
 [ext_resource type="Texture2D" uid="uid://b4urdyuj5n378" path="res://godot-credits/FinalSpaceBGScaledDimmed.png" id="2_i48s1"]
->>>>>>> Stashed changes
 
 [node name="GodotCredits" type="Node2D"]
+script = ExtResource("1_gr4ws")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -15,17 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0, 0, 0, 1)
 
-<<<<<<< Updated upstream
-[node name="CreditsContainer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Line" type="Label" parent="CreditsContainer"]
-layout_mode = 0
-anchor_right = 1.0
-=======
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -79,6 +65,5 @@ offset_top = -17.0
 offset_right = 45.5
 grow_horizontal = 2
 grow_vertical = 0
->>>>>>> Stashed changes
 size_flags_horizontal = 3
 horizontal_alignment = 1

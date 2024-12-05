@@ -9,13 +9,8 @@ const title_color := Color.DARK_RED
 # var scroll_speed := base_speed
 var speed_up := false
 
-<<<<<<< Updated upstream
-@onready var line := $CreditsContainer/Line
-var started := false
-=======
 @onready var line := $SubViewportContainer/SubViewport/CreditsContainer/Line
-var started := true
->>>>>>> Stashed changes
+var started := false
 var finished := false
 
 var section
@@ -92,11 +87,12 @@ var credits = [
 func _process(delta):
 	var scroll_speed = base_speed * delta
 	
+	
 	if section_next:
+		print("Section next")
 		section_timer += delta * speed_up_multiplier if speed_up else delta
 		if section_timer >= section_time:
 			section_timer -= section_time
-			
 			if credits.size() > 0:
 				started = true
 				section = credits.pop_front()
@@ -104,21 +100,25 @@ func _process(delta):
 				add_line()
 	
 	else:
+		print("Not section next")
 		line_timer += delta * speed_up_multiplier if speed_up else delta
 		if line_timer >= line_time:
 			line_timer -= line_time
 			add_line()
 	
 	if speed_up:
+		print ("Speed up")
 		scroll_speed *= speed_up_multiplier
 	
 	if lines.size() > 0:
+		print("Lines remaining")
 		for l in lines:
 			l.position.y -= scroll_speed
 			if l.position.y < -l.get_line_height():
 				lines.erase(l)
 				l.queue_free()
 	elif started:
+		print("Finsih")
 		finish()
 
 
@@ -126,7 +126,7 @@ func finish():
 	if not finished:
 		finished = true
 		# This is called when the credits finish and returns to the main menu
-		#get_tree().change_scene_to_file("res://OverworldContent/Diner.tscn")
+		get_tree().change_scene_to_file("res://OverworldContent/Diner.tscn")
 
 
 func add_line():
