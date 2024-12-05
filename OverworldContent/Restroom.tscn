@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cqo8for1njqyq"]
+[gd_scene load_steps=12 format=4 uid="uid://cqo8for1njqyq"]
 
 [ext_resource type="Texture2D" uid="uid://cgegl0sdyhr8k" path="res://Textures/pixel_assets/bathroom/BathroomTiles.png" id="1_dk201"]
 [ext_resource type="Script" path="res://OverworldContent/restroom.gd" id="1_qt82t"]
@@ -45,6 +45,9 @@ tile_proxies/coords_level = [[0, Vector2i(0, 0)], [7, Vector2i(0, 0)], [1, Vecto
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_daemg"]
 size = Vector2(21, 24)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2qit"]
+size = Vector2(58.5, 29.5)
+
 [node name="Restroom" type="Node2D"]
 script = ExtResource("1_qt82t")
 
@@ -56,10 +59,18 @@ tile_set = SubResource("TileSet_wdlvg")
 [node name="Player" parent="." instance=ExtResource("4_r6ln1")]
 position = Vector2(43, 80)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ExitArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
 position = Vector2(23.5, 80)
 shape = SubResource("RectangleShape2D_daemg")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="LevelResetArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelResetArea"]
+position = Vector2(63.75, 26.25)
+shape = SubResource("RectangleShape2D_e2qit")
+
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_entered" from="LevelResetArea" to="." method="_on_level_reset_area_body_entered"]
+[connection signal="body_exited" from="LevelResetArea" to="." method="_on_level_reset_area_body_exited"]

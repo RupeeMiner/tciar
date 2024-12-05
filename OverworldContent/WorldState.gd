@@ -23,6 +23,10 @@ var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend",
 var current_recipe = ""
 var current_ingredients = []
 var current_enemies = []
+var coolers_closed = [true, true, true]
+var active_enemies = []
+
+var level_reset = false
 
 var current_scene = "Diner"
 
@@ -76,6 +80,8 @@ func load_scene(scene_name):
 
 func load_next_level():
 	PlayerState.current_health = PlayerState.max_health
+	coolers_closed = [true, true, true]
+	active_enemies = []
 	load_scene(current_recipe + "Dungeon")
 	await get_tree().create_timer(1).timeout
 	first_loaded[current_recipe + "Dungeon"] = false
@@ -93,3 +99,9 @@ func reset_level():
 	while current_enemies.size() < story_enemies[level - 1].size():
 		current_enemies.append(extra_enemies[randi() % extra_enemies.size()])
 	load_next_level()
+
+func return_to_dungeon():
+	if(level_reset):
+		reset_level()
+	else:
+		load_scene(current_recipe + "Dungeon")

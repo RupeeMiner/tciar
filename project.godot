@@ -53,6 +53,7 @@ directories/dtl_directory={
 "NoodlesQuip": "res://DialogicContent/NoodlesQuip.dtl",
 "RestStopPopup": "res://DialogicContent/RestStopPopup.dtl",
 "RestroomExit": "res://DialogicContent/RestroomExit.dtl",
+"RestroomReset": "res://DialogicContent/RestroomReset.dtl",
 "SlamOrder": "res://DialogicContent/SlamOrder.dtl",
 "SlamReady": "res://DialogicContent/SlamReady.dtl",
 "SlamStart": "res://DialogicContent/SlamStart.dtl",

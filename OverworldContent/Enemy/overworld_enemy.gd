@@ -20,42 +20,43 @@ func _ready():
 	WorldState.battle_ended.connect(update_health)
 	player = get_tree().get_first_node_in_group("Player")
 	set_physics_process(false)
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.5).timeout
 	set_physics_process(true)
 	await get_tree().create_timer(3)
 	battle_ready = true
 
 func _physics_process(delta):
-	var contexts = [0,0,0,0]
-	var speed = walk_speed
-	
-	var player_dir = global_position - player.global_position
-	if (player_dir.length() < 80):
-		speed = run_speed
-		for i in range(directions.size()):
-			contexts[i] += directions[i].dot(player_dir.normalized())
-	
-	var i = 0
-	var safe = []
-	for raycast in $ContextMap/Orthogonal.get_children():
-		if (raycast.is_colliding()):
-			contexts[i] -= 5
-		else:
-			safe.append(i)
-		i += 1
-	
-	if safe != old_safe:
-		interest_direction = safe.pick_random()
-	
-	old_safe = safe
-	
-	contexts[interest_direction] += 2
-	
-	direction = contexts.find(contexts.max())
-	velocity = directions[direction] * speed
-	
-	move_and_slide()
-	play_anim()
+	if(is_instance_valid(player)):
+		var contexts = [0,0,0,0]
+		var speed = walk_speed
+		
+		var player_dir = global_position - player.global_position
+		if (player_dir.length() < 80):
+			speed = run_speed
+			for i in range(directions.size()):
+				contexts[i] += directions[i].dot(player_dir.normalized())
+		
+		var i = 0
+		var safe = []
+		for raycast in $ContextMap/Orthogonal.get_children():
+			if (raycast.is_colliding()):
+				contexts[i] -= 5
+			else:
+				safe.append(i)
+			i += 1
+		
+		if safe != old_safe && safe.size() != 0:
+			interest_direction = safe.pick_random()
+		
+		old_safe = safe
+		
+		contexts[interest_direction] += 2
+		
+		direction = contexts.find(contexts.max())
+		velocity = directions[direction] * speed
+		
+		move_and_slide()
+		play_anim()
 
 func play_anim():
 	var anim = $AnimatedSprite2D
@@ -80,6 +81,7 @@ func _on_battle_area_body_entered(body: Node2D) -> void:
 
 func update_health(new_health):
 	if (new_health <= 0):
+		WorldState.active_enemies.remove_at(WorldState.active_enemies.find(enemy))
 		queue_free()
 	else:
 		health = new_health
