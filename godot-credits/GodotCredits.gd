@@ -4,13 +4,18 @@ const section_time := 2.0
 const line_time := 0.3
 const base_speed := 100
 const speed_up_multiplier := 10.0
-const title_color := Color.BLUE_VIOLET
+const title_color := Color.DARK_RED
 
 # var scroll_speed := base_speed
 var speed_up := false
 
+<<<<<<< Updated upstream
 @onready var line := $CreditsContainer/Line
 var started := false
+=======
+@onready var line := $SubViewportContainer/SubViewport/CreditsContainer/Line
+var started := true
+>>>>>>> Stashed changes
 var finished := false
 
 var section
@@ -29,6 +34,7 @@ var credits = [
 		"Garen Meinerding"
 	],[
 		"Food Aliens",
+		"Jonkler Juice",
 		"Cumbersome Cucumber",
 		"Lumbering Lettuce",
 		"Bouncing Bun",
@@ -78,6 +84,7 @@ var credits = [
 		"Drennon Dooms",
 		"Everyone in Class",
 		"Thicc Ass Bacon",
+	],[
 		"And You"
 	]
 ]
@@ -119,7 +126,7 @@ func finish():
 	if not finished:
 		finished = true
 		# This is called when the credits finish and returns to the main menu
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		#get_tree().change_scene_to_file("res://OverworldContent/Diner.tscn")
 
 
 func add_line():
@@ -129,7 +136,7 @@ func add_line():
 	if curr_line == 0:
 		# new_line.add_color_override("font_color", title_color)
 		new_line.set("theme_override_colors/font_color", title_color)
-	$CreditsContainer.add_child(new_line)
+	$SubViewportContainer/SubViewport/CreditsContainer.add_child(new_line)
 	
 	if section.size() > 0:
 		curr_line += 1
