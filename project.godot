@@ -51,15 +51,16 @@ directories/dtl_directory={
 "LettuceQuip": "res://DialogicContent/LettuceQuip.dtl",
 "MeatballerQuip": "res://DialogicContent/MeatballerQuip.dtl",
 "NoodlesQuip": "res://DialogicContent/NoodlesQuip.dtl",
-"PotatoQuip": "res://DialogicContent/PotatoQuip.dtl",
 "RestStopPopup": "res://DialogicContent/RestStopPopup.dtl",
 "RestroomExit": "res://DialogicContent/RestroomExit.dtl",
+"RestroomReset": "res://DialogicContent/RestroomReset.dtl",
 "SlamOrder": "res://DialogicContent/SlamOrder.dtl",
 "SlamReady": "res://DialogicContent/SlamReady.dtl",
 "SlamStart": "res://DialogicContent/SlamStart.dtl",
 "SpagOrder": "res://DialogicContent/SpagOrder.dtl",
 "SpagReady": "res://DialogicContent/SpagReady.dtl",
 "SpagStart": "res://DialogicContent/SpagStart.dtl",
+"TaterQuip": "res://DialogicContent/TaterQuip.dtl",
 "TempTutorial": "res://DialogicContent/TempTutorial.dtl",
 "TomatoQuip": "res://DialogicContent/TomatoQuip.dtl"
 }
@@ -95,6 +96,10 @@ project/assembly_name="tciar"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+Player=""
 
 [gui]
 

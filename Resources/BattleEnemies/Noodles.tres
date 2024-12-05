@@ -14,3 +14,6 @@ defense = 0
 speed = 2
 moves = Array[String](["atk"])
 weakness = "Boil"
+sight_range = 100
+walk_speed = 60
+run_speed = 65

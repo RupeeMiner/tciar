@@ -9,14 +9,10 @@ var current_player_health = 0
 
 func _ready() -> void:
 	visible = false
-	WorldState.battle_started.connect(cooler_opened)
+	WorldState.battle_started.connect(init)
 
-func cooler_opened(current_enemy):
-	enemy = load(current_enemy)
-	Dialogic.timeline_ended.connect(init)
-
-func init():
-	Dialogic.timeline_ended.disconnect(init)
+func init(current_enemy, enemy_health):
+	enemy = load("res://Resources/BattleEnemies/" + current_enemy + ".tres")
 	get_tree().paused = true
 	
 	visible = true
@@ -31,9 +27,9 @@ func init():
 	$Actions/MovesMenu/Move3.text = PlayerState.moves[2]
 	
 	set_health(PlayerState.current_health, PlayerState.max_health, $PlayerHealth)
-	set_health(enemy.health, enemy.health, $EnemyHealth)
+	set_health(enemy_health, enemy.health, $EnemyHealth)
 	
-	current_enemy_health = enemy.health
+	current_enemy_health = enemy_health
 	current_player_health = PlayerState.current_health
 	
 	display_text("%s appeared!" % enemy.name)
@@ -103,10 +99,8 @@ func player_attack(move_num):
 	if (current_enemy_health == 0):
 		display_text("%s was defeated!" % enemy.name)
 		await textbox_closed
-		PlayerState.current_health = current_player_health
 		PlayerState.items.append(enemy.ingredient)
-		get_tree().paused = false
-		visible = false
+		end_battle()
 		WorldState.check_recipe_ready()
 	
 	enemy_turn()
@@ -115,8 +109,12 @@ func _on_run_pressed() -> void:
 	## todo -- calculate run possibility using player's speed value
 	display_text("You ran away.")
 	await textbox_closed
+	end_battle()
+
+func end_battle():
 	PlayerState.current_health = current_player_health
 	get_tree().paused = false
+	WorldState.end_battle(current_enemy_health)
 	visible = false
 
 func _on_moves_pressed() -> void:

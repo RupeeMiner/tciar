@@ -1,4 +1,4 @@
-PopupCharacter: Take a bathroom break? (This will reset the level and respawn enemies.)
+PopupCharacter: Take a bathroom break?
 - Sure.
 	do WorldState.load_scene("Restroom")
 - Nope.

@@ -1,8 +1,9 @@
 extends Node
 
-signal battle_started(current_enemy)
-signal battle_ended()
+signal battle_started(enemy, enemy_health)
+signal battle_ended(enemy_health)
 signal recipe_ready(current_recipe)
+signal enemy_spawned(enemy)
 
 var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "SlamDungeon": true}
 
@@ -15,13 +16,17 @@ var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vect
 var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
-var story_enemies = [["res://Resources/Beefy.tres", "res://Resources/Bun.tres", "res://Resources/Cheese.tres"], ["res://Resources/Meatballs.tres", "res://Resources/Noodles.tres", "res://Resources/Tomato.tres"], ["res://Resources/Bacon.tres", "res://Resources/Egg.tres", "res://Resources/Potato.tres"]]
-var extra_enemies = ["res://Resources/Lettuce.tres","res://Resources/Cuce.tres"]
+var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballs", "Noodles", "Tomato"], ["Bacon", "Egg", "Tater"]]
+var extra_enemies = ["Lettuce","Cuce"]
 var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend","Boil","Sear"], "SlamDungeon": ["Beat","Fry","Shred"]}
 
 var current_recipe = ""
 var current_ingredients = []
 var current_enemies = []
+var coolers_closed = [true, true, true]
+var active_enemies = []
+
+var level_reset = false
 
 var current_scene = "Diner"
 
@@ -32,10 +37,17 @@ func load_level_data():
 	PlayerState.moves = moves[current_recipe + "Dungeon"]
 	level += 1
 
-func start_battle():
+func spawn_enemy():
 	var index = randi() % current_enemies.size()
 	var enemy = current_enemies.pop_at(index)
-	emit_signal("battle_started", enemy)
+	emit_signal("enemy_spawned", enemy)
+	return enemy
+
+func start_battle(enemy, enemy_health):
+	emit_signal("battle_started", enemy, enemy_health)
+
+func end_battle(enemy_health):
+	emit_signal("battle_ended", enemy_health)
 
 func ingredients_missing():
 	var ingredients_collected = false
@@ -68,15 +80,16 @@ func load_scene(scene_name):
 
 func load_next_level():
 	PlayerState.current_health = PlayerState.max_health
+	coolers_closed = [true, true, true]
+	active_enemies = []
 	load_scene(current_recipe + "Dungeon")
 	await get_tree().create_timer(1).timeout
 	first_loaded[current_recipe + "Dungeon"] = false
 
 func reset_level():
-	print("Hi")
 	current_enemies = []
 	for enemy in story_enemies[level - 1]:
-		var ingredient = load(enemy).ingredient
+		var ingredient = load("res://Resources/BattleEnemies/" + enemy + ".tres").ingredient
 		var ingredient_needed = true
 		for item in PlayerState.items:
 			if (item == ingredient):
@@ -86,3 +99,9 @@ func reset_level():
 	while current_enemies.size() < story_enemies[level - 1].size():
 		current_enemies.append(extra_enemies[randi() % extra_enemies.size()])
 	load_next_level()
+
+func return_to_dungeon():
+	if(level_reset):
+		reset_level()
+	else:
+		load_scene(current_recipe + "Dungeon")

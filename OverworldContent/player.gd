@@ -6,7 +6,7 @@ var quipped = false
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
-	WorldState.battle_started.connect(play_quip)
+	WorldState.enemy_spawned.connect(play_quip)
 	WorldState.recipe_ready.connect(play_ready_quip)
 	update_self()
 
@@ -42,28 +42,27 @@ func player_movement(delta):
 	move_and_slide()
 
 func play_anim(isMoving):
-	var dir = current_dir
 	var anim = $AnimatedSprite2D
 	
-	if dir == "right":
+	if current_dir == "right":
 		anim.flip_h = false
 		if isMoving:
 			anim.play("side_walk")
 		else:
 			anim.play("side_idle")
-	elif dir == "left":
+	elif current_dir == "left":
 		anim.flip_h = true
 		if isMoving:
 			anim.play("side_walk")
 		else:
 			anim.play("side_idle")
-	elif dir == "down":
+	elif current_dir == "down":
 		anim.flip_h = false
 		if isMoving:
 			anim.play("front_walk")
 		else:
 			anim.play("front_idle")
-	elif dir == "up":
+	elif current_dir == "up":
 		anim.flip_h = false
 		if isMoving:
 			anim.play("back_walk")
@@ -86,8 +85,7 @@ func update_self():
 			self.position = WorldState.dungeon_rest_pos[WorldState.current_scene]
 
 func play_quip(enemy):
-	var enemy_name = load(enemy).name
-	play_dialogue(enemy_name + "Quip")
+	play_dialogue(enemy + "Quip")
 
 func ended_dialogue():
 	Dialogic.timeline_ended.disconnect(ended_dialogue)
