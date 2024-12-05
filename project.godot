@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerState="*res://BattleSceneContent/PlayerState.gd"
 WorldState="*res://OverworldContent/WorldState.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+SceneTransition="*res://SceneTransition.tscn"
 
 [dialogic]
 

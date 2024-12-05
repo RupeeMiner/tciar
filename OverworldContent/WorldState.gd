@@ -76,7 +76,7 @@ func check_recipe_ready():
 
 func load_scene(scene_name):
 	current_scene = scene_name
-	get_tree().change_scene_to_file("res://OverworldContent/" + scene_name + ".tscn")
+	SceneTransition.change_scene("res://OverworldContent/" + scene_name + ".tscn")
 
 func load_next_level():
 	PlayerState.current_health = PlayerState.max_health
