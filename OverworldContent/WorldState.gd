@@ -77,6 +77,7 @@ func check_recipe_ready():
 func load_scene(scene_name):
 	current_scene = scene_name
 	SceneTransition.change_scene("res://OverworldContent/" + scene_name + ".tscn")
+	AudioManager.update_music(scene_name)
 
 func load_next_level():
 	PlayerState.current_health = PlayerState.max_health

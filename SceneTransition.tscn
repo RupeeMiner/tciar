@@ -4,6 +4,8 @@
 [ext_resource type="SpriteFrames" uid="uid://cc1c2oeh4dqu5" path="res://Textures/pixel_assets/transitions/SceneTransition.tres" id="1_jhsxx"]
 
 [node name="SceneTransition" type="CanvasLayer"]
+process_mode = 3
+layer = 5
 script = ExtResource("1_bmtd4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

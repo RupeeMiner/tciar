@@ -8,3 +8,13 @@ func change_scene(target: String) -> void:
 	$AnimatedSprite2D.play("fadein" + str(randi() % 3))
 	await ($AnimatedSprite2D.animation_finished)
 	$AnimatedSprite2D.play("blank")
+
+func fade_out():
+	$AnimatedSprite2D.play("fadeoutbite")
+	await ($AnimatedSprite2D.animation_finished)
+	$AnimatedSprite2D.play("dark")
+
+func fade_in():
+	$AnimatedSprite2D.play("fadeinbite")
+	await ($AnimatedSprite2D.animation_finished)
+	$AnimatedSprite2D.play("blank")

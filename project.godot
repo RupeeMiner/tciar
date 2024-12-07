@@ -15,12 +15,17 @@ run/main_scene="res://OverworldContent/Diner.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://audio/default_bus_layout.tres"
+
 [autoload]
 
 PlayerState="*res://BattleSceneContent/PlayerState.gd"
 WorldState="*res://OverworldContent/WorldState.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 SceneTransition="*res://SceneTransition.tscn"
+AudioManager="*res://audio/AudioManager.tscn"
 
 [dialogic]
 
