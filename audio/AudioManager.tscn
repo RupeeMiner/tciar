@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8ohlegqs0dqt"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ohlegqs0dqt"]
 
 [ext_resource type="AudioStream" uid="uid://0yfmh7kfu7vp" path="res://audio/dungeonPH.mp3" id="1_x8pim"]
 [ext_resource type="AudioStream" uid="uid://bycrw8pk61l2h" path="res://audio/dinerPH.wav" id="2_ajeik"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://audio/audio_manager.gd" id="5_o25bo"]
 [ext_resource type="AudioStream" uid="uid://cfgp0ykv4dwo6" path="res://audio/game-over-classic-206486.mp3" id="5_vijqg"]
 [ext_resource type="AudioStream" uid="uid://dyty2mr5oaon1" path="res://audio/sound effects/Open Door.wav" id="6_50deq"]
+[ext_resource type="AudioStream" uid="uid://dq2cdhp5ab3qi" path="res://audio/TitleScreenLoop.mp3" id="6_ykmd8"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jgwwh"]
 stream_count = 1
@@ -26,6 +27,7 @@ stream_0 = ExtResource("4_mxpf2")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_ndl88"]
 stream_count = 1
+stream_0 = ExtResource("6_ykmd8")
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_xtcoq"]
 clip_count = 6

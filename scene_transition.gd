@@ -1,20 +1,22 @@
 extends CanvasLayer
 
+@onready var sprite = $AnimatedSprite2D
+
 func change_scene(target: String) -> void:
-	$AnimatedSprite2D.play("fadeout" + str(randi() % 4))
-	await ($AnimatedSprite2D.animation_finished)
-	$AnimatedSprite2D.play("dark")
+	sprite.play("fadeout" + str(randi() % 4))
+	await (sprite.animation_finished)
+	sprite.play("dark")
 	get_tree().change_scene_to_file(target)
-	$AnimatedSprite2D.play("fadein" + str(randi() % 3))
-	await ($AnimatedSprite2D.animation_finished)
-	$AnimatedSprite2D.play("blank")
+	sprite.play("fadein" + str(randi() % 3))
+	await (sprite.animation_finished)
+	sprite.play("blank")
 
 func fade_out():
-	$AnimatedSprite2D.play("fadeoutbite")
-	await ($AnimatedSprite2D.animation_finished)
-	$AnimatedSprite2D.play("dark")
+	sprite.play("fadeoutbite")
+	await (sprite.animation_finished)
+	sprite.play("dark")
 
 func fade_in():
-	$AnimatedSprite2D.play("fadeinbite")
-	await ($AnimatedSprite2D.animation_finished)
-	$AnimatedSprite2D.play("blank")
+	sprite.play("fadeinbite")
+	await (sprite.animation_finished)
+	sprite.play("blank")

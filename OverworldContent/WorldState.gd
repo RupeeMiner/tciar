@@ -116,3 +116,4 @@ func kill_player(enemy: String):
 func respawn_player():
 	load_scene("Restroom")
 	level_reset = true
+	get_tree().paused = false

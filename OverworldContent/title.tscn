@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://daxr1niw8bcsb"]
+
+[ext_resource type="Script" path="res://title.gd" id="1_amka1"]
+[ext_resource type="Texture2D" uid="uid://b4urdyuj5n378" path="res://godot-credits/FinalSpaceBGScaledDimmed.png" id="2_fdq3r"]
+[ext_resource type="Texture2D" uid="uid://ci7o2kcg7bi3e" path="res://Textures/pixel_assets/titleScreen/titleBG.png" id="3_phetl"]
+[ext_resource type="Texture2D" uid="uid://c6o0a1cw3n1ju" path="res://Textures/pixel_assets/titleScreen/option.png" id="4_03d3l"]
+[ext_resource type="Texture2D" uid="uid://c8dlqmyl4qdux" path="res://Textures/pixel_assets/titleScreen/start.png" id="5_hh5vw"]
+[ext_resource type="Texture2D" uid="uid://dcarj10uon6qh" path="res://Textures/pixel_assets/titleScreen/exit.png" id="6_qfvu2"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_amka1")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+offset_right = 256.0
+offset_bottom = 224.0
+scale = Vector2(4, 4)
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(256, 224)
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport"]
+texture_filter = 1
+offset_right = 256.0
+offset_bottom = 224.0
+texture = ExtResource("2_fdq3r")
+
+[node name="TextureRect2" type="TextureRect" parent="SubViewportContainer/SubViewport"]
+texture_filter = 1
+offset_right = 256.0
+offset_bottom = 224.0
+texture = ExtResource("3_phetl")
+
+[node name="optionButton" type="TextureButton" parent="SubViewportContainer/SubViewport"]
+texture_filter = 1
+offset_left = 180.0
+offset_top = 143.0
+offset_right = 251.0
+offset_bottom = 218.0
+texture_normal = ExtResource("4_03d3l")
+
+[node name="startButton" type="TextureButton" parent="SubViewportContainer/SubViewport"]
+texture_filter = 1
+offset_left = 84.0
+offset_top = 70.0
+offset_right = 234.0
+offset_bottom = 166.0
+texture_normal = ExtResource("5_hh5vw")
+
+[node name="exitButton" type="TextureButton" parent="SubViewportContainer/SubViewport"]
+texture_filter = 1
+offset_left = 86.0
+offset_top = 183.0
+offset_right = 135.0
+offset_bottom = 223.0
+texture_normal = ExtResource("6_qfvu2")
+
+[connection signal="pressed" from="SubViewportContainer/SubViewport/optionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/exitButton" to="." method="_on_exit_button_pressed"]

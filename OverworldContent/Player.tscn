@@ -210,7 +210,6 @@ animation = &"side_idle"
 frame_progress = 0.221142
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
 limit_left = -64
 limit_top = -64
 limit_right = 2200
@@ -223,8 +222,5 @@ drag_vertical_enabled = true
 [node name="PlayerAudioStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_ibatk")
 bus = &"sfx"
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(8, -9)
 
 [connection signal="finished" from="PlayerAudioStream" to="." method="_on_player_audio_stream_finished"]

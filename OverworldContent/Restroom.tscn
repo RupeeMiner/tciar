@@ -51,26 +51,44 @@ size = Vector2(58.5, 29.5)
 [node name="Restroom" type="Node2D"]
 script = ExtResource("1_qt82t")
 
-[node name="World" type="TileMapLayer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 256.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(256, 224)
+render_target_update_mode = 4
+
+[node name="World" type="TileMapLayer" parent="SubViewportContainer/SubViewport"]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAACAAAABwADAAAAAAADAAAABwACAAEAAAABAAAABwAAAAEAAAAEAAAABwACAAAAAFAAAAAABwACAAEAAGAAAAQABwACAAAAADAEAAQABwABAAAAAFAAAAEABwABAAEAAGAAAAIABwAAAAAAAGAAAAMABwACAAEAADABAAQABwACAAAAADACAAQABwACAAAAADADAAQABwACAAAAADAEAAMABwACAAAAAFAEAAIABwACAAAAAFAEAAEABwACAAAAAFABAAEACQAAAAAAAAACAAEACQAAAAAAAAADAAEABwABAAEAAFADAAIABwABAAEAAFACAAIACQAAAAAAAAABAAIACQAAAAAAAAABAAMABwABAAEAADACAAMABwABAAEAADADAAMABwACAAEAAFAAAP//BwACAAAAAAABAP//BwACAAAAAAACAP//BwACAAAAAAADAP//BwACAAAAAAAEAP//BwABAAAAAAAFAAAACAAAAAAAAAAFAAEACAAAAAAAAAAFAAIACAAAAAAAAAAFAAMACAAAAAAAAAAFAAQACAAAAAAAAAAEAAUACAAAAAAAAAADAAUACAAAAAAAAAACAAUACAAAAAAAAAABAAUACAAAAAAAAAAAAAUACAAAAAAAAAD//wQABwABAAAAADD//wMABwACAAAAAGD//wIABwACAAAAAGD//wEABwACAAAAAGD//wAABwACAAAAAGAFAP//CAAAAAAAAAAFAAUACAAAAAAAAAD//wUACAAAAAAAAAD/////BwABAAAAAGD+//7/CAAAAAAAAAD///7/CAAAAAAAAAAAAP7/CAAAAAAAAAABAP7/CAAAAAAAAAACAP7/CAAAAAAAAAADAP7/CAAAAAAAAAAEAP7/CAAAAAAAAAAFAP7/CAAAAAAAAAAGAP7/CAAAAAAAAAAGAP//CAAAAAAAAAAGAAAACAAAAAAAAAAGAAEACAAAAAAAAAAGAAIACAAAAAAAAAAGAAMACAAAAAAAAAAGAAQACAAAAAAAAAAGAAUACAAAAAAAAAAGAAYACAAAAAAAAAD+/wYACAAAAAAAAAD//wYACAAAAAAAAAAAAAYACAAAAAAAAAABAAYACAAAAAAAAAACAAYACAAAAAAAAAADAAYACAAAAAAAAAAEAAYACAAAAAAAAAAFAAYACAAAAAAAAAD+////CAAAAAAAAAD+/wAACAAAAAAAAAD+/wEACAAAAAAAAAD+/wIACAAAAAAAAAD+/wMACAAAAAAAAAD+/wQACAAAAAAAAAD+/wUACAAAAAAAAAD+//3/CAAAAAAAAAD///3/CAAAAAAAAAAAAP3/CAAAAAAAAAABAP3/CAAAAAAAAAACAP3/CAAAAAAAAAADAP3/CAAAAAAAAAAEAP3/CAAAAAAAAAAFAP3/CAAAAAAAAAAGAP3/CAAAAAAAAAAHAP3/CAAAAAAAAAAHAP7/CAAAAAAAAAAHAP//CAAAAAAAAAAHAAAACAAAAAAAAAAIAAEACAAAAAAAAAAIAAIACAAAAAAAAAAIAAMACAAAAAAAAAAIAAQACAAAAAAAAAAIAAUACAAAAAAAAAAIAAYACAAAAAAAAAAHAAYACAAAAAAAAAAHAAUACAAAAAAAAAAHAAQACAAAAAAAAAAHAAMACAAAAAAAAAAHAAIACAAAAAAAAAAHAAEACAAAAAAAAAAIAAAACAAAAAAAAAAIAP//CAAAAAAAAAAIAP7/CAAAAAAAAAAIAP3/CAAAAAAAAAD9//3/CAAAAAAAAAD9//7/CAAAAAAAAAD9////CAAAAAAAAAD9/wAACAAAAAAAAAD9/wEACAAAAAAAAAD9/wIACAAAAAAAAAD9/wMACAAAAAAAAAD9/wQACAAAAAAAAAD9/wUACAAAAAAAAAD9/wYACAAAAAAAAAD9/wcACAAAAAAAAAD8/wcACAAAAAAAAAD8/wYACAAAAAAAAAD8/wUACAAAAAAAAAD8/wQACAAAAAAAAAD8/wMACAAAAAAAAAD8/wIACAAAAAAAAAD8/wEACAAAAAAAAAD8/wAACAAAAAAAAAD8////CAAAAAAAAAD8//3/CAAAAAAAAAD8//7/CAAAAAAAAAD+/wcACAAAAAAAAAD//wcACAAAAAAAAAAAAAcACAAAAAAAAAABAAcACAAAAAAAAAACAAcACAAAAAAAAAADAAcACAAAAAAAAAAEAAcACAAAAAAAAAAGAAcACAAAAAAAAAAHAAcACAAAAAAAAAAIAAcACAAAAAAAAAAFAAcACAAAAAAAAAA=")
 tile_set = SubResource("TileSet_wdlvg")
 
-[node name="Player" parent="." instance=ExtResource("4_r6ln1")]
+[node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_r6ln1")]
 position = Vector2(43, 80)
 
-[node name="ExitArea" type="Area2D" parent="."]
+[node name="ExitArea" type="Area2D" parent="SubViewportContainer/SubViewport"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/ExitArea"]
 position = Vector2(23.5, 80)
 shape = SubResource("RectangleShape2D_daemg")
 
-[node name="LevelResetArea" type="Area2D" parent="."]
+[node name="LevelResetArea" type="Area2D" parent="SubViewportContainer/SubViewport"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelResetArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/LevelResetArea"]
 position = Vector2(63.75, 26.25)
 shape = SubResource("RectangleShape2D_e2qit")
 
-[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
-[connection signal="body_entered" from="LevelResetArea" to="." method="_on_level_reset_area_body_entered"]
-[connection signal="body_exited" from="LevelResetArea" to="." method="_on_level_reset_area_body_exited"]
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/LevelResetArea" to="." method="_on_level_reset_area_body_entered"]
+[connection signal="body_exited" from="SubViewportContainer/SubViewport/LevelResetArea" to="." method="_on_level_reset_area_body_exited"]

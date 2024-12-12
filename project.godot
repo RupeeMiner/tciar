@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tciar"
-run/main_scene="res://OverworldContent/Diner.tscn"
+run/main_scene="res://OverworldContent/title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -109,8 +109,8 @@ text/autopauses={}
 
 [display]
 
-window/size/viewport_width=768
-window/size/viewport_height=672
+window/size/viewport_width=1024
+window/size/viewport_height=896
 window/stretch/mode="viewport"
 
 [dotnet]

@@ -44,7 +44,7 @@ func spawn_enemy():
 	
 	var enemy_name = WorldState.spawn_enemy()
 	var enemy = enemy_scene.instantiate()
-	get_tree().root.add_child(enemy)
+	get_parent().get_parent().add_child(enemy)
 	enemy.global_position = spawn_marker.global_position
 	enemy.load_data(enemy_name)
 	WorldState.active_enemies.append(enemy_name)
