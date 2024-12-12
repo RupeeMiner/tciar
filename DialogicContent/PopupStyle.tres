@@ -49,7 +49,11 @@ overrides = {
 [sub_resource type="Resource" id="Resource_i437t"]
 script = ExtResource("1_be247")
 scene = ExtResource("7_kjr0w")
-overrides = {}
+overrides = {
+"sounds_focus": "\"res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav\"",
+"sounds_hover": "\"res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav\"",
+"sounds_pressed": "\"res://audio/sound effects/Menu/SFX_UI_Confirm.wav\""
+}
 
 [sub_resource type="Resource" id="Resource_ugc16"]
 script = ExtResource("1_be247")
@@ -70,4 +74,4 @@ script = ExtResource("10_f4jw3")
 name = "PopupStyle"
 base_overrides = {}
 layers = Array[ExtResource("1_be247")]([SubResource("Resource_6dwbk"), SubResource("Resource_iwgr0"), SubResource("Resource_2u7y6"), SubResource("Resource_grk1g"), SubResource("Resource_8id0t"), SubResource("Resource_i437t"), SubResource("Resource_ugc16"), SubResource("Resource_g812i")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = 5

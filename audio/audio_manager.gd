@@ -14,3 +14,7 @@ func update_music(music_name: String):
 		get_stream_playback().switch_to_clip_by_name("DungeonMusic")
 	else:
 		get_stream_playback().switch_to_clip_by_name(music_name + "Music")
+
+func play_sfx(sfx_name: String):
+	if (sfx_name == "Door"):
+		$SFXPlayer.play()
