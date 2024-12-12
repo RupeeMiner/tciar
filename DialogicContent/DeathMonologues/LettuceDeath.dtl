@@ -1,0 +1,3 @@
+TonyCharacter: LETTUCE get out of here!
+TonyCharacter: ... I am in great pain.
+do WorldState.respawn_player()

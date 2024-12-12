@@ -1,0 +1,3 @@
+TonyCharacter: Who knew some bread could kick my ass so easily!
+TonyCharacter: I'm outta here!
+do WorldState.respawn_player()

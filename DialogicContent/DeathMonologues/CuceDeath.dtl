@@ -1,0 +1,3 @@
+TonyCharacter: What the hell is that thing??
+TonyCharacter: LET'S RUN AWAY!!!
+do WorldState.respawn_player()

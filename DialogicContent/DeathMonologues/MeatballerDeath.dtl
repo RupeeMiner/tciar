@@ -1,0 +1,2 @@
+TonyCharacter: I'm getting rolled over here, better escape!
+do WorldState.respawn_player()

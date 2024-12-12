@@ -10,6 +10,7 @@ func _ready():
 	$AnimatedSprite2D.play("front_idle")
 	WorldState.enemy_spawned.connect(play_quip)
 	WorldState.recipe_ready.connect(play_ready_quip)
+	WorldState.player_died.connect(die)
 	update_self()
 
 func _physics_process(delta):
@@ -111,13 +112,16 @@ func play_dialogue(timeline_name):
 	Dialogic.timeline_ended.connect(ended_dialogue)
 	set_physics_process(false)
 	var layout = Dialogic.Styles.load_style("QuipStyle")
-	layout.register_character(load("res://DialogicContent/TonyCharacter.dch"), $".")
+	layout.register_character(load("res://DialogicContent/TonyCharacter.dch"), $Marker2D)
 	Dialogic.start(timeline_name)
 
 func play_ready_quip(current_recipe):
 	if (!quipped):
 		play_dialogue(current_recipe + "Ready")
 		quipped = true
+
+func die(enemy):
+	play_dialogue(enemy + "Death")
 
 func player():
 	pass

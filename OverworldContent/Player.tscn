@@ -224,4 +224,7 @@ drag_vertical_enabled = true
 stream = SubResource("AudioStreamRandomizer_ibatk")
 bus = &"sfx"
 
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(8, -9)
+
 [connection signal="finished" from="PlayerAudioStream" to="." method="_on_player_audio_stream_finished"]

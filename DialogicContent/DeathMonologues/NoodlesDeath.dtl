@@ -1,0 +1,3 @@
+TonyCharacter: Is this stuff even safe to eat?
+TonyCharacter: Au revoir!
+do WorldState.respawn_player()

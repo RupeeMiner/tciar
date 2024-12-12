@@ -26,9 +26,9 @@ func init(current_enemy, enemy_health):
 	
 	$EnemySprite.texture = enemy.texture
 	
-	$Moves/Move1.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[0] + ".png")
-	$Moves/Move2.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[1] + ".png")
-	$Moves/Move3.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[2] + ".png")
+	$Moves/Move1.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[0].to_upper() + ".png")
+	$Moves/Move2.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[1].to_upper() + ".png")
+	$Moves/Move3.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[2].to_upper() + ".png")
 	
 	set_health(PlayerState.current_health, PlayerState.max_health, $AspectRatioContainer/HpBox/Label)
 	
@@ -46,7 +46,7 @@ func init(current_enemy, enemy_health):
 		enemy_turn()
 	else:
 		$Moves.show()
-		$BattleTextBox.hide()
+		$AspectRatioContainer/BattleTextBox.hide()
 
 func _input(event):
 	if (Input.is_action_just_pressed("ui_accept") or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) and $AspectRatioContainer/BattleTextBox/Label.is_visible_in_tree():
@@ -65,7 +65,7 @@ func set_health(health, max_health, health_label):
 
 func enemy_turn():
 	var move_num = randi() % enemy.moves.size()
-	display_text("You get %s by %s!" % [enemy.moves[0], enemy.name])
+	display_text("You get %s!" % enemy.moves[0])
 	await textbox_closed
 	
 	var damage = enemy.attack - PlayerState.defense
@@ -77,13 +77,10 @@ func enemy_turn():
 	await textbox_closed
 	
 	if (current_player_health == 0):
-		display_text("You were defeated! :(")
+		display_text("You were defeated!")
 		await textbox_closed
 		
-		#todo: game over
-		get_tree().paused = false
-		get_tree().reload_current_scene()
-		visible = false
+		end_battle()
 	
 	$Moves.show()
 
@@ -120,10 +117,16 @@ func end_battle():
 	SceneTransition.fade_out()
 	PlayerState.current_health = current_player_health
 	get_tree().paused = false
-	WorldState.end_battle(current_enemy_health)
-	await get_tree().create_timer(2).timeout
-	visible = false
-	AudioManager.update_music("Dungeon")
+	if (current_player_health > 0):
+		WorldState.end_battle(current_enemy_health)
+		await get_tree().create_timer(2).timeout
+		visible = false
+		AudioManager.update_music("Dungeon")
+	else:
+		WorldState.kill_player(enemy.name)
+		await get_tree().create_timer(2).timeout
+		visible = false
+		AudioManager.update_music("Dead")
 	SceneTransition.fade_in()
 
 func _on_move_1_pressed() -> void:

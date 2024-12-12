@@ -4,6 +4,7 @@ signal battle_started(enemy, enemy_health)
 signal battle_ended(enemy_health)
 signal recipe_ready(current_recipe)
 signal enemy_spawned(enemy)
+signal player_died(enemy)
 
 var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "SlamDungeon": true}
 
@@ -108,3 +109,10 @@ func return_to_dungeon():
 		reset_level()
 	else:
 		load_scene(current_recipe + "Dungeon")
+
+func kill_player(enemy: String):
+	emit_signal("player_died", enemy)
+
+func respawn_player():
+	load_scene("Restroom")
+	level_reset = true

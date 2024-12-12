@@ -1,0 +1,3 @@
+TonyCharacter: Looks like the glove DOES fit!
+TonyCharacter: Oh shit, it has a knife.
+do WorldState.respawn_player()

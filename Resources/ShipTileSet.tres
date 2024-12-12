@@ -119,12 +119,14 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_frame_3/duration = 0.2
 0:0/animation_frame_4/duration = 0.2
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 12, -16, 12)
+0:0/0/physics_layer_0/polygon_0/one_way_margin = 1.085
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2jyi"]
 texture = ExtResource("4_3iq27")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 12, -16, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wa2m0"]
 texture = ExtResource("5_agi8c")
@@ -147,7 +149,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_frame_8/duration = 1.0
 0:0/animation_frame_9/duration = 1.0
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 12, -16, 12)
+0:0/0/physics_layer_0/polygon_0/one_way_margin = 1.085
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxyp0"]
 texture = ExtResource("9_8l1sp")
@@ -158,7 +161,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_frame_1/duration = 0.7
 0:0/animation_frame_2/duration = 0.7
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 12, -16, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5eeg6"]
 texture = ExtResource("6_tssym")
@@ -175,7 +178,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_frame_3/duration = 1.0
 0:0/animation_frame_4/duration = 1.0
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 12, -16, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4nvy"]
 texture = ExtResource("15_swj0d")

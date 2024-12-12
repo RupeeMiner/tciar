@@ -50,11 +50,11 @@ visible = false
 position = Vector2(216, 344)
 
 [node name="Cooler1" parent="Coolers" instance=ExtResource("2_0rkvj")]
-position = Vector2(568, 1224)
+position = Vector2(584, 1208)
 cooler_num = 1
 
 [node name="Cooler2" parent="Coolers" instance=ExtResource("2_0rkvj")]
-position = Vector2(1544, 888)
+position = Vector2(1528, 888)
 cooler_num = 2
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
