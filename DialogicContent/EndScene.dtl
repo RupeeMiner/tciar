@@ -1,4 +1,5 @@
 [style name="ConversationStyle"]
+do WorldState.set_player_physics(false)
 join ChefCharacter left
 join VokunalCharacter right
 ChefCharacter: Here you go, hope you enjoy eating it as much as I enjoyed cooking it!
@@ -16,3 +17,4 @@ leave ChefCharacter
 leave PrimokCharacter
 join DaBossCharacter center
 DaBossCharacter: ... Where did everyone go?
+do WorldState.load_scene("Credits")

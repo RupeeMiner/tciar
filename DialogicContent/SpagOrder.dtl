@@ -1,4 +1,5 @@
 [style name="ConversationStyle"]
+do WorldState.set_player_physics(false)
 join ChefCharacter left
 join KahhaehunCharacter right
 ChefCharacter: Here is your cheeseburger, enjoy!
@@ -11,3 +12,4 @@ HorkentCharacter: Service? There ain't no service that you can give me that woul
 HorkentCharacter: You, however, can get me some grub.
 HorkentCharacter: Some spag with extra tomato sauce and meatballs. Chop chop, I'm starvin here!
 ChefCharacter: Right away, be right back!
+do WorldState.set_player_physics(true)

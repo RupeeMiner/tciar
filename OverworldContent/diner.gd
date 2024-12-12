@@ -2,6 +2,8 @@ extends Node2D
 
 var game_over = false
 
+
+
 func _ready() -> void:
 	if (WorldState.level < WorldState.recipes.size()):
 		WorldState.load_level_data()

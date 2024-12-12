@@ -22,3 +22,4 @@ leave DaBossCharacter
 join KahhaehunCharacter right
 KahhaehunCharacter: YES, A BUEGAR. IF DELIVERED PROMPTLY, THEN I WILL TIP HANDSOMELY IN KILO KOINS.
 ChefCharacter: Yes Ma'am... Sir... whatever.
+do WorldState.set_player_physics(true)

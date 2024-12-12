@@ -1,3 +1,5 @@
-[style name="PopupStyle"]
-PopupCharacter: This is where the tutorial will go
+[style name="ConversationStyle"]
+join TutorialCharacter center
+[wait time="2.0" skippable="true"]
+[wait_input]
 do Dialogic.start("BurgerOrder")

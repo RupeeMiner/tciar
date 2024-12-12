@@ -37,6 +37,7 @@ directories/dch_directory={
 "PopupCharacter": "res://DialogicContent/PopupCharacter.dch",
 "PrimokCharacter": "res://DialogicContent/PrimokCharacter.dch",
 "TonyCharacter": "res://DialogicContent/TonyCharacter.dch",
+"TutorialCharacter": "res://DialogicContent/TutorialCharacter.dch",
 "VokunalCharacter": "res://DialogicContent/VokunalCharacter.dch"
 }
 directories/dtl_directory={

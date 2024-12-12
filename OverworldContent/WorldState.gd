@@ -5,6 +5,7 @@ signal battle_ended(enemy_health)
 signal recipe_ready(current_recipe)
 signal enemy_spawned(enemy)
 signal player_died(enemy)
+signal player_physics(val)
 
 var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "SlamDungeon": true}
 
@@ -116,4 +117,6 @@ func kill_player(enemy: String):
 func respawn_player():
 	load_scene("Restroom")
 	level_reset = true
-	get_tree().paused = false
+
+func set_player_physics(val: bool):
+	emit_signal("player_physics", val)

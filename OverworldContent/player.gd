@@ -11,10 +11,14 @@ func _ready():
 	WorldState.enemy_spawned.connect(play_quip)
 	WorldState.recipe_ready.connect(play_ready_quip)
 	WorldState.player_died.connect(die)
+	WorldState.player_physics.connect(update_physics)
 	update_self()
 
 func _physics_process(delta):
 	player_movement(delta)
+
+func update_physics(val):
+	set_physics_process(val)
 
 func player_movement(delta):
 	if Input.is_action_pressed("right"):
