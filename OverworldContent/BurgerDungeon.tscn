@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://OverworldContent/dungeon.gd" id="1_vve7x"]
 [ext_resource type="PackedScene" uid="uid://b3u0j66gmm7y7" path="res://OverworldContent/Cooler.tscn" id="2_0rkvj"]
 [ext_resource type="PackedScene" uid="uid://tpxunwtho7ya" path="res://OverworldContent/Player.tscn" id="3_qu8py"]
-[ext_resource type="PackedScene" uid="uid://dpyyw3fn617fo" path="res://BattleSceneContent/BattleScene.tscn" id="4_iw76f"]
+[ext_resource type="PackedScene" uid="uid://cjnujus1tx5bm" path="res://BattleSceneContent/BattleSceneTextured.tscn" id="4_viuw6"]
 [ext_resource type="Script" path="res://OverworldContent/respawn_point.gd" id="6_jp127"]
 [ext_resource type="PackedScene" uid="uid://dxhku6mb4mds3" path="res://OverworldContent/Enemy/OverworldEnemy.tscn" id="7_0xf4q"]
 
@@ -41,10 +41,8 @@ shape = SubResource("RectangleShape2D_7yuok")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="BattleScene" parent="CanvasLayer" instance=ExtResource("4_iw76f")]
-process_mode = 3
+[node name="BattleSceneTextured" parent="CanvasLayer" instance=ExtResource("4_viuw6")]
 visible = false
-scale = Vector2(3.3, 3.3)
 
 [node name="Coolers" type="Node2D" parent="."]
 
