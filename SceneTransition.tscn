@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bol25v6koerkk"]
+
+[ext_resource type="Script" path="res://scene_transition.gd" id="1_bmtd4"]
+[ext_resource type="SpriteFrames" uid="uid://cc1c2oeh4dqu5" path="res://Textures/pixel_assets/transitions/SceneTransition.tres" id="1_jhsxx"]
+
+[node name="SceneTransition" type="CanvasLayer"]
+process_mode = 3
+layer = 5
+script = ExtResource("1_bmtd4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 112)
+sprite_frames = ExtResource("1_jhsxx")
+animation = &"blank"

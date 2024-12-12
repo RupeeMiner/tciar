@@ -35,7 +35,9 @@ overrides = {
 [sub_resource type="Resource" id="Resource_grk1g"]
 script = ExtResource("1_be247")
 scene = ExtResource("5_vq5b0")
-overrides = {}
+overrides = {
+"box_panel": "\"vn_textbox_default_panel.tres\""
+}
 
 [sub_resource type="Resource" id="Resource_8id0t"]
 script = ExtResource("1_be247")
@@ -47,7 +49,11 @@ overrides = {
 [sub_resource type="Resource" id="Resource_i437t"]
 script = ExtResource("1_be247")
 scene = ExtResource("7_kjr0w")
-overrides = {}
+overrides = {
+"sounds_focus": "\"res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav\"",
+"sounds_hover": "\"res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav\"",
+"sounds_pressed": "\"res://audio/sound effects/Menu/SFX_UI_Confirm.wav\""
+}
 
 [sub_resource type="Resource" id="Resource_ugc16"]
 script = ExtResource("1_be247")

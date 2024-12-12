@@ -4,6 +4,8 @@ const speed = 100
 var current_dir = "none"
 var quipped = false
 
+var audio_ready = true
+
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
 	WorldState.enemy_spawned.connect(play_quip)
@@ -35,11 +37,24 @@ func player_movement(delta):
 		velocity.x = 0
 		velocity.y = -speed
 	else:
+		
 		play_anim(false)
 		velocity.x = 0
 		velocity.y = 0
 	
 	move_and_slide()
+
+func update_audio(isMoving):
+	if audio_ready:
+		if isMoving:
+			$PlayerAudioStream.play()
+			audio_ready = false
+		else:
+			$PlayerAudioStream.stop()
+			audio_ready = true
+
+func _on_player_audio_stream_finished() -> void:
+	audio_ready = true
 
 func play_anim(isMoving):
 	var anim = $AnimatedSprite2D
@@ -68,6 +83,7 @@ func play_anim(isMoving):
 			anim.play("back_walk")
 		else:
 			anim.play("back_idle")
+	update_audio(isMoving)
 
 func update_self():
 	pass

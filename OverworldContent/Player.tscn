@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://tpxunwtho7ya"]
+[gd_scene load_steps=24 format=3 uid="uid://tpxunwtho7ya"]
 
 [ext_resource type="Texture2D" uid="uid://bqueokwnjm0jn" path="res://Textures/pixel_assets/tony front.png" id="1_aafjn"]
 [ext_resource type="Script" path="res://OverworldContent/player.gd" id="1_drobj"]
 [ext_resource type="Texture2D" uid="uid://kt7016xqgw76" path="res://Textures/pixel_assets/tony back.png" id="1_x3vgu"]
 [ext_resource type="Texture2D" uid="uid://d2f2b5l8hascn" path="res://Textures/pixel_assets/tonyside.png" id="3_bkl6a"]
+[ext_resource type="AudioStream" uid="uid://yqrp5xe3ovkr" path="res://audio/sound effects/walk.wav" id="5_j7fi7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tris7"]
 size = Vector2(16, 18)
@@ -93,7 +94,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"back_walk",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -118,7 +119,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"front_walk",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -143,8 +144,15 @@ animations = [{
 }],
 "loop": true,
 "name": &"side_walk",
-"speed": 6.0
+"speed": 8.0
 }]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ibatk"]
+playback_mode = 2
+random_pitch = 1.1
+random_volume_offset_db = 0.1
+streams_count = 1
+stream_0/stream = ExtResource("5_j7fi7")
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_drobj")
@@ -155,7 +163,7 @@ shape = SubResource("RectangleShape2D_tris7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ffdh0")
-animation = &"side_walk"
+animation = &"back_idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
@@ -165,3 +173,11 @@ limit_right = 2200
 limit_bottom = 1760
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="PlayerAudioStream" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_ibatk")
+bus = &"sfx"
+
+[connection signal="finished" from="PlayerAudioStream" to="." method="_on_player_audio_stream_finished"]

@@ -10,7 +10,7 @@ const title_color := Color.BLUE_VIOLET
 var speed_up := false
 
 @onready var line := $CreditsContainer/Line
-var started := true
+var started := false
 var finished := false
 
 var section
@@ -124,8 +124,7 @@ func finish():
 	if not finished:
 		finished = true
 		# This is called when the credits finish and returns to the main menu
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-
+		SceneTransition.change_scene("res://title.tscn")
 
 func add_line():
 	var new_line = line.duplicate()

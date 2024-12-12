@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8ohlegqs0dqt"]
+
+[ext_resource type="AudioStream" uid="uid://0yfmh7kfu7vp" path="res://audio/dungeonPH.mp3" id="1_x8pim"]
+[ext_resource type="AudioStream" uid="uid://bycrw8pk61l2h" path="res://audio/dinerPH.wav" id="2_ajeik"]
+[ext_resource type="AudioStream" uid="uid://ftoq6yfo8at0" path="res://audio/creditsPH.mp3" id="3_g22hk"]
+[ext_resource type="AudioStream" uid="uid://cs1ihnkq4uihb" path="res://audio/battlePH.mp3" id="4_mxpf2"]
+[ext_resource type="Script" path="res://audio/audio_manager.gd" id="5_o25bo"]
+[ext_resource type="AudioStream" uid="uid://dyty2mr5oaon1" path="res://audio/sound effects/Open Door.wav" id="6_50deq"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jgwwh"]
+stream_count = 1
+stream_0 = ExtResource("1_x8pim")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_p6bi5"]
+stream_count = 1
+stream_0 = ExtResource("2_ajeik")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_b87ld"]
+stream_count = 1
+stream_0 = ExtResource("3_g22hk")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_1i1rf"]
+stream_count = 1
+stream_0 = ExtResource("4_mxpf2")
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_xtcoq"]
+clip_count = 4
+clip_0/name = &"DungeonMusic"
+clip_0/stream = SubResource("AudioStreamPlaylist_jgwwh")
+clip_0/auto_advance = 0
+clip_1/name = &"DinerMusic"
+clip_1/stream = SubResource("AudioStreamPlaylist_p6bi5")
+clip_1/auto_advance = 0
+clip_2/name = &"CreditsMusic"
+clip_2/stream = SubResource("AudioStreamPlaylist_b87ld")
+clip_2/auto_advance = 0
+clip_3/name = &"BattleMusic"
+clip_3/stream = SubResource("AudioStreamPlaylist_1i1rf")
+clip_3/auto_advance = 0
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(0, 3): {
+"fade_beats": 3,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(1, 0): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(1, 2): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(2, 0): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(2, 1): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(2, 3): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(3, 0): {
+"fade_beats": 3,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_mynsc"]
+clip_count = 1
+clip_0/name = &"Door"
+clip_0/stream = ExtResource("6_50deq")
+clip_0/auto_advance = 0
+_transitions = {
+Vector2i(0, 0): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="AudioManager" type="AudioStreamPlayer"]
+process_mode = 3
+stream = SubResource("AudioStreamInteractive_xtcoq")
+volume_db = -10.0
+autoplay = true
+bus = &"music"
+script = ExtResource("5_o25bo")
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_mynsc")
+bus = &"sfx"

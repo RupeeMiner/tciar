@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("closed")
 		if playerInArea:
 			if Input.is_action_just_pressed("interact"):
+				$AudioStreamPlayer2D.play()
 				isClosed = false
 				spawn_enemy()
 				$SpawnPoints.queue_free()

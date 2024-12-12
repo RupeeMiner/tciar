@@ -12,8 +12,10 @@ func _ready() -> void:
 	WorldState.battle_started.connect(init)
 
 func init(current_enemy, enemy_health):
+	SceneTransition.fade_out()
 	enemy = load("res://Resources/BattleEnemies/" + current_enemy + ".tres")
 	get_tree().paused = true
+	await get_tree().create_timer(2).timeout
 	
 	visible = true
 	
@@ -32,6 +34,8 @@ func init(current_enemy, enemy_health):
 	current_enemy_health = enemy_health
 	current_player_health = PlayerState.current_health
 	
+	AudioManager.update_music("Battle")
+	SceneTransition.fade_in()
 	display_text("%s appeared!" % enemy.name)
 	await textbox_closed
 	
@@ -102,20 +106,23 @@ func player_attack(move_num):
 		PlayerState.items.append(enemy.ingredient)
 		end_battle()
 		WorldState.check_recipe_ready()
-	
-	enemy_turn()
+	else:
+		enemy_turn()
 
 func _on_run_pressed() -> void:
-	## todo -- calculate run possibility using player's speed value
 	display_text("You ran away.")
 	await textbox_closed
 	end_battle()
 
 func end_battle():
+	SceneTransition.fade_out()
 	PlayerState.current_health = current_player_health
 	get_tree().paused = false
 	WorldState.end_battle(current_enemy_health)
+	await get_tree().create_timer(2).timeout
 	visible = false
+	AudioManager.update_music("Dungeon")
+	SceneTransition.fade_in()
 
 func _on_moves_pressed() -> void:
 	$Actions/ActionMenu.hide()

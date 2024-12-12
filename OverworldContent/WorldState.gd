@@ -76,14 +76,15 @@ func check_recipe_ready():
 
 func load_scene(scene_name):
 	current_scene = scene_name
-	get_tree().change_scene_to_file("res://OverworldContent/" + scene_name + ".tscn")
+	SceneTransition.change_scene("res://OverworldContent/" + scene_name + ".tscn")
+	AudioManager.update_music(scene_name)
 
 func load_next_level():
 	PlayerState.current_health = PlayerState.max_health
 	coolers_closed = [true, true, true]
 	active_enemies = []
 	load_scene(current_recipe + "Dungeon")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(6).timeout
 	first_loaded[current_recipe + "Dungeon"] = false
 
 func reset_level():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3u0j66gmm7y7"]
+[gd_scene load_steps=10 format=3 uid="uid://b3u0j66gmm7y7"]
 
 [ext_resource type="Script" path="res://OverworldContent/cooler.gd" id="1_6nvhl"]
 [ext_resource type="Texture2D" uid="uid://bvt0ltf1ro708" path="res://Textures/pixel_assets/Cooler.png" id="1_u0bbq"]
 [ext_resource type="Texture2D" uid="uid://mfeo6a3lemso" path="res://Textures/pixel_assets/Cooler Open.png" id="2_5b5k7"]
 [ext_resource type="PackedScene" uid="uid://dxhku6mb4mds3" path="res://OverworldContent/Enemy/OverworldEnemy.tscn" id="2_gi23b"]
+[ext_resource type="AudioStream" uid="uid://dmcvjwpnvvn8v" path="res://audio/sound effects/OpenCooler.wav" id="5_2himh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1s6dr"]
 animations = [{
@@ -92,6 +93,10 @@ position = Vector2(18, 18)
 shape = SubResource("RectangleShape2D_71req")
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPoints/DownRight"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_2himh")
+bus = &"sfx"
 
 [connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
 [connection signal="body_exited" from="interactable_area" to="." method="_on_interactable_area_body_exited"]
