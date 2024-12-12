@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bcxa2i6m14280" path="res://Textures/paper_assets/TomatoPaperPNGScaled.png" id="17_46nyx"]
 
 [node name="BattleSceneTextured" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,7 @@ offset_right = -896.0
 offset_bottom = -424.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 script = ExtResource("1_l3p0b")
 
 [node name="ChefSprite" type="Sprite2D" parent="."]

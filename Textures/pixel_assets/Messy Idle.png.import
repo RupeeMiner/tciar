@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch3rwqq4bhxg6"
-path="res://.godot/imported/Tony Idle itch.png-9bb2b2cfc890ff48f1669e304025102d.ctex"
+uid="uid://d4a32xgbwd236"
+path="res://.godot/imported/Messy Idle.png-b1177fbe9663a575cda2d2ab355a475d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Tony Idle itch.png"
-dest_files=["res://.godot/imported/Tony Idle itch.png-9bb2b2cfc890ff48f1669e304025102d.ctex"]
+source_file="res://Textures/pixel_assets/Messy Idle.png"
+dest_files=["res://.godot/imported/Messy Idle.png-b1177fbe9663a575cda2d2ab355a475d.ctex"]
 
 [params]
 

@@ -49,7 +49,7 @@ func init(current_enemy, enemy_health):
 		$BattleTextBox.hide()
 
 func _input(event):
-	if (Input.is_action_just_pressed("ui_accept") or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) and $AspectRatioContainer/BattleTextBox.visible:
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) and $AspectRatioContainer/BattleTextBox/Label.is_visible_in_tree():
 		$AspectRatioContainer/BattleTextBox.hide()
 		emit_signal("textbox_closed")
 
@@ -65,7 +65,7 @@ func set_health(health, max_health, health_label):
 
 func enemy_turn():
 	var move_num = randi() % enemy.moves.size()
-	display_text("%s attacks!" % enemy.name)
+	display_text("You get %s by %s!" % [enemy.moves[0], enemy.name])
 	await textbox_closed
 	
 	var damage = enemy.attack - PlayerState.defense
@@ -73,7 +73,7 @@ func enemy_turn():
 	current_player_health = max(0, current_player_health - damage)
 	set_health(current_player_health, PlayerState.max_health, $AspectRatioContainer/HpBox/Label)
 	
-	display_text("%s dealt %d damage" % [enemy.name, damage])
+	display_text("%s dealt %d damage." % [enemy.name, damage])
 	await textbox_closed
 	
 	if (current_player_health == 0):
@@ -88,7 +88,7 @@ func enemy_turn():
 	$Moves.show()
 
 func player_attack(move_num):
-	display_text("You used %s!" % PlayerState.moves[move_num])
+	display_text(PlayerState.move_texts[move_num])
 	await textbox_closed
 	
 	var damage = PlayerState.attack - enemy.defense
@@ -99,7 +99,7 @@ func player_attack(move_num):
 	
 	current_enemy_health = max(0, current_enemy_health - damage)
 	
-	display_text("You dealt %d damage" % damage)
+	display_text("You dealt %d damage." % damage)
 	await textbox_closed
 	
 	if (current_enemy_health == 0):

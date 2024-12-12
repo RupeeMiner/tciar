@@ -19,6 +19,7 @@ var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", 
 var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballs", "Noodles", "Tomato"], ["Bacon", "Egg", "Tater"]]
 var extra_enemies = ["Lettuce","Cuce"]
 var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend","Boil","Sear"], "SlamDungeon": ["Beat","Fry","Shred"]}
+var move_texts = {"BurgerDungeon": ["It's getting toasty in here!","Smaaaash!","You're melting, you're  meeeeeeeelting!"],"SpagDungeon":["Pull out the blender and turn to max speed!","Crank up the heat!","Sear off the competition!"],"SlamDungeon":["Get scrambled!","Rev up those fryers!","Shred it up!"]}
 
 var current_recipe = ""
 var current_ingredients = []
@@ -35,6 +36,7 @@ func load_level_data():
 	current_enemies = story_enemies[level].duplicate(true)
 	current_ingredients = ingredients[level]
 	PlayerState.moves = moves[current_recipe + "Dungeon"]
+	PlayerState.move_texts = move_texts[current_recipe + "Dungeon"]
 	level += 1
 
 func spawn_enemy():
