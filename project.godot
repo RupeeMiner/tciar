@@ -107,6 +107,12 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 
+[display]
+
+window/size/viewport_width=768
+window/size/viewport_height=672
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="tciar"
