@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhq68lemrhmto"
-path="res://.godot/imported/burn.png-c877912aeb538bbf31afc385f0e19db1.ctex"
+uid="uid://2v6ln41hqjx0"
+path="res://.godot/imported/cardboardboxSideProp.png-da0bb9fc605c1fed3c19a6798e3578c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/burn.png"
-dest_files=["res://.godot/imported/burn.png-c877912aeb538bbf31afc385f0e19db1.ctex"]
+source_file="res://Textures/pixel_assets/porps/cardboardboxSideProp.png"
+dest_files=["res://.godot/imported/cardboardboxSideProp.png-da0bb9fc605c1fed3c19a6798e3578c8.ctex"]
 
 [params]
 

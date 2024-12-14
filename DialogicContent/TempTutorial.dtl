@@ -1,5 +1,4 @@
 [style name="ConversationStyle"]
 join TutorialCharacter center
-[wait time="2.0" skippable="true"]
 [wait_input]
 do Dialogic.start("BurgerOrder")

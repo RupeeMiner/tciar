@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjdarypqurfs"
-path="res://.godot/imported/blend.png-78e6b8e8fe874a0a45858f7122c43cf5.ctex"
+uid="uid://biok3nppo7tvl"
+path="res://.godot/imported/shelfFrontProp.png-aef950545dee2c2841c1dda89cf9b1a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/blend.png"
-dest_files=["res://.godot/imported/blend.png-78e6b8e8fe874a0a45858f7122c43cf5.ctex"]
+source_file="res://Textures/pixel_assets/porps/shelfFrontProp.png"
+dest_files=["res://.godot/imported/shelfFrontProp.png-aef950545dee2c2841c1dda89cf9b1a2.ctex"]
 
 [params]
 

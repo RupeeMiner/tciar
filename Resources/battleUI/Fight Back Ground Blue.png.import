@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvkyxra63ftsq"
-path="res://.godot/imported/battleBG.png-7a34caf9543ca6d677cbc7ffcc279fe9.ctex"
+uid="uid://lgyo2y46vxwc"
+path="res://.godot/imported/Fight Back Ground Blue.png-7dfae527a05605b76e961f85fc2f22dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/battleBG.png"
-dest_files=["res://.godot/imported/battleBG.png-7a34caf9543ca6d677cbc7ffcc279fe9.ctex"]
+source_file="res://Resources/battleUI/Fight Back Ground Blue.png"
+dest_files=["res://.godot/imported/Fight Back Ground Blue.png-7dfae527a05605b76e961f85fc2f22dd.ctex"]
 
 [params]
 

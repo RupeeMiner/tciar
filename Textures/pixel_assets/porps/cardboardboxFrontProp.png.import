@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8sxikfhwa1hl"
-path="res://.godot/imported/HPBox.png-075ab96e5c04647732372c3de5ab94a2.ctex"
+uid="uid://ctvphp7fvdeev"
+path="res://.godot/imported/cardboardboxFrontProp.png-547e2bdf739a1e92364362ec28ac81f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/HPBox.png"
-dest_files=["res://.godot/imported/HPBox.png-075ab96e5c04647732372c3de5ab94a2.ctex"]
+source_file="res://Textures/pixel_assets/porps/cardboardboxFrontProp.png"
+dest_files=["res://.godot/imported/cardboardboxFrontProp.png-547e2bdf739a1e92364362ec28ac81f3.ctex"]
 
 [params]
 

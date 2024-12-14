@@ -12,7 +12,7 @@ func _ready() -> void:
 	WorldState.battle_started.connect(init)
 
 func init(current_enemy, enemy_health):
-	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.play("battle" + str(randi() % 2))
 	SceneTransition.fade_out()
 	enemy = load("res://Resources/BattleEnemies/" + current_enemy + ".tres")
 	get_tree().paused = true
@@ -117,8 +117,8 @@ func _on_run_pressed() -> void:
 func end_battle():
 	SceneTransition.fade_out()
 	PlayerState.current_health = current_player_health
+	get_tree().paused = false
 	if (current_player_health > 0):
-		get_tree().paused = false
 		WorldState.end_battle(current_enemy_health)
 		await get_tree().create_timer(2).timeout
 		AudioManager.update_music("Dungeon")

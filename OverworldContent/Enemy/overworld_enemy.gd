@@ -77,7 +77,8 @@ func play_anim():
 func _on_battle_area_body_entered(body: Node2D) -> void:
 	if (body.has_method("player")):
 		if (battle_ready):
-			WorldState.start_battle(enemy, health)
+			if (!WorldState.respawning):
+				WorldState.start_battle(enemy, health)
 
 func update_health(new_health):
 	if (new_health <= 0):

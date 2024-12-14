@@ -30,6 +30,7 @@ var coolers_closed = [true, true, true]
 var active_enemies = []
 
 var level_reset = false
+var respawning = false
 
 var current_scene = "Diner"
 
@@ -112,11 +113,13 @@ func return_to_dungeon():
 		load_scene(current_recipe + "Dungeon")
 
 func kill_player(enemy: String):
+	respawning = true
 	emit_signal("player_died", enemy)
 
 func respawn_player():
 	load_scene("Restroom")
 	level_reset = true
+	respawning = false
 
 func set_player_physics(val: bool):
 	emit_signal("player_physics", val)

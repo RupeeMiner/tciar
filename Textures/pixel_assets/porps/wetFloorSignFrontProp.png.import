@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bow7u6rc7p17j"
-path="res://.godot/imported/popupOrder.png-c1ce4c0cc9267694c4641b56fffe550b.ctex"
+uid="uid://da6u6vdupignd"
+path="res://.godot/imported/wetFloorSignFrontProp.png-b0ce9115927fd33c926f10a0ed8ba889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/popupOrder.png"
-dest_files=["res://.godot/imported/popupOrder.png-c1ce4c0cc9267694c4641b56fffe550b.ctex"]
+source_file="res://Textures/pixel_assets/porps/wetFloorSignFrontProp.png"
+dest_files=["res://.godot/imported/wetFloorSignFrontProp.png-b0ce9115927fd33c926f10a0ed8ba889.ctex"]
 
 [params]
 

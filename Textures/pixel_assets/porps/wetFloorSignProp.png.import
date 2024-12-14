@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhriyakmbvgja"
-path="res://.godot/imported/mainTitleBack.png-f7ead4b3d07d9d03f56dd11b6d9e467b.ctex"
+uid="uid://df6nfs7bhysu7"
+path="res://.godot/imported/wetFloorSignProp.png-65764a09daa1d16e44803d0268d085dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/mainTitleBack.png"
-dest_files=["res://.godot/imported/mainTitleBack.png-f7ead4b3d07d9d03f56dd11b6d9e467b.ctex"]
+source_file="res://Textures/pixel_assets/porps/wetFloorSignProp.png"
+dest_files=["res://.godot/imported/wetFloorSignProp.png-65764a09daa1d16e44803d0268d085dd.ctex"]
 
 [params]
 

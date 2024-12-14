@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://51j55f78q2t1"
-path="res://.godot/imported/battleText.png-98ef5354ba297f5f1d1f536ab3d4ef65.ctex"
+uid="uid://cqcfd2ab1hykn"
+path="res://.godot/imported/crackProp.png-e9723411038dc65eebc9fcd6431cea10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/pixel_assets/battleScene/battleText.png"
-dest_files=["res://.godot/imported/battleText.png-98ef5354ba297f5f1d1f536ab3d4ef65.ctex"]
+source_file="res://Textures/pixel_assets/porps/crackProp.png"
+dest_files=["res://.godot/imported/crackProp.png-e9723411038dc65eebc9fcd6431cea10.ctex"]
 
 [params]
 
