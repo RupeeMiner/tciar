@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dv0qqcvmabvia"]
+
+[ext_resource type="Texture2D" uid="uid://biok3nppo7tvl" path="res://Textures/pixel_assets/porps/shelfFrontProp.png" id="1_atq70"]
+[ext_resource type="Texture2D" uid="uid://ur3vssfctm3g" path="res://Textures/pixel_assets/porps/shelfSideProp.png" id="2_pksuk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yeard"]
+texture = ExtResource("1_atq70")
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -12, 22, -12, 22, 24, 18, 24, 18, 12, -18, 12, -18, 24, -22, 24)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf8i2"]
+texture = ExtResource("2_pksuk")
+0:0/size_in_atlas = Vector2i(2, 3)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -22, 16, -22, 16, 22, 14, 22, 14, 18, 2, 18, 2, 22, -2, 22)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/4 = SubResource("TileSetAtlasSource_yeard")
+sources/5 = SubResource("TileSetAtlasSource_rf8i2")
