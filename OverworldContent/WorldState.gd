@@ -32,7 +32,7 @@ var active_enemies = []
 var level_reset = false
 var respawning = false
 
-var current_scene = "Diner"
+var current_scene = "Title"
 
 func load_level_data():
 	current_recipe = recipes[level]

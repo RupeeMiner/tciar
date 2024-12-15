@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxhku6mb4mds3"]
 
 [ext_resource type="Script" path="res://OverworldContent/Enemy/overworld_enemy.gd" id="1_eksa4"]
-[ext_resource type="SpriteFrames" uid="uid://cjh1avcn7cl3v" path="res://Resources/OverworldEnemies/BaconFrames.tres" id="2_avjy7"]
+[ext_resource type="SpriteFrames" uid="uid://ldhrxmuqtf4k" path="res://Resources/OverworldEnemies/TomatoFrames.tres" id="2_recdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_by8km"]
 size = Vector2(18, 18)
@@ -31,8 +31,8 @@ target_position = Vector2(25, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = ExtResource("2_avjy7")
-animation = &"side_move"
+sprite_frames = ExtResource("2_recdn")
+animation = &"up_move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_by8km")

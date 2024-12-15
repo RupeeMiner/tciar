@@ -1,5 +1,6 @@
 do WorldState.set_player_physics(false)
-PopupCharacter: You've got all the ingredients you need to make a {WorldState.current_recipe}! Are you ready to head back to the diner?
+PopupCharacter: `\
+You've got all the ingredients you need to make a {WorldState.current_recipe}! Are you ready to head back to the diner?
 - Let's get cooking!
 	do WorldState.load_scene("Diner")
 - Nope, I'm staying here..

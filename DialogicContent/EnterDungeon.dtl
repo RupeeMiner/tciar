@@ -1,4 +1,5 @@
-PopupCharacter: Ready to round up the ingredients to make a {WorldState.current_recipe}?
+PopupCharacter: `\
+Ready to round up the ingredients to make a {WorldState.current_recipe}?
 - Ready as I'll ever be!
 	do WorldState.load_next_level()
 - No way.
