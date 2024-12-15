@@ -2,28 +2,28 @@
 do WorldState.set_player_physics(false)
 join ChefCharacter left
 join HorkentCharacter right
-ChefCharacter: `
+ChefCharacter: `\
 Order up! Hot and freshly beaten!
-HorkentCharacter: `
+HorkentCharacter: `\
 Took you long enough, bet you were slacking off back there! Gimme that.
-HorkentCharacter: `
+HorkentCharacter: `\
 Looks good enough... here is a tip, get a better job!
 leave HorkentCharacter
-ChefCharacter: `
+ChefCharacter: `\
 Jeez, he musta woke up on the wrong side of the space bed...
 join VokunalCharacter right
-ChefCharacter: `
+ChefCharacter: `\
 H-how can I help you... sir? Ma'am?
-VokunalCharacter: `
+VokunalCharacter: `\
 Sup.
-ChefCharacter: `
+ChefCharacter: `\
 Nothing much, I guess...
-VokunalCharacter: `
+VokunalCharacter: `\
 Cool. Do you guys do breakfast?
-ChefCharacter: `
+ChefCharacter: `\
 Uh, yeah, we have our grandest slammy, with eggs, bacon, and fried potatoes.
-VokunalCharacter: `
+VokunalCharacter: `\
 Nice, sounds good. I'll take one of those. Thanks man.
-ChefCharacter: `
+ChefCharacter: `\
 No problem... I'll get right on it.
 do WorldState.set_player_physics(true)

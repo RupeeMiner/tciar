@@ -1,5 +1,5 @@
 do WorldState.set_player_physics(false)
-PopupCharacter: `
+PopupCharacter: `\
 Take a longer break? (You will heal up to full, but all ingredients will go back into hiding.)
 - Sure thing.
 	set {WorldState.level_reset} = true

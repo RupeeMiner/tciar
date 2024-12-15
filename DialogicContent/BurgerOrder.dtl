@@ -5,36 +5,36 @@ DaBossCharacter: `\
 See, no training needed, laser disc fixes everything, Chef!
 ChefCharacter: `\
 It's Tony...
-ChefCharacter: `
+ChefCharacter: `\
 So, where are the other employees?
-DaBossCharacter: `
+DaBossCharacter: `\
 OTHER EMPLOYEES?
-DaBossCharacter: `
+DaBossCharacter: `\
 You think I would put a help wanted sign up if I had other employees? YOU are the other employee!
-ChefCharacter: `
+ChefCharacter: `\
 Oh... okay. At least the pay is decent.
-DaBossCharacter: `
+DaBossCharacter: `\
 Sure, kid. Look, here comes the first customer of the day, get to it!
 leave DaBossCharacter
 join KahhaehunCharacter right
-KahhaehunCharacter: `
+KahhaehunCharacter: `\
 HELLO HUMANOID. I DESIRE SUSTENANCE TO FILL MY INNNER NUTRIATE SAC.
-ChefCharacter: `
+ChefCharacter: `\
 Sure, what can I make for you today?
-KahhaehunCharacter: `
+KahhaehunCharacter: `\
 I REQUEST FOODSTUFF COMPRISED OF TWO GRAIN BLOCKS COVERED IN SESAME KERNELS THAT CONTAIN A SEARED SLAB OF SPACE BEEF.
-KahhaehunCharacter: `
+KahhaehunCharacter: `\
 ON THIS BEEF, I REQUIRE A QUADRILATERAL PIECE OF CURDLED DAIRY MELTED AT A TEMPERATURE BETWEEN 75 AND 85 DEGREES FAHRENHEIT.
-ChefCharacter: `
+ChefCharacter: `\
 Uh, English please?
 leave KahhaehunCharacter
 join DaBossCharacter right
-DaBossCharacter: `
+DaBossCharacter: `\
 They want a burger.
 leave DaBossCharacter
 join KahhaehunCharacter right
-KahhaehunCharacter: `
+KahhaehunCharacter: `\
 YES, A BUEGAR. IF DELIVERED PROMPTLY, THEN I WILL TIP HANDSOMELY IN KILO KOINS.
-ChefCharacter: `
+ChefCharacter: `\
 Yes Ma'am... Sir... whatever.
 do WorldState.set_player_physics(true)

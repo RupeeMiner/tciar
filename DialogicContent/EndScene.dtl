@@ -2,29 +2,29 @@
 do WorldState.set_player_physics(false)
 join ChefCharacter left
 join VokunalCharacter right
-ChefCharacter: `
+ChefCharacter: `\
 Here you go, hope you enjoy eating it as much as I enjoyed cooking it!
-VokunalCharacter: `
+VokunalCharacter: `\
 Thanks bro, I'd tip but I just ran out of cash.
-ChefCharacter: `
+ChefCharacter: `\
 Oh, you can actually tip on car-
 leave VokunalCharacter
-ChefCharacter: `
+ChefCharacter: `\
 Oh well, maybe next time.
 join PrimokCharacter right
-ChefCharacter: `
+ChefCharacter: `\
 Hello, what can I get you today?
-PrimokCharacter: `
+PrimokCharacter: `\
 hELlO, WoUlD YoU hAPPen tO hAvE ANy HumAN?
-ChefCharacter: `
+ChefCharacter: `\
 Well, lucky for you, I am a human! How can I help?
-PrimokCharacter: `
+PrimokCharacter: `\
 YeS, LUCky mE...
-ChefCharacter: `
+ChefCharacter: `\
 Hey, what are you doing, HEY STO-
 leave ChefCharacter
 leave PrimokCharacter
 join DaBossCharacter center
-DaBossCharacter: `
+DaBossCharacter: `\
 ... Where did everyone go?
 do WorldState.load_scene("Credits")

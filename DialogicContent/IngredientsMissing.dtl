@@ -1,4 +1,4 @@
 do WorldState.set_player_physics(false)
-PopupCharacter: `
+PopupCharacter: `\
 Where are you going?? You still need to collect {WorldState.list_missing_ingredients()}!
 do WorldState.set_player_physics(true)

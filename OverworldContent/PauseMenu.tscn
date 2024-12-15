@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d11axk4unno7o"]
+[gd_scene load_steps=4 format=3 uid="uid://d11axk4unno7o"]
 
 [ext_resource type="Texture2D" uid="uid://bnhxxeso1mhet" path="res://Textures/pixel_assets/tutorialBox2.png" id="1_0ren2"]
 [ext_resource type="Script" path="res://OverworldContent/pause_menu.gd" id="1_7iwm0"]
 [ext_resource type="Texture2D" uid="uid://dqomh3fgrn5fd" path="res://Textures/pixel_assets/buttonBG.png" id="2_1u513"]
-[ext_resource type="FontFile" uid="uid://cm8pul1g8b7fi" path="res://Resources/text/pixelScrawl2.ttf" id="4_vqyxs"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -46,7 +45,6 @@ offset_top = 6.25
 offset_right = 46.5
 offset_bottom = 23.25
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_vqyxs")
 theme_override_font_sizes/font_size = 9
 text = "RESUME"
 
@@ -71,7 +69,6 @@ offset_top = 5.75
 offset_right = 51.0
 offset_bottom = 22.75
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_vqyxs")
 theme_override_font_sizes/font_size = 7
 text = "OPTIONS"
 
@@ -96,7 +93,6 @@ offset_top = 5.75
 offset_right = 55.25
 offset_bottom = 22.75
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_vqyxs")
 theme_override_font_sizes/font_size = 9
 text = "EXIT"
 

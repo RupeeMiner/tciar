@@ -1,4 +1,4 @@
-PopupCharacter: `
+PopupCharacter: `\
 Ready to get outta here?
 - Yep.
 	do WorldState.return_to_dungeon()
