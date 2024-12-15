@@ -195,7 +195,6 @@ Vector2i(0, 0): {
 [node name="AudioManager" type="AudioStreamPlayer"]
 process_mode = 3
 stream = SubResource("AudioStreamInteractive_xtcoq")
-volume_db = -10.0
 autoplay = true
 bus = &"music"
 script = ExtResource("5_o25bo")

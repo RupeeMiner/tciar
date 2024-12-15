@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://d11axk4unno7o"]
+
+[ext_resource type="Texture2D" uid="uid://bnhxxeso1mhet" path="res://Textures/pixel_assets/tutorialBox2.png" id="1_0ren2"]
+[ext_resource type="Script" path="res://OverworldContent/pause_menu.gd" id="1_7iwm0"]
+[ext_resource type="Texture2D" uid="uid://dqomh3fgrn5fd" path="res://Textures/pixel_assets/buttonBG.png" id="2_1u513"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 9
+visible = false
+script = ExtResource("1_7iwm0")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ren2")
+
+[node name="Resume" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 414.0
+offset_top = 180.0
+offset_right = 463.0
+offset_bottom = 198.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_1u513")
+
+[node name="Label" type="Label" parent="Control/Resume"]
+layout_mode = 0
+offset_left = 1.5
+offset_top = 6.25
+offset_right = 46.5
+offset_bottom = 23.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "RESUME"
+
+[node name="Options" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 355.0
+offset_right = -49.0
+offset_bottom = 373.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_1u513")
+
+[node name="Label" type="Label" parent="Control/Options"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.75
+offset_right = 51.0
+offset_bottom = 22.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 7
+text = "OPTIONS"
+
+[node name="Exit" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 530.0
+offset_right = -49.0
+offset_bottom = 548.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_1u513")
+
+[node name="Label" type="Label" parent="Control/Exit"]
+layout_mode = 0
+offset_left = 10.25
+offset_top = 5.75
+offset_right = 55.25
+offset_bottom = 22.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "EXIT"
+
+[connection signal="pressed" from="Control/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Control/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/Exit" to="." method="_on_exit_pressed"]
