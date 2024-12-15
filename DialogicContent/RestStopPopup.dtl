@@ -1,5 +1,6 @@
 do WorldState.set_player_physics(false)
-PopupCharacter: Take a bathroom break?
+PopupCharacter: `
+Take a bathroom break?
 - Sure.
 	do WorldState.load_scene("Restroom")
 - Nope.

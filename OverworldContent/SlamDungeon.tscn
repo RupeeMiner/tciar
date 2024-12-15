@@ -78,6 +78,7 @@ scale = Vector2(4, 4)
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
+audio_listener_enable_2d = true
 size = Vector2i(256, 224)
 render_target_update_mode = 0
 

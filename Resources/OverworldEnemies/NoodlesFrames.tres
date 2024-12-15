@@ -1,0 +1,84 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://duramsqgxgy3a"]
+
+[ext_resource type="Texture2D" uid="uid://d0x3t61jsmyid" path="res://Textures/pixel_assets/Enemies/spaghoot.png" id="1_ri02u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f31hj"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyd4k"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4chw0"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2psw"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkx3e"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq63p"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtidi"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l6d8"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4xis"]
+atlas = ExtResource("1_ri02u")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f31hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyd4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4chw0")
+}],
+"loop": true,
+"name": &"down_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2psw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkx3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq63p")
+}],
+"loop": true,
+"name": &"side_move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtidi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l6d8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4xis")
+}],
+"loop": true,
+"name": &"up_move",
+"speed": 5.0
+}]

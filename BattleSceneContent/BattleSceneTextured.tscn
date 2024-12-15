@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cjnujus1tx5bm"]
+[gd_scene load_steps=42 format=3 uid="uid://cjnujus1tx5bm"]
 
 [ext_resource type="Texture2D" uid="uid://dy8waqbs5naj7" path="res://Resources/battleUI/battleTextBox.png" id="1_ewts8"]
 [ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_l3p0b"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bk1gatqh62nl7" path="res://Resources/battleUI/buttons/TOAST.png" id="5_mpcfu"]
 [ext_resource type="Texture2D" uid="uid://l4jxdijcfv1" path="res://Resources/battleUI/buttons/SMASH.png" id="6_icari"]
 [ext_resource type="Texture2D" uid="uid://blftc81vnw136" path="res://Resources/battleUI/buttons/MELT.png" id="7_os68v"]
+[ext_resource type="FontFile" uid="uid://cm8pul1g8b7fi" path="res://Resources/text/pixelScrawl2.ttf" id="9_qbs6h"]
 [ext_resource type="Texture2D" uid="uid://edo84fi316a5" path="res://Resources/battleUI/buttons/RUN.png" id="14_cyrdu"]
 [ext_resource type="Texture2D" uid="uid://bcxa2i6m14280" path="res://Textures/paper_assets/TomatoPaperPNGScaled.png" id="17_46nyx"]
 
@@ -273,6 +274,7 @@ offset_top = -10.0
 offset_right = 64.0
 offset_bottom = 7.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_qbs6h")
 theme_override_font_sizes/font_size = 9
 text = "HP: 15/15"
 
