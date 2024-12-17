@@ -1,13 +1,15 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6qjljw47p3v4"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://6qjljw47p3v4"]
 
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="1_umnho"]
-[ext_resource type="Texture2D" uid="uid://nr851g4kwykg" path="res://Textures/paper_assets/Final Ingredients/BurgerPattyPaper.png" id="2_v6mnv"]
+[ext_resource type="Texture2D" uid="uid://qdxk68ojiu68" path="res://Textures/paper_assets/IngredientAssets/Burger/BurgerPaperBG/Patty_Battle/PattyBattle_DMG.png" id="1_y46nv"]
+[ext_resource type="Texture2D" uid="uid://d3a6j8dtglv3c" path="res://Textures/paper_assets/IngredientAssets/Burger/BurgerPaperBG/Patty_Battle/PattyBattle_Idle.png" id="3_wvwgs"]
 
 [resource]
 script = ExtResource("1_umnho")
 name = "Beefy"
 ingredient = "Beef Patty"
-texture = ExtResource("2_v6mnv")
+texture = ExtResource("3_wvwgs")
+injured_texture = ExtResource("1_y46nv")
 health = 10
 attack = 4
 defense = 1

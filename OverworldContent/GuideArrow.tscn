@@ -1,11 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://3j82c6xcbd16"]
 
+[ext_resource type="Texture2D" uid="uid://doic44c1cess" path="res://Textures/pixel_assets/arrows/down.png" id="1_damoj"]
 [ext_resource type="Script" path="res://OverworldContent/guide_arrow.gd" id="1_mrkbg"]
-[ext_resource type="Texture2D" uid="uid://32ng3ielp20" path="res://Textures/pixel_assets/DinerTiles/Counter No Register.png" id="2_ns2xp"]
 
 [node name="GuideArrow" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_damoj")
 script = ExtResource("1_mrkbg")
-
-[node name="CounterNoRegister" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
-texture = ExtResource("2_ns2xp")

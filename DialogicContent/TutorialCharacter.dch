@@ -17,7 +17,7 @@
 "portraits": {
 "Tutorial": {
 "export_overrides": {
-"image": "\"res://Textures/pixel_assets/tutorialPic.png\""
+"image": "\"res://Textures/pixel_assets/tutorialPicBIGGER.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

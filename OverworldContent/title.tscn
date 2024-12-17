@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://daxr1niw8bcsb"]
+[gd_scene load_steps=8 format=3 uid="uid://daxr1niw8bcsb"]
 
 [ext_resource type="Script" path="res://title.gd" id="1_amka1"]
 [ext_resource type="Texture2D" uid="uid://b4urdyuj5n378" path="res://godot-credits/FinalSpaceBGScaledDimmed.png" id="2_fdq3r"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c6o0a1cw3n1ju" path="res://Textures/pixel_assets/titleScreen/option.png" id="4_03d3l"]
 [ext_resource type="Texture2D" uid="uid://c8dlqmyl4qdux" path="res://Textures/pixel_assets/titleScreen/start.png" id="5_hh5vw"]
 [ext_resource type="Texture2D" uid="uid://dcarj10uon6qh" path="res://Textures/pixel_assets/titleScreen/exit.png" id="6_qfvu2"]
+[ext_resource type="AudioStream" uid="uid://cuo11f7engcmi" path="res://audio/sound effects/Menu/SFX_UI_CloseMenu.wav" id="7_e75ug"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_amka1")
@@ -57,6 +58,13 @@ offset_right = 135.0
 offset_bottom = 223.0
 texture_normal = ExtResource("6_qfvu2")
 
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_e75ug")
+bus = &"sfx"
+
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/optionButton" to="." method="_on_option_button_mouse_entered"]
 [connection signal="pressed" from="SubViewportContainer/SubViewport/optionButton" to="." method="_on_option_button_pressed"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/startButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="SubViewportContainer/SubViewport/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/exitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="SubViewportContainer/SubViewport/exitButton" to="." method="_on_exit_button_pressed"]

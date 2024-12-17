@@ -7,4 +7,5 @@ var defense = 1
 var speed = 1
 var moves = ["Toast","Smash","Melt"]
 var move_texts = ["It's getting toasty in here!","Smaaaash!","You're melting, you're  meeeeeeeelting!"]
+var move_anims = []
 var items = []

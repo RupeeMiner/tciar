@@ -7,6 +7,7 @@ extends Sprite2D
 
 var vectors = [Vector2(0,1), Vector2(1,1), Vector2(1,0), Vector2(1, -1), Vector2(0, -1), Vector2(-1, -1), Vector2(-1, 0), Vector2(-1, 1)]
 var dirs = ["down", "downright", "right", "upright", "up", "upleft", "left", "downleft"]
+var textures = []
 
 var recipe_ready = false
 
@@ -16,6 +17,9 @@ func _ready():
 	Options.guide_toggled.connect(toggle)
 	
 	visible = Options.guide_active
+	
+	for dir in dirs:
+		textures.append(load("res://Textures/pixel_assets/arrows/" + dir + ".png"))
 
 func toggle(toggled_on):
 	visible = toggled_on
@@ -39,6 +43,9 @@ func _process(delta):
 				cooler_dirs.append((coolers[cooler_id].global_position - player.global_position).length())
 			target = coolers[closed_coolers[cooler_dirs.find(cooler_dirs.min())]]
 	
+	if !target:
+		target = exit_area
+	
 	var direction: Vector2 = (target.global_position - player.global_position).normalized()
 	
 	var dot_products = []
@@ -46,6 +53,7 @@ func _process(delta):
 		dot_products.append(vectors[i].normalized().dot(direction))
 	
 	var result = dot_products.find(dot_products.max())
+	texture = textures[result]
 	print (dirs[result])
 
 func ready_recipe(current_recipe):

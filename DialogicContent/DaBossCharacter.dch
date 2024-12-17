@@ -17,7 +17,7 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Textures/paper_assets/BossFinalPNG.png\""
+"image": "\"res://Textures/paper_assets/CustomerAssets/AlienBoss/BossFinalPNG.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -50),

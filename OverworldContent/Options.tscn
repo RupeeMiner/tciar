@@ -168,5 +168,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 46
 text = "SFX"
 
+[connection signal="mouse_entered" from="Control/Back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
 [connection signal="toggled" from="Guide" to="." method="_on_guide_toggled"]

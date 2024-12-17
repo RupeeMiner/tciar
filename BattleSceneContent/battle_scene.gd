@@ -22,16 +22,19 @@ func init(current_enemy, enemy_health):
 	
 	$AspectRatioContainer/BattleBox.hide()
 	$AspectRatioContainer/FlavorText.hide()
-	$AspectRatioContainer/HpBox.hide()
+	$AspectRatioContainer/PlayerHpBox.hide()
 	$Moves.hide()
 	
 	$EnemySprite.texture = enemy.texture
+	$AspectRatioContainer/EnemyHpBox/NameLabel.text = enemy.name
+	
 	
 	$Moves/Move1.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[0].to_upper() + ".png")
 	$Moves/Move2.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[1].to_upper() + ".png")
 	$Moves/Move3.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[2].to_upper() + ".png")
 	
-	set_health(PlayerState.current_health, PlayerState.max_health, $AspectRatioContainer/HpBox/Label)
+	set_health(PlayerState.current_health, PlayerState.max_health, $AspectRatioContainer/PlayerHpBox/Label)
+	set_health(enemy.health, enemy.health, $AspectRatioContainer/EnemyHpBox/HealthLabel)
 	
 	current_enemy_health = enemy_health
 	current_player_health = PlayerState.current_health
@@ -42,7 +45,7 @@ func init(current_enemy, enemy_health):
 	display_text("%s appeared!" % enemy.name)
 	await textbox_closed
 	
-	$AspectRatioContainer/HpBox.show()
+	$AspectRatioContainer/PlayerHpBox.show()
 	if (enemy.speed > PlayerState.speed):
 		enemy_turn()
 	else:
@@ -72,7 +75,7 @@ func enemy_turn():
 	var damage = enemy.attack - PlayerState.defense
 	
 	current_player_health = max(0, current_player_health - damage)
-	set_health(current_player_health, PlayerState.max_health, $AspectRatioContainer/HpBox/Label)
+	set_health(current_player_health, PlayerState.max_health, $AspectRatioContainer/PlayerHpBox/HealthLabel)
 	
 	display_text("%s dealt %d damage." % [enemy.name, damage])
 	await textbox_closed
@@ -89,6 +92,14 @@ func player_attack(move_num):
 	display_text(PlayerState.move_texts[move_num])
 	await textbox_closed
 	
+	$EnemySprite.texture = enemy.injured_texture
+	$AttackAudio.play()
+	$AttackAnim.play(PlayerState.move_anims[move_num])
+	
+	await ($AttackAnim.animation_finished)
+	
+	$AttackAnim.play("blank")
+	
 	var damage = PlayerState.attack - enemy.defense
 	if (PlayerState.moves[move_num] == enemy.weakness):
 		display_text("It was super effective!")
@@ -96,9 +107,12 @@ func player_attack(move_num):
 		damage = damage + 2
 	
 	current_enemy_health = max(0, current_enemy_health - damage)
+	set_health(current_enemy_health, enemy.health, $AspectRatioContainer/EnemyHpBox/HealthLabel)
 	
 	display_text("You dealt %d damage." % damage)
 	await textbox_closed
+	
+	$EnemySprite.texture = enemy.texture
 	
 	if (current_enemy_health == 0):
 		display_text("%s was defeated!" % enemy.name)

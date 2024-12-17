@@ -1,13 +1,15 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://gx7ek47xlmvs"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://gx7ek47xlmvs"]
 
+[ext_resource type="Texture2D" uid="uid://c8nvl71pwbpnp" path="res://Textures/paper_assets/IngredientAssets/BreakfastSlam/BreakfastPaperBG/Egg_Battle/EggBattle_DMG.png" id="1_5gn2m"]
 [ext_resource type="Script" path="res://Resources/BaseEnemy.gd" id="2_dlyox"]
-[ext_resource type="Texture2D" uid="uid://cpvwjyymiy2sg" path="res://Textures/paper_assets/Final Ingredients/EggPaper.png" id="2_s632g"]
+[ext_resource type="Texture2D" uid="uid://dvd035y7rsi4x" path="res://Textures/paper_assets/IngredientAssets/BreakfastSlam/BreakfastPaperBG/Egg_Battle/EggBattle_Idle.png" id="3_r0uxe"]
 
 [resource]
 script = ExtResource("2_dlyox")
 name = "Eggy"
 ingredient = "Egg"
-texture = ExtResource("2_s632g")
+texture = ExtResource("3_r0uxe")
+injured_texture = ExtResource("1_5gn2m")
 health = 12
 attack = 3
 defense = 0

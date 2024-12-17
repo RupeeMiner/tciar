@@ -17,7 +17,7 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Textures/paper_assets/AlienNo1FinalPNG.png\""
+"image": "\"res://Textures/paper_assets/CustomerAssets/AlienNo1/AlienNo1FinalPNG.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -50),
