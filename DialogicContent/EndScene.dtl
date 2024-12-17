@@ -28,4 +28,4 @@ leave PrimokCharacter
 join DaBossCharacter center
 DaBossCharacter: `\
 ... Where did everyone go?
-do WorldState.load_credits("Credits")
+do WorldState.load_credits()
