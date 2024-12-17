@@ -8,6 +8,8 @@ func _process(delta):
 	volume_update()
 
 func _on_back_pressed() -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_Confirm.wav")
+	$Audio.play()
 	visible = false
 
 func volume_update():
@@ -22,6 +24,35 @@ func volume_update():
 
 
 func _on_guide_toggled(toggled_on: bool) -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_Confirm.wav")
+	$Audio.play()
 	guide_active = toggled_on
-	print(toggled_on)
 	emit_signal("guide_toggled", toggled_on)
+
+
+func _on_back_mouse_entered() -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav")
+	$Audio.play()
+
+
+func _on_guide_mouse_entered() -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav")
+	$Audio.play()
+
+
+func _on_sfx_drag_ended(value_changed: bool) -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_CloseMenu.wav")
+	$Audio.play()
+
+
+func _on_sfx_drag_started() -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_Pause.wav")
+	$Audio.play()
+
+func _on_music_drag_ended(value_changed: bool) -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_CloseMenu.wav")
+	$Audio.play()
+
+func _on_music_drag_started() -> void:
+	$Audio.stream = load("res://audio/sound effects/Menu/SFX_UI_Pause.wav")
+	$Audio.play()

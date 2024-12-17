@@ -43,9 +43,6 @@ func _process(delta):
 				cooler_dirs.append((coolers[cooler_id].global_position - player.global_position).length())
 			target = coolers[closed_coolers[cooler_dirs.find(cooler_dirs.min())]]
 	
-	if !target:
-		target = exit_area
-	
 	var direction: Vector2 = (target.global_position - player.global_position).normalized()
 	
 	var dot_products = []
@@ -54,8 +51,6 @@ func _process(delta):
 	
 	var result = dot_products.find(dot_products.max())
 	texture = textures[result]
-	print (dirs[result])
-
+	
 func ready_recipe(current_recipe):
 	recipe_ready = true
-	print("I'm here")

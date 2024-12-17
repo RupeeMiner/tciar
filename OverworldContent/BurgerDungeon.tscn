@@ -103,11 +103,12 @@ enemy_scene = ExtResource("7_0xf4q")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GuideArrow" parent="CanvasLayer" node_paths=PackedStringArray("player", "coolers", "rest_area") instance=ExtResource("9_g0pje")]
+[node name="GuideArrow" parent="CanvasLayer" node_paths=PackedStringArray("player", "coolers", "rest_area", "exit_area") instance=ExtResource("9_g0pje")]
 position = Vector2(994, 26)
 player = NodePath("../../SubViewportContainer/SubViewport/Player")
 coolers = [NodePath("../../SubViewportContainer/SubViewport/Coolers/Cooler0"), NodePath("../../SubViewportContainer/SubViewport/Coolers/Cooler1"), NodePath("../../SubViewportContainer/SubViewport/Coolers/Cooler2")]
 rest_area = NodePath("../../SubViewportContainer/SubViewport/RestArea/CollisionShape2D")
+exit_area = NodePath("../../SubViewportContainer/SubViewport/ExitArea/CollisionShape2D")
 
 [node name="BattleSceneTextured" parent="CanvasLayer" instance=ExtResource("4_viuw6")]
 visible = false

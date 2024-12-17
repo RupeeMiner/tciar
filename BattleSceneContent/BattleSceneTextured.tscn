@@ -465,9 +465,9 @@ position = Vector2(35, 18)
 texture = ExtResource("4_by704")
 
 [node name="HealthLabel" type="Label" parent="AspectRatioContainer/PlayerHpBox"]
-offset_left = -29.0
+offset_left = -30.0
 offset_top = 2.5
-offset_right = 64.0
+offset_right = 63.0
 offset_bottom = 19.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_qbs6h")
@@ -489,9 +489,9 @@ position = Vector2(220, 18)
 texture = ExtResource("4_by704")
 
 [node name="HealthLabel" type="Label" parent="AspectRatioContainer/EnemyHpBox"]
-offset_left = -29.0
+offset_left = -30.0
 offset_top = 2.5
-offset_right = 64.0
+offset_right = 63.0
 offset_bottom = 19.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_qbs6h")

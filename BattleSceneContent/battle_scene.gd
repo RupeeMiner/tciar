@@ -23,6 +23,7 @@ func init(current_enemy, enemy_health):
 	$AspectRatioContainer/BattleBox.hide()
 	$AspectRatioContainer/FlavorText.hide()
 	$AspectRatioContainer/PlayerHpBox.hide()
+	$AspectRatioContainer/EnemyHpBox.hide()
 	$Moves.hide()
 	
 	$EnemySprite.texture = enemy.texture
@@ -33,7 +34,7 @@ func init(current_enemy, enemy_health):
 	$Moves/Move2.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[1].to_upper() + ".png")
 	$Moves/Move3.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[2].to_upper() + ".png")
 	
-	set_health(PlayerState.current_health, PlayerState.max_health, $AspectRatioContainer/PlayerHpBox/Label)
+	set_health(PlayerState.current_health, PlayerState.max_health, $AspectRatioContainer/PlayerHpBox/HealthLabel)
 	set_health(enemy.health, enemy.health, $AspectRatioContainer/EnemyHpBox/HealthLabel)
 	
 	current_enemy_health = enemy_health
@@ -46,6 +47,7 @@ func init(current_enemy, enemy_health):
 	await textbox_closed
 	
 	$AspectRatioContainer/PlayerHpBox.show()
+	$AspectRatioContainer/EnemyHpBox.show()
 	if (enemy.speed > PlayerState.speed):
 		enemy_turn()
 	else:

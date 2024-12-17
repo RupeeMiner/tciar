@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c12mdlspxsls"]
+[gd_scene load_steps=25 format=3 uid="uid://c12mdlspxsls"]
 
 [ext_resource type="Texture2D" uid="uid://bnhxxeso1mhet" path="res://Textures/pixel_assets/tutorialBox2.png" id="1_t3uqu"]
 [ext_resource type="Script" path="res://OverworldContent/options.gd" id="1_udrxm"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8x5kd071yxci" path="res://Textures/pixel_assets/slider_dots/slider.png" id="7_6j54v"]
 [ext_resource type="Texture2D" uid="uid://cb1c7c5fh551x" path="res://Textures/pixel_assets/checkBox/checked.png" id="8_52x7x"]
 [ext_resource type="Texture2D" uid="uid://ql2vu2bknbbw" path="res://Textures/pixel_assets/checkBox/uncheck.png" id="9_yljom"]
+[ext_resource type="AudioStream" uid="uid://bo6b21ij5istn" path="res://audio/sound effects/Menu/SFX_UI_MenuSelections.wav" id="10_qc7js"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kaknm"]
 texture = ExtResource("7_6j54v")
@@ -168,6 +169,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 46
 text = "SFX"
 
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qc7js")
+bus = &"sfx"
+
 [connection signal="mouse_entered" from="Control/Back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
+[connection signal="drag_ended" from="Control/sfx" to="." method="_on_sfx_drag_ended"]
+[connection signal="drag_started" from="Control/sfx" to="." method="_on_sfx_drag_started"]
+[connection signal="drag_ended" from="Control/music" to="." method="_on_music_drag_ended"]
+[connection signal="drag_started" from="Control/music" to="." method="_on_music_drag_started"]
+[connection signal="mouse_entered" from="Guide" to="." method="_on_guide_mouse_entered"]
 [connection signal="toggled" from="Guide" to="." method="_on_guide_toggled"]

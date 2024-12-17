@@ -12,13 +12,13 @@ var first_loaded = {"Diner": true, "BurgerDungeon": true, "SpagDungeon": true, "
 var diner_intro_pos = Vector2(80, 140)
 var diner_door_pos = Vector2(49, 208)
 
-var dungeon_entrance_pos = {"BurgerDungeon": Vector2(880, 784), "SpagDungeon": Vector2(1232,1229), "SlamDungeon": Vector2(76,79)}
-var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vector2(110, 240), "SlamDungeon": Vector2(1936,179)}
+var dungeon_entrance_pos = {"BurgerDungeon": Vector2(880, 784), "SpagDungeon": Vector2(1232,1229), "SlamDungeon": Vector2(208,837)}
+var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vector2(110, 240), "SlamDungeon": Vector2(2062,930)}
 
-var level = 0
+var level = 2
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
-var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballer", "Noodles", "Tomato"], ["Bacon", "Egg", "Tater"]]
+var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballer", "Noodles", "Tomato"], ["Bacon", "Eggy", "Tater"]]
 var extra_enemies = ["Lettuce","Cuce"]
 var moves = {"BurgerDungeon": ["Toast","Smash","Melt"], "SpagDungeon": ["Blend","Boil","Sear"], "SlamDungeon": ["Beat","Fry","Shred"]}
 var move_texts = {"BurgerDungeon": ["It's getting toasty in here!","Smaaaash!","You're melting, you're  meeeeeeeelting!"],"SpagDungeon":["Pull out the blender and turn to max speed!","Crank up the heat!","Sear off the competition!"],"SlamDungeon":["Get scrambled!","Rev up those fryers!","Shred it up!"]}
@@ -80,6 +80,10 @@ func list_missing_ingredients():
 func check_recipe_ready():
 	if !ingredients_missing():
 		emit_signal("recipe_ready", current_recipe)
+
+func load_credits():
+	SceneTransition.change_scene("res://godot-credits/GodotCredits.tscn")
+	AudioManager.update_music("Credits")
 
 func load_scene(scene_name):
 	current_scene = scene_name

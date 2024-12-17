@@ -12,10 +12,8 @@ func change_scene():
 		layout = Dialogic.start("IngredientsMissing")
 	else:
 		layout = Dialogic.start("LeaveDungeon")
-	layout.register_character(load("res://DialogicContent/PopupCharacter.dch"), $".")
 
 
 func _on_rest_area_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		var layout = Dialogic.start("RestStopPopup")
-		layout.register_character(load("res://DialogicContent/PopupCharacter.dch"), $".")
