@@ -1,3 +1,5 @@
-TonyCharacter: Is it getting hot in here or what?
-TonyCharacter: Let's slide out of here!
+ChefCharacter: `\
+Is it getting hot in here or what?
+ChefCharacter: `\
+Let's slide out of here!
 do WorldState.respawn_player()

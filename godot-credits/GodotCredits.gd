@@ -25,7 +25,8 @@ var credits = [
 		"A game by A Good Company"
 	],[
 		"Programming",
-		"Maeby Neaves"
+		"Maeby Neaves",
+		"Sam Barks"
 	],[
 		"Food Aliens",
 		"Jonkler Juice",

@@ -169,3 +169,4 @@ theme_override_font_sizes/font_size = 46
 text = "SFX"
 
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Guide" to="." method="_on_guide_toggled"]

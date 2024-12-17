@@ -83,10 +83,11 @@ directories/dtl_directory={
 "TaterDeath": "res://DialogicContent/DeathMonologues/TaterDeath.dtl",
 "TaterQuip": "res://DialogicContent/TaterQuip.dtl",
 "TempTutorial": "res://DialogicContent/TempTutorial.dtl",
+"TomatoDeath": "res://DialogicContent/DeathMonologues/TomatoDeath.dtl",
 "TomatoQuip": "res://DialogicContent/TomatoQuip.dtl"
 }
-layout/style_list=["res://DialogicContent/QuipStyle.tres", "res://DialogicContent/PopupStyle.tres", "res://DialogicContent/ConversationStyle.tres"]
-layout/default_style="res://DialogicContent/QuipStyle.tres"
+layout/style_list=["res://DialogicContent/QuipStyle.tres", "res://DialogicContent/PopupStyle.tres", "res://DialogicContent/ConversationStyle.tres", "res://DialogicContent/QuipStyleNew.tres"]
+layout/default_style="res://DialogicContent/QuipStyleNew.tres"
 glossary/default_case_sensitive=true
 variables={}
 extensions_folder="res://addons/dialogic_additions"

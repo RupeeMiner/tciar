@@ -1,2 +1,3 @@
-TonyCharacter: What a cheesy way to go, let's skedaddle!
+ChefCharacter: `\
+What a cheesy way to go, let's skedaddle!
 do WorldState.respawn_player()

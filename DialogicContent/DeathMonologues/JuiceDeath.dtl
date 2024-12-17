@@ -1,3 +1,5 @@
-TonyCharacter: Looks like the glove DOES fit!
-TonyCharacter: Oh shit, it has a knife.
+ChefCharacter: `\
+Looks like the glove DOES fit!
+ChefCharacter: `\
+Oh shit, it has a knife.
 do WorldState.respawn_player()

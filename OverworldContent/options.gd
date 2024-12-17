@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+signal guide_toggled(value)
+
+var guide_active = false
+
 func _process(delta):
 	volume_update()
 
@@ -15,3 +19,9 @@ func volume_update():
 	
 	AudioServer.set_bus_volume_db(music_index, music_vol)
 	AudioServer.set_bus_volume_db(sfx_index, sfx_vol)
+
+
+func _on_guide_toggled(toggled_on: bool) -> void:
+	guide_active = toggled_on
+	print(toggled_on)
+	emit_signal("guide_toggled", toggled_on)

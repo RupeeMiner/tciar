@@ -115,9 +115,7 @@ func ended_dialogue():
 func play_dialogue(timeline_name):
 	Dialogic.timeline_ended.connect(ended_dialogue)
 	set_physics_process(false)
-	var layout = Dialogic.Styles.load_style("QuipStyle")
-	layout.register_character(load("res://DialogicContent/TonyCharacter.dch"), $".")
-	Dialogic.start(timeline_name)
+	var layout = Dialogic.start(timeline_name)
 
 func play_ready_quip(current_recipe):
 	if (!quipped):

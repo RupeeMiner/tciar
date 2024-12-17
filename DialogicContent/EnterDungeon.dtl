@@ -1,5 +1,7 @@
+do WorldState.set_player_physics(false)
 PopupCharacter: `\
 Ready to round up the ingredients to make a {WorldState.current_recipe}?
 - Ready as I'll ever be!
 	do WorldState.load_next_level()
 - No way.
+do WorldState.set_player_physics(true)

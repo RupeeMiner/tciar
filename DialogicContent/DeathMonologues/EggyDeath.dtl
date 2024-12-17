@@ -1,3 +1,5 @@
-TonyCharacter: I thought I was supposed to be doing the scrambling!
-TonyCharacter: I gotta skirt!
+ChefCharacter: `\
+I thought I was supposed to be doing the scrambling!
+ChefCharacter: `\
+I gotta skirt!
 do WorldState.respawn_player()
