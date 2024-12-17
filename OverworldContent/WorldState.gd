@@ -15,7 +15,7 @@ var diner_door_pos = Vector2(49, 208)
 var dungeon_entrance_pos = {"BurgerDungeon": Vector2(880, 784), "SpagDungeon": Vector2(1232,1229), "SlamDungeon": Vector2(208,837)}
 var dungeon_rest_pos = {"BurgerDungeon": Vector2(1552, 210), "SpagDungeon": Vector2(110, 240), "SlamDungeon": Vector2(2062,930)}
 
-var level = 2
+var level = 0
 var recipes = ["Burger", "Spag", "Slam"]
 var ingredients = [["Beef Patty", "Hamburger Bun", "Cheese Slice"], ["Noodles", "Meatballs", "Tomato"], ["Egg", "Bacon", "Potato"]]
 var story_enemies = [["Beefy", "Bun", "Cheese"], ["Meatballer", "Noodles", "Tomato"], ["Bacon", "Eggy", "Tater"]]
@@ -82,6 +82,7 @@ func check_recipe_ready():
 		emit_signal("recipe_ready", current_recipe)
 
 func load_credits():
+	current_scene = "Credits"
 	SceneTransition.change_scene("res://godot-credits/GodotCredits.tscn")
 	AudioManager.update_music("Credits")
 

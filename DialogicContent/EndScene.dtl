@@ -24,7 +24,8 @@ ChefCharacter: `\
 Hey, what are you doing, HEY STO-
 leave ChefCharacter
 leave PrimokCharacter
+[wait time="5.0"]
 join DaBossCharacter center
 DaBossCharacter: `\
 ... Where did everyone go?
-do WorldState.load_scene("Credits")
+do WorldState.load_credits("Credits")

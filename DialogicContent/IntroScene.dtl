@@ -4,6 +4,7 @@ join ChefCharacter left
 join DaBossCharacter right
 DaBossCharacter: `\
 Thought you might never show, new guy! Woulda had to hire some other suck--I mean... respectable employee!
+do WorldState.load_credits()
 ChefCharacter: `\
 Erm, sorry... Got caught up in space traffic. Name's Tony. When does training start?
 DaBossCharacter: `\
