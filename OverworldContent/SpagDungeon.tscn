@@ -47,7 +47,7 @@ tile_set = ExtResource("2_sckei")
 tile_map_data = PackedByteArray("AAAcABsABAAAAAAAAAAfABsABAAAAAAAAAAiABsABAAAAAAAAAA4AAMABAAAAAAAAABGAEMABAAAAAAAAABDAEMABAAAAAAAAAAgADUABAAAAAAAAAAHABsABAAAAAAAAABGADEABAAAAAAAAABDADEABAAAAAAAAAA=")
 tile_set = ExtResource("3_a5x22")
 
-[node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_kgmg0")]
+[node name="Player" parent="SubViewportContainer/SubViewport" groups=["Player"] instance=ExtResource("4_kgmg0")]
 position = Vector2(1232, 1229)
 
 [node name="ExitArea" type="Area2D" parent="SubViewportContainer/SubViewport"]

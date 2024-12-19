@@ -16,7 +16,7 @@ size = Vector2(27, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi4pt"]
 size = Vector2(25, 28)
 
-[node name="SlamDungeon" type="Node2D"]
+[node name="SlamDungeon" type="Node2D" groups=["Player"]]
 script = ExtResource("1_xncrd")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
