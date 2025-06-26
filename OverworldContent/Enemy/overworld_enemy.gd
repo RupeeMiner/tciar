@@ -24,11 +24,9 @@ func _ready():
 	set_physics_process(true)
 	await get_tree().create_timer(3)
 	battle_ready = true
-	print("alive")
 
 func _physics_process(delta):
 	if(is_instance_valid(player)):
-		print("player valid")
 		var contexts = [0,0,0,0]
 		var speed = walk_speed
 		

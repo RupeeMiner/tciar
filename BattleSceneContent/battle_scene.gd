@@ -27,7 +27,7 @@ func init(current_enemy, enemy_health):
 	$Moves.hide()
 	
 	$EnemySprite.texture = enemy.texture
-	$AspectRatioContainer/EnemyHpBox/NameLabel.text = enemy.name
+	$AspectRatioContainer/EnemyHpBox/NameLabel.text = enemy.name.to_upper()
 	
 	
 	$Moves/Move1.texture_normal = load("res://Resources/battleUI/buttons/" + PlayerState.moves[0].to_upper() + ".png")
@@ -52,6 +52,7 @@ func init(current_enemy, enemy_health):
 		enemy_turn()
 	else:
 		$Moves.show()
+		$AspectRatioContainer/BattleBox.show()
 		$AspectRatioContainer/BattleTextBox.hide()
 
 func _input(event):
@@ -89,6 +90,7 @@ func enemy_turn():
 		end_battle()
 	
 	$Moves.show()
+	$AspectRatioContainer/BattleBox.show()
 
 func player_attack(move_num):
 	display_text(PlayerState.move_texts[move_num])

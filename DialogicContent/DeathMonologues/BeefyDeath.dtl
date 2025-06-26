@@ -1,3 +1,2 @@
-CHefCharacter: `\
-I'm getting pounded over here, I gotta scram!
+CHefCharacter: I'm getting pounded over here, I gotta scram!
 do WorldState.respawn_player()

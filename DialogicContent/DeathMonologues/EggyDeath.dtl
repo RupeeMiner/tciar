@@ -1,5 +1,3 @@
-ChefCharacter: `\
-I thought I was supposed to be doing the scrambling!
-ChefCharacter: `\
-I gotta skirt!
+ChefCharacter: I thought I was supposed to be doing the scrambling!
+ChefCharacter: I gotta skirt!
 do WorldState.respawn_player()

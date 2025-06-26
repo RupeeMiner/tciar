@@ -1,7 +1,7 @@
 extends Node2D
 
-const section_time := 2.0
-const line_time := 0.3
+const section_time := 1.8
+const line_time := 0.2
 const base_speed := 100
 const speed_up_multiplier := 10.0
 const title_color := Color.DARK_RED
@@ -69,67 +69,66 @@ var credits = [
 		"Sam Barks",
 		"Haden Dorsch"
 	],[
-		"Godot Credits",
-		"Ben Bishop",
-		"MIT License
-
-Copyright (c) 2019 Ben Bishop
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.",
-	],[
 		"Font",
-		"VCR OSD Mono à € by Riciery Leal",
+		"VCR OSD Mono by Riciery Leal",
 	],[
 		"Tools used",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
-		"Art created with Aesprite",
-		"Dialogic Plugin by Jowan-Spooner and Emilio Coppola",
-		"MIT License
-
-Copyright (c) 2020 - present Emilio Coppola
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.",
+		"Art created with Aesprite"
+	],[
+		"Godot Credits",
+		"Dialogic Plugin",
+		"by Jowan-Spooner and Emilio Coppola",
+		"Copyright (c) 2020 - present",
+		"Emilio Coppola",
+		"MIT License",
+		"Godot Credits",
+		"Ben Bishop",
+		"Copyright (c) 2019 Ben Bishop",
+		"MIT License",
+		"",
+		"Permission is hereby granted,",
+		"free of charge, to any person",
+		"obtaining a copy of this software", 
+		"and associated documentation files",
+		'(the "Software"),to deal in the',
+		"Software without restriction,",
+		"including without limitation",
+		"the rights to use, copy, modify,",
+		"merge, publish, distribute,",
+		"sublicense, and/or sell copies",
+		"of the Software, and to permit",
+		"persons to whom the Software",
+		"is furnished to do so, subject",
+		"to the following conditions:",
+		"The above copyright notice and",
+		"this permission notice shall be",
+		"included in all copies or substantial",
+		"portions of the Software.",
+		'THE SOFTWARE IS PROVIDED "AS IS",',
+		"WITHOUT WARRANTY OF ANY KIND,",
+		"EXPRESS OR IMPLIED, INCLUDING BUT",
+		"NOT LIMITED TO THE WARRANTIES OF",
+		"MERCHANTABILITY, FITNESS FOR",
+		"A PARTICULAR PURPOSE AND",
+		"NONINFRINGEMENT. IN NO EVENT SHALL",
+		"THE AUTHORS OR COPYRIGHT HOLDERS",
+		"BE LIABLE FOR ANY CLAIM, DAMAGES",
+		"OR OTHER LIABILITY, WHETHER IN",
+		"AN ACTION OF CONTRACT, TORT OR",
+		"OTHERWISE, ARISING FROM, OUT OF",
+		"OR IN CONNECTION WITH THE",
+		"SOFTWARE OR THE USE OR OTHER",
+		"DEALINGS IN THE SOFTWARE."
 	],[
 		"Special thanks",
 		"Drennon Dooms",
 		"Everyone in Class",
 		"Thicc Ass Bacon",
 	],[
-		"And You"
+		"And You!"
 	]
 ]
 

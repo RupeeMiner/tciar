@@ -1,3 +1,2 @@
-ChefCharacter: `\
-I'm getting rolled over here, better escape!
+ChefCharacter: I'm getting rolled over here, better escape!
 do WorldState.respawn_player()

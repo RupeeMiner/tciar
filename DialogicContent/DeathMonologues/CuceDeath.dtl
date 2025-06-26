@@ -1,5 +1,3 @@
-ChefCharacter: `\
-What the hell is that thing??
-ChefCharacter: `\
-LET'S RUN AWAY!!!
+ChefCharacter: What the hell is that thing??
+ChefCharacter: LET'S RUN AWAY!!!
 do WorldState.respawn_player()

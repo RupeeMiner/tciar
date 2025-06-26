@@ -1,5 +1,3 @@
-ChefCharacter: `\
-LETTUCE get out of here!
-ChefCharacter: `\
-... I am in great pain.
+ChefCharacter: LETTUCE get out of here!
+ChefCharacter: ... I am in great pain.
 do WorldState.respawn_player()

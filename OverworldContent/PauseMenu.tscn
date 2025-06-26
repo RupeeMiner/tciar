@@ -40,13 +40,15 @@ texture_normal = ExtResource("2_1u513")
 
 [node name="Label" type="Label" parent="Control/Resume"]
 layout_mode = 0
-offset_left = 1.5
-offset_top = 6.25
-offset_right = 46.5
-offset_bottom = 23.25
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 48.0
+offset_bottom = 18.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 11
 text = "RESUME"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Options" type="TextureButton" parent="Control"]
 texture_filter = 1
@@ -64,13 +66,15 @@ texture_normal = ExtResource("2_1u513")
 
 [node name="Label" type="Label" parent="Control/Options"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 5.75
-offset_right = 51.0
-offset_bottom = 22.75
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 49.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 10
 text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Exit" type="TextureButton" parent="Control"]
 texture_filter = 1
@@ -88,13 +92,15 @@ texture_normal = ExtResource("2_1u513")
 
 [node name="Label" type="Label" parent="Control/Exit"]
 layout_mode = 0
-offset_left = 10.25
-offset_top = 5.75
-offset_right = 55.25
-offset_bottom = 22.75
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 48.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 12
 text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
 bus = &"sfx"

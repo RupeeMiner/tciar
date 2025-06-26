@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://cjnujus1tx5bm"]
+[gd_scene load_steps=73 format=3 uid="uid://cjnujus1tx5bm"]
 
 [ext_resource type="Texture2D" uid="uid://dy8waqbs5naj7" path="res://Resources/battleUI/battleTextBox.png" id="1_ewts8"]
 [ext_resource type="Script" path="res://BattleSceneContent/battle_scene.gd" id="1_l3p0b"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bk1gatqh62nl7" path="res://Resources/battleUI/buttons/TOAST.png" id="5_mpcfu"]
 [ext_resource type="Texture2D" uid="uid://l4jxdijcfv1" path="res://Resources/battleUI/buttons/SMASH.png" id="6_icari"]
 [ext_resource type="Texture2D" uid="uid://blftc81vnw136" path="res://Resources/battleUI/buttons/MELT.png" id="7_os68v"]
-[ext_resource type="FontFile" uid="uid://cm8pul1g8b7fi" path="res://Resources/text/pixelScrawl2.ttf" id="9_qbs6h"]
 [ext_resource type="Texture2D" uid="uid://bgfy1mvol6icd" path="res://Textures/paper_assets/IngredientAssets/BreakfastSlam/BreakfastPaperBG/Bacon_Battle/BaconBattle_Idle.png" id="14_56feo"]
 [ext_resource type="Texture2D" uid="uid://edo84fi316a5" path="res://Resources/battleUI/buttons/RUN.png" id="14_cyrdu"]
 [ext_resource type="Texture2D" uid="uid://d3lwvjbrkb3ih" path="res://Textures/pixel_assets/Attack Animations/bubbleAttackAnim-Sheet.png" id="15_0p1u5"]
@@ -433,22 +432,22 @@ ratio = 1.1429
 stretch_mode = 0
 
 [node name="BattleTextBox" type="Sprite2D" parent="AspectRatioContainer"]
-visible = false
 texture_filter = 1
 position = Vector2(128, 192)
 texture = ExtResource("1_ewts8")
 
 [node name="Label" type="Label" parent="AspectRatioContainer/BattleTextBox"]
 offset_left = -123.0
-offset_top = -24.0
+offset_top = -28.0
 offset_right = 123.0
-offset_bottom = 26.0
+offset_bottom = 31.0
 theme_override_colors/font_color = Color(0.283004, 0.495969, 0.692313, 1)
-theme_override_font_sizes/font_size = 9
-text = "This text goes around and around and around and around the box"
+theme_override_font_sizes/font_size = 12
+text = "This text goes around and around and around and around and around and around and around and around and around and around the box"
 autowrap_mode = 2
 
 [node name="BattleBox" type="Sprite2D" parent="AspectRatioContainer"]
+visible = false
 texture_filter = 1
 position = Vector2(128, 192)
 scale = Vector2(2, 1)
@@ -470,8 +469,7 @@ offset_top = 2.5
 offset_right = 63.0
 offset_bottom = 19.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_qbs6h")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 11
 text = "HP: 3/20"
 
 [node name="NameLabel" type="Label" parent="AspectRatioContainer/PlayerHpBox"]
@@ -480,7 +478,7 @@ offset_top = -11.0
 offset_right = 62.5
 offset_bottom = 6.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 13
 text = "CHEF"
 
 [node name="EnemyHpBox" type="Sprite2D" parent="AspectRatioContainer"]
@@ -494,8 +492,7 @@ offset_top = 2.5
 offset_right = 63.0
 offset_bottom = 19.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_qbs6h")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 11
 text = "HP: 8/12"
 
 [node name="NameLabel" type="Label" parent="AspectRatioContainer/EnemyHpBox"]
@@ -504,8 +501,7 @@ offset_top = -12.0
 offset_right = 62.5
 offset_bottom = 5.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_qbs6h")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 13
 text = "BEEFY"
 
 [node name="Moves" type="Node2D" parent="."]

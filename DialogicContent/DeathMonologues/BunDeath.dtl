@@ -1,5 +1,3 @@
-CbefCharacter: `\
-Who knew some bread could kick my ass so easily!
-ChefCharacter: `\
-I'm outta here!
+CbefCharacter: Who knew some bread could kick my ass so easily!
+ChefCharacter: I'm outta here!
 do WorldState.respawn_player()

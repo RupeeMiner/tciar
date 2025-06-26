@@ -1,6 +1,5 @@
 do WorldState.set_player_physics(false)
-PopupCharacter: `\
-Ready to get outta here?
+PopupCharacter: Ready to get outta here?
 - Yep.
 	do WorldState.return_to_dungeon()
 - Not yet.

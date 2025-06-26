@@ -2,12 +2,9 @@
 do WorldState.set_player_physics(false)
 join ChefCharacter left
 join DaBossCharacter right
-DaBossCharacter: `\
-Thought you might never show, new guy! Woulda had to hire some other suck--I mean... respectable employee!
-ChefCharacter: `\
-Erm, sorry... Got caught up in space traffic. Name's Tony. When does training start?
-DaBossCharacter: `\
-Training? Look Chef, I got this laser disc with any info you may need. Here, let's watch it.
+DaBossCharacter: Thought you might never show, new guy! Woulda had to hire some other suck--I mean... respectable employee!
+ChefCharacter: Erm, sorry... Got caught up in space traffic. Name's Tony. When does training start?
+DaBossCharacter: Training? Look Chef, I got this laser disc with any info you may need. Here, let's watch it.
 leave ChefCharacter
 leave DaBossCharacter
 join TutorialCharacter center

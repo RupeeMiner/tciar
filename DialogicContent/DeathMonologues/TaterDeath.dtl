@@ -1,5 +1,3 @@
-ChefCharacter: `\
-I'm starting to see the root of my problems.
-ChefCharacter: `\
-Let's move on!
+ChefCharacter: I'm starting to see the root of my problems.
+ChefCharacter: Let's move on!
 do WorldState.respawn_player()

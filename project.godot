@@ -131,7 +131,7 @@ Player=""
 
 [gui]
 
-theme/custom_font="res://Resources/text/pixelScrawl2.ttf"
+theme/custom_font="res://Resources/text/VCR_OSD_MONO_1.001.ttf"
 
 [input]
 

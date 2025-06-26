@@ -2,22 +2,14 @@
 do WorldState.set_player_physics(false)
 join ChefCharacter left
 join KahhaehunCharacter right
-ChefCharacter: `\
-Here is your cheeseburger, enjoy!
-KahhaehunCharacter: `\
-NOT FAST ENOUGH, NO TIP. GOODBYE.
+ChefCharacter: Here is your cheeseburger, enjoy!
+KahhaehunCharacter: NOT FAST ENOUGH, NO TIP. GOODBYE.
 leave KahhaehunCharacter
-ChefCharacter: `\
-What a drag... Oh, another customer!
+ChefCharacter: What a drag... Oh, another customer!
 join HorkentCharacter right
-ChefCharacter: `\
-Welcome in, how may I be of service?
-HorkentCharacter: `\
-Service? There ain't no service that you can give me that would bring me any more joy than the truck stop down the lightyear.
-HorkentCharacter: `\
-You, however, can get me some grub.
-HorkentCharacter: `\
-Some spag with extra tomato sauce and meatballs. Chop chop, I'm starvin here!
-ChefCharacter: `\
-Right away, be right back!
+ChefCharacter: Welcome in, how may I be of service?
+HorkentCharacter: Service? There ain't no service that you can give me that would bring me any more joy than the truck stop down the lightyear.
+HorkentCharacter: You, however, can get me some grub.
+HorkentCharacter: Some spag with extra tomato sauce and meatballs. Chop chop, I'm starvin here!
+ChefCharacter: Right away, be right back!
 do WorldState.set_player_physics(true)
